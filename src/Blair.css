@@ -1,7 +1,7 @@
-* {
-    display: flex;
-    background: silver;
-    justify-content: center;
-    height: 80vh;
-    width: 50vw !important;
+.app {
+    display: flex !important;
+    background: black !important;
+    justify-content: center !important;
+    font-family: comic !important;
+    font-size: 3333px !important;
 }
