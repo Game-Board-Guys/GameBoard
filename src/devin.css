@@ -1,8 +1,4 @@
-body {
-    color: aqua;
-}
+{
+    background: black;
 
-html>body{
-    display: hidden;
-    overflow: hidden;
 }
