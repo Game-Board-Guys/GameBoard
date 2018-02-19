@@ -1,8 +1,7 @@
-* {
-    display: flex;
+.app {
+    display: flex !important;
     background: black !important;
-    justify-content: center;
-    align-items: center;
-    height: 100px !important;
-    font-size: 20px !important;
+    justify-content: center !important;
+    font-family: comic !important;
+    font-size: 3333px !important;
 }
