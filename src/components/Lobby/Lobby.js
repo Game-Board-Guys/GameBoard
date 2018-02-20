@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Lobby.css';
 
-
 class Lobby extends Component {
     render(){
         return (
