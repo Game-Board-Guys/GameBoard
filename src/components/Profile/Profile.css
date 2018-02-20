@@ -1,0 +1,137 @@
+.main-profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+}
+
+.user-info {
+    display: flex;
+    height: 80%;
+    width: 27%;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-info-box {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    flex-direction: column;
+}
+
+.user-stats {
+    display: flex;
+    height: 80%;
+    width: 32%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    background: aliceblue;
+    margin-top: 20px;
+    
+}
+
+.standings {
+    display: flex;
+    height: 80%;
+    width: 32%;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    background: aliceblue;
+    margin-top: 20px;
+}
+
+.user-profile-img {
+    height: 250px;
+    width: 250px;
+    border: 3px solid #5762D5;
+    border-radius: 150px;
+}
+
+.profile-username {
+    font-size: 28px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.profile-level {
+    font-size: 28px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0px;
+}
+
+.stats-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    color: #363537;
+    font-size: 35px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 15px;
+    border-bottom: 3px solid #5762D5;
+}
+
+.standings-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    color: #363537;
+    font-size: 35px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 15px;
+    border-bottom: 3px solid #5762D5;
+}
+
+.user-stats-actual {
+    width: 95%;
+    height: 600px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 19px;
+    line-height: 190%;
+    color: #363537;
+    overflow: scroll;
+}
+
+.standings-actual {
+    width: 95%;
+    height: 600px;
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 19px;
+    line-height: 190%;
+    color: #363537;
+    overflow: scroll;
+}
+
+.update-profile-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 140px;
+    border: none;
+    border-radius: 6px;
+    background: #5762D5;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+}
