@@ -7,7 +7,7 @@ class Header extends Component {
     render() {
         return (
             <div className="main-header-container">
-                <Link to="/landing"><div className="header-logo">P  E  A  X</div></Link>
+                <Link to="/"><div className="header-logo">P  E  A  X</div></Link>
                 <nav className="main-nav-container">
                     <Link to="/lobby"><p>LOBBY</p></Link>
                     <Link to="/leaderboard"><p>LEADERBOARD</p></Link>
