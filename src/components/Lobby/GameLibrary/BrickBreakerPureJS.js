@@ -191,7 +191,7 @@ class Lobby extends Component {
         return (
             <div className="lobby-main-container">
                 <div className="upper-lobby-container">
-                    <canvas ref="myCanvas" width='300' height='300'></canvas>
+                    <canvas ref="myCanvas" width='480px' height='320px'></canvas>
                     <div className="upper-lobby-right">
                         <div className="chat-bar"></div>
                         <div className="lobby-buttons"><button onClick={this.draw}>Rules</button>   <button>Leave Game</button></div>
