@@ -1,5 +1,8 @@
 .lobby-main-container {
-    background: #512ADF;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+    height: 1500px;
 }
 
 .upper-lobby-container {
@@ -14,10 +17,10 @@
 canvas {
     height: 700px;
     width: 1000px;
-    background: whitesmoke;
+    background: aliceblue;
     border: 3px solid #5762D5;
     margin-right: -50px;
-    margin-top: -30px;
+    margin-top: -10px;
     border-radius: 6px;
 }
 
@@ -54,9 +57,9 @@ canvas {
 .chat-bar {
     height: 500px;
     width: 400px;
-    background: whitesmoke;
+    background: aliceblue;
     border: 3px solid #5762D5;
-    margin-top: -110px;
+    margin-top: -90px;
     border-radius: 6px;
 }
 
