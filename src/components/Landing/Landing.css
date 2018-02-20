@@ -1,0 +1,106 @@
+.landing_main_container {
+    color: #fff;
+   background: #363537;
+   box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+    height: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.arrow-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 125px;
+}
+
+.left-arrow {
+    width: 0; 
+    height: 0; 
+    /* border-color: #5762D5; */
+    border-radius: 120px;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    margin-right: 10px;
+    border-right: 60px solid #5762D5;
+    box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+    margin-top: 130px;
+}
+
+.left-arrow:hover {
+    /* box-shadow: 0 0 10px 0 #5762D5 inset, 0 0 10px 4px #5762D5; */
+    border-radius: 120px;
+    border-top: 65px solid transparent;
+    border-bottom: 65px solid transparent;
+    /* margin-left: 10px; */
+    border-right: 65px solid #5762D5;
+    box-shadow: 0 0 45px 45px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+}
+
+.game-slider {
+    height: 400px;
+    width: 1060px;
+    background-color: black;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    /* position: absolute; */
+}
+
+.right-arrow {
+    width: 0; 
+    height: 0; 
+    /* border-color: #5762D5; */
+    border-radius: 120px;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    margin-left: 10px;
+    border-left: 60px solid #5762D5;
+    box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+    margin-top: 130px;
+}
+
+.right-arrow:hover {
+    /* box-shadow: 0 0 10px 0 #5762D5 inset, 0 0 10px 4px #5762D5; */
+    border-radius: 120px;
+    border-top: 65px solid transparent;
+    border-bottom: 65px solid transparent;
+    /* margin-left: 10px; */
+    border-left: 65px solid #5762D5;
+    box-shadow: 0 0 45px 45px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+}
+
+.landing-chat-box {
+    height: 250px;
+    width: 600px;
+    background-color: black;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+}
+
+.game-list-container {
+    height: 300px;
+    width: 800px;
+    background-color: black;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: scroll;
+}
+
+.listed-game {
+    margin-top: 10px;
+}
