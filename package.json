@@ -25,5 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "main": "server/server.js",
+  "repository": "https://github.com/Game-Board-Guys/GameBoard.git",
+  "author": "devin <deivnobowen@gmail.com>",
+  "license": "MIT"
 }
