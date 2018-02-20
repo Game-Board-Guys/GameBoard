@@ -1,0 +1,11 @@
+.footer-main-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    height: 60px;
+    width: 100%;
+    background: #363537;
+    border-top: 3px solid #5762D5;
+    position: fixed;
+    bottom: 0;
+}
