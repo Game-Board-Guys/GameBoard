@@ -3,9 +3,11 @@ import './Footer.css';
 
 
 class Footer extends Component {
-    render(){
+    render() {
         return (
-            <div>Footer Component</div>
+            <div className="footer-main-wrapper">
+               
+            </div>
         )
     }
 }
