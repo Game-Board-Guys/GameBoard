@@ -67,7 +67,12 @@ class Landing extends Component {
                     </div>
                     <div className="right-arrow" onClick={() => this.slideRight()}></div>
                 </div>
-                <div className="landing-chat-box"></div>
+                <div className="landing-chat-box">
+                
+                <input type="text" placeholder="Enter a message..." onKeyUp={this.handleSubmit} />
+                {this.state.messages}
+                
+                </div>
                 <div className="game-list-container">
                     <Link to="lobby" style={{textDecoration: 'none'}}>
                         <div className="game-container">
