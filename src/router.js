@@ -8,6 +8,9 @@ import EditProfile from './components/EditProfile/EditProfile.js';
 import BrickBreak from './components/Lobby/GameLibrary/BrickBreakerPureJS';
 import Dropdown from './components/Dropdown/Dropdown.js';
 
+
+import BrickBreaker from './components/Lobby/GameLibrary/BrickBreakPhase';
+
 import { HashRouter as Router, Route } from 'react-router-dom';
 
 export default function router(showSlideMenu, closeMenu){
@@ -17,11 +20,14 @@ export default function router(showSlideMenu, closeMenu){
             <div>
                 <Route component={Landing} exact path="/"/>
                 <Route component={Login} path="/login"/>
-                <Route component={BrickBreak} path="/lobby"/>
+                <Route component={BrickBreak} exact path="/lobby"/>
                 <Route component={Profile} path="/profile"/>
                 <Route component={LeaderBoard} path="/leaderboard"/>
                 <Route component={EditProfile} path="/editprofile"/>
                 <Route render={() => <Dropdown showSlideMenu={showSlideMenu} closeMenu={closeMenu}/>} path='/'/>
+
+
+                <Route component={BrickBreaker} path="/lobby/brick-breaker" />
             </div>
         </Router>
     )
