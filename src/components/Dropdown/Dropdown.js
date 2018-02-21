@@ -14,16 +14,16 @@ class Dropdown extends Component {
                             P E A X
                         </div>
                     </Link>
-                    
+
                     <div className="close_x" onClick={this.props.closeMenu}>X</div>
                 </div>
-                <nav>
-                    <div onClick={this.props.closeMenu}><Link to="/lobby">LOBBY</Link></div>
-                    <div onClick={this.props.closeMenu}><Link to="/leaderboard">LEADERBOARD</Link></div>
-                    <div onClick={this.props.closeMenu}><Link to="/profile">PROFILE</Link></div>
+                <nav className="dropdown-nav">
+                    <Link to="/lobby"><div onClick={this.props.closeMenu}>LOBBY</div></Link>
+                    <Link to="/leaderboard"><div onClick={this.props.closeMenu}>LEADERBOARD</div></Link>
+                    <Link to="/profile"><div onClick={this.props.closeMenu}>PROFILE</div></Link>
                 </nav>
             </div>
-                
+
         )
 
     }

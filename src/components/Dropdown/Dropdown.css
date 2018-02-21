@@ -2,7 +2,9 @@
     display: flex;
     height: 250px;
     width: 100%;
-    background: #2E2E30;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 30px 0px #5762D5 inset, 0 0 0 0 #5762D5;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -22,27 +24,36 @@
 .slidedown_header {
     display: flex;
     width: 100vw;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin-top: -30px;
+}
+
+.slidedown_logo_wrapper:hover {
+    font-size: 41px;
+    color: #E9D758
 }
 
 .close_x {
      /* margin-right: 190px;  */
      color: white;
-     margin-right: -10px;
+     margin-right: 40px;
+     cursor: pointer;
 }
 
 .slidedown_logo_wrapper {
-    /* margin-right: -90px; */
     display: flex;
-    /* width: 450px; */
     height: 35px;
     align-items: center;
     justify-content: center;
-    font-family: 'Monoton', cursive;
-    font-size: 15px;
-    color: #F8D158;
-    margin-left: 10px;
+    margin-left: 100px;
+    width: 200px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    margin-top: 10px;
+    color: #5762D5;
+    text-decoration: underline #363537;
+    margin-left: 80px;
     margin-right: -30px;
 }
 
@@ -57,24 +68,25 @@
     padding-top: 20px;
 }
 
-.admin_nav_container_dropdown {
+.dropdown-nav {
     display: flex;
-    height: 300px;
-    width: 100%;
-    background: #2E2E30;
     flex-direction: column;
-    justify-content: space-around;
+    width: 400px;
+    height: 150px;
+    justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    font-size: 30px;
+    margin-top: -10px;
 }
 
-.facebook_logo_dropdown {
-    /* display: flex;
-    align-items: center; */
-    height: 30px;
-    margin: 10px;
-    
+.dropdown-nav div {
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 34px;
+    text-decoration: underline #363537;
+}
+
+.dropdown-nav div:hover {
+    color: #E9D758
 }
 
 @media(min-width:1100px) {
