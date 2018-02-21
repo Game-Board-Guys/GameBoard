@@ -8,7 +8,7 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
 class BrickBreaker extends Component {
 
 Game(){
-      var game = new window.Phaser.Game(480, 320, window.Phaser.AUTO, null, {
+      var game = new window.Phaser.Game(480, 320, window.Phaser.AUTO, 'Breaking', {
           preload: preload, create: create, update: update
       });
       
@@ -26,6 +26,7 @@ Game(){
       var lifeLostText;
       var playing = false;
       var startButton;
+      
       
       function preload() {
       
@@ -121,7 +122,7 @@ Game(){
                   count_alive += 1
               }
           }
-          if (count_alive == 0) {
+          if (score == 210) {
               alert('You won the game, congratulations!');
               document.location.reload();
           }
@@ -156,12 +157,13 @@ Game(){
       }
 
   }
+    
   render() {
     
     return (
         <div className="lobby-main-container">
         <div className="upper-lobby-container">
-        <canvas id="myCanvas">{this.Game()}</canvas>
+        <div id="Breaking">{this.Game()}</div>
         <div className="upper-lobby-right">
         <div className="chat-bar"></div>
          <div className="lobby-buttons"><button>Rules</button>   <button>Leave Game</button></div>
