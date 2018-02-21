@@ -5,12 +5,29 @@ const bodyParser = require('body-parser')
 , massive = require('massive')
 , passport = require('passport')
 , session = require('express-session')
-, Auth0Strategy = require('passport-auth0')
+, Auth0Strategy = require('passport-auth0');
+const http = require('http');
+const socketIO = require('socket.io');
 
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
+const server = http.createServer(app);
+const io = socketIO(server);
+
+app.use(express.static(__dirname + '../public'));
+
+io.on('connection', socket => {
+    console.log('server io test')
+    socket.on('message', body => {
+      socket.emit('message', {
+        body,
+        from: socket.id.slice(8)
+      });
+    });
+  });
 
 // ---------SESSIONS--------
 app.use(session({
