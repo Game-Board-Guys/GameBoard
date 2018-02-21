@@ -17,6 +17,7 @@
     width: 500px;
     justify-content: flex-end;
     align-items: center;
+    cursor: pointer;
 }
 
 .main-nav-container {
