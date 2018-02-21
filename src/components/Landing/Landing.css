@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:500');
+
 .landing_main_container {
     color: #fff;
    background: #363537;
@@ -35,6 +37,7 @@
     box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
     transition: all 90ms ease-in-out;
     margin-top: 130px;
+    cursor: pointer;
 }
 
 .left-arrow:hover {
@@ -50,8 +53,9 @@
 
 .game-slider {
     height: 400px;
-    width: 1060px;
-    background-color: black;
+    width: 900px;
+    /* background-image: url('./../../Pictures/black-jack.jpg'); */
+    background-size: cover;
     border: 3px solid #5762D5;
     border-radius: 6px;
     /* position: absolute; */
@@ -69,6 +73,7 @@
     box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
     transition: all 90ms ease-in-out;
     margin-top: 130px;
+    cursor: pointer;
 }
 
 .right-arrow:hover {
@@ -101,6 +106,53 @@
     overflow-y: scroll;
 }
 
-.listed-game {
+.listed-game-1 {
     margin-top: 10px;
+    background-image: url('./../../Pictures/checkers.jpeg');
+    background-size: contain;
+    height: 60px;
+    width: 105px;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.game-text {
+    font-size: 16;
+    font-family: 'Orbitron', sans-serif;
+    color: #5762D5;
+}
+
+.game-text:hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.listed-game-2 {
+    margin-top: 10px;
+    background-image: url('./../../Pictures/black-jack.jpg');
+    background-size: contain;
+    height: 60px;
+    width: 105px;
+}
+
+.listed-game-3 {
+    margin-top: 10px;
+    background-image: url('./../../Pictures/minesweeper.jpg');
+    background-size: contain;
+    height: 60px;
+    width: 105px;
+}
+
+.listed-game-4 {
+    margin-top: 10px;
+    background-image: url('./../../Pictures/Screenshot (7).png');
+    background-size: contain;
+    height: 60px;
+    width: 105px;
 }
