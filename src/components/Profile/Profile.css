@@ -135,3 +135,26 @@
     padding-top: 5px;
     cursor: pointer;
 }
+
+@media(max-width:900px){
+    .main-profile-container {
+        flex-direction: column;
+        height: 2000px;
+    }
+    .user-info {
+        width: 80%;
+        height: 32%;
+    }
+    .user-info-box {
+        margin-top: 130px;
+    }
+    .user-stats {
+        width: 80%;
+        height: 32%;
+    }
+    .standings {
+        width: 80%;
+        height: 32%;
+        margin-bottom: 80px;
+    }
+}
