@@ -54,11 +54,9 @@
 .game-slider {
     height: 400px;
     width: 900px;
-    /* background-image: url('./../../Pictures/black-jack.jpg'); */
     background-size: cover;
     border: 3px solid #5762D5;
     border-radius: 6px;
-    /* position: absolute; */
 }
 
 .right-arrow {

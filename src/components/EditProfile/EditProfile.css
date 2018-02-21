@@ -1,0 +1,31 @@
+.main-edit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+}
+
+.user-profile-img {
+    height: 250px;
+    width: 250px;
+    border: 3px solid #5762D5;
+    border-radius: 150px;
+}
+
+.username-title {
+    display: flex;
+}
+
+.change-name {
+    height: 30px;
+    width: 250px;
+    border-radius: 6px;
+    background-color: #363537;
+    border-color: #5762D5;
+    color: #5762D5;
+    font-size: 24px;
+}
