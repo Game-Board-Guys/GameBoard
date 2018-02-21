@@ -7,6 +7,7 @@
 
 .upper-lobby-container {
     display: flex;
+    flex-direction: row;
     width: 100%;
     height: 900px;
     justify-content: space-around;
@@ -14,9 +15,21 @@
     flex-direction: row;
 }
 
+.game-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.game-title {
+    font-size: 32px;
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 50px;
+}
+
 canvas {
-    height: 700px;
-    width: 1000px;
+    height: 600px;
+    width: 100%;
     background: aliceblue;
     border: 3px solid #5762D5;
     margin-right: -50px;
@@ -27,12 +40,15 @@ canvas {
 .upper-lobby-right {
     display: flex;
     width: 400px;
+    margin-top: 120px;
     flex-direction: column;
 }
 
 .lobby-buttons {
     display: flex;
     width: 400px;
+    height: 200px;
+    flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: row;
     margin-top: 40px;
@@ -55,7 +71,7 @@ canvas {
 }
 
 .chat-bar {
-    height: 500px;
+    height: 305px;
     width: 400px;
     background: aliceblue;
     border: 3px solid #5762D5;
@@ -65,4 +81,140 @@ canvas {
 
 .lobby-buttons button:hover {
     box-shadow: 0 0 10px 0 #5762D5 inset, 0 0 10px 4px #5762D5;
+}
+
+.lower-lobby {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-rules-main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: -110px;
+}
+
+.game-rules-header {
+    font-size: 32px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.rules-container {
+    height: 300px;
+    width: 70%;
+    font-size: 28px;
+    line-height: 180%;
+    font-family: 'Orbitron', sans-serif;
+    padding: 30px;  
+    color: #9C0D38;
+    /* background: aliceblue; */
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow: scroll;
+}
+
+.leave-game-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 200px;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 6px;
+    background: #9C0D38;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #9C0D38 inset, 0 0 0 0 #9C0D38;
+    transition: all 90ms ease-in-out;
+    margin-right: 180px;
+}
+
+.leave-game-button:hover {
+    box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
+}
+
+@media(max-width:1100px) {
+    .upper-lobby-container {
+        flex-direction: column;
+        height: 900px;
+    }
+    .game-box {
+        margin-top: 60px;
+        align-items: center;
+        width: 90%;
+    }
+    .upper-lobby-right {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 0px;
+    }
+    canvas {
+        height: 700px;
+        width: 100%;
+        margin-right: 0px;
+    }
+    .lobby-buttons {
+        flex-direction: row;
+        width: 100%;
+        height: 260px;
+        margin-top: 10px;
+    }
+    .chat-bar {
+        height: 260px;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: -3px;
+    }
+    .lower-lobby {
+        flex-direction: column;
+    }
+    .rules-container {
+        margin-bottom: 10px;
+    }
+    .leave-game-button {
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+    .game-rules-main {
+        margin-left: 0px;
+    }
+}
+
+@media(max-width:700px){
+    .upper-lobby-container {
+        flex-direction: column;
+        height: 900px;
+    }
+    .game-box {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        width: 90%;
+    }
+    .upper-lobby-right {
+        flex-direction: column;
+        width: 90%;
+        margin-top: 0px;
+    }
+    canvas {
+        height: 370px;
+        width: 100%;
+    }
+    .lobby-buttons {
+        flex-direction: row;
+        width: 100%;
+        height: 260px;
+        margin-top: 10px;
+    }
+    .chat-bar {
+        height: 260px;
+        width: 100%;
+        margin-top: 20px;
+    }
 }

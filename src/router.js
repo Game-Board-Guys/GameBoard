@@ -5,20 +5,25 @@ import Login from './components/Login/Login.js';
 import Profile from './components/Profile/Profile.js';
 import LeaderBoard from './components/LeaderBoard/LeaderBoard.js';
 import EditProfile from './components/EditProfile/EditProfile.js';
-import { HashRouter as Router, Route } from 'react-router-dom';
 import BrickBreak from './components/Lobby/GameLibrary/BrickBreakerPureJS';
+import Dropdown from './components/Dropdown/Dropdown.js';
 
-export default (
+import { HashRouter as Router, Route } from 'react-router-dom';
 
-    <Router>
-        <div>
-            <Route exact path="/" component={Landing} />
-            <Route path="/login" component={Login} />
-            <Route path="/lobby" component={BrickBreak} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/leaderboard" component={LeaderBoard} />
-            <Route path="/editprofile" component={EditProfile} />
-        </div>
-    </Router>
-)
+export default function router(showSlideMenu, closeMenu){
+    // console.log('closeMenu', closeMenu, 'showSlideMenu', showSlideMenu)
+    return (
+        <Router>
+            <div>
+                <Route component={Landing} exact path="/"/>
+                <Route component={Login} path="/login"/>
+                <Route component={BrickBreak} path="/lobby"/>
+                <Route component={Profile} path="/profile"/>
+                <Route component={LeaderBoard} path="/leaderboard"/>
+                <Route component={EditProfile} path="/editprofile"/>
+                <Route render={() => <Dropdown showSlideMenu={showSlideMenu} closeMenu={closeMenu}/>} path='/'/>
+            </div>
+        </Router>
+    )
+}
 
