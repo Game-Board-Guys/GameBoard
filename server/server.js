@@ -6,27 +6,40 @@ const bodyParser = require('body-parser')
 , passport = require('passport')
 , session = require('express-session')
 , Auth0Strategy = require('passport-auth0');
-const http = require('http');
 const socketIO = require('socket.io');
 
 
-const app = express();
+const port = process.env.SERVER_PORT;
+const app = express()
+const io = socketIO(app.listen(port, console.log(`this server is running on port ${port}.`)))
+massive(process.env.CONNECTION_STRING).then(db => {
+        app.set('db', db)
+        
+    })
+    app.use("/js", express.static(__dirname + "/client/js"));
 app.use(bodyParser.json());
 app.use(cors());
 
-const server = http.createServer(app);
-const io = socketIO(server);
-
-app.use(express.static(__dirname + '../public'));
-
 io.on('connection', socket => {
-    console.log('server io test')
-    socket.on('message', body => {
-      socket.emit('message', {
-        body,
-        from: socket.id.slice(8)
-      });
-    });
+    console.log('User Connected');
+    socket.emit("welcome", {userID: socket.id})
+  
+    // socket.on('message sent', function(data) {
+    //   console.log(data)
+    //   data.user = this.id
+    //   io.emit('message dispatched', data);
+    // })
+  
+
+    socket.on('message sent', function(data) {
+      data.user = this.id
+      console.log(data)
+      socket.broadcast.emit('message dispatched', data);
+    })
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    })
   });
 
 // ---------SESSIONS--------
@@ -102,8 +115,8 @@ app.get('/auth/logout', function(req,res) {
 
 
 // --------DATABASE CONNECTION--------
-const port = process.env.SERVER_PORT;
-massive(process.env.CONNECTION_STRING).then(db => {
-    app.set('db', db)
-    app.listen(port, console.log(`this server is running on port ${port}.`))
-})
+// const port = process.env.SERVER_PORT;
+// massive(process.env.CONNECTION_STRING).then(db => {
+//     app.set('db', db)
+//     app.listen(port, console.log(`this server is running on port ${port}.`))
+// })
