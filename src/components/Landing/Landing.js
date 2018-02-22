@@ -67,28 +67,22 @@ class Landing extends Component {
                 </div>
                 <Chat />
                 <div className="game-list-container">
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    <Link to="/lobby:pong" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-1"></div>
-                            <div className="game-text">Checkers</div>
+                            <div className="game-text">Pong</div>
                         </div>
                     </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    <Link to="/lobby:maze2d" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-2"></div>
-                            <div className="game-text">Black Jack</div>
+                            <div className="game-text">Cyber Orb</div>
                         </div>
                     </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
-                        <div className="game-container">
-                            <div className="listed-game-3"></div>
-                            <div className="game-text">Mine Sweeper</div>
-                        </div>
-                    </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    <Link to="/lobby:brickbreaker" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-4"></div>
-                            <div className="game-text">Break Brick</div>
+                            <div className="game-text">Brick Breaker</div>
                         </div>
                     </Link>
                 </div>

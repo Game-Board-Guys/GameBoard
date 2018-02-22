@@ -10,7 +10,6 @@ class Header extends Component {
                 <Link to="/"><div className="header-logo">P  E  A  X</div></Link>
                 <div className="nav-hamburger-container">
                     <nav className="main-nav-container">
-                        <Link to="/lobby"><p>LOBBY</p></Link>
                         <Link to="/leaderboard"><p>LEADERBOARD</p></Link>
                         <Link to="/profile"><p>PROFILE</p></Link>
                     </nav>
