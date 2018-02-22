@@ -4,8 +4,8 @@ window.PIXI = require('phaser-ce/build/custom/pixi');
 window.p2 = require('phaser-ce/build/custom/p2');
 window.Phaser = require('phaser-ce/build/custom/phaser-split');
 
-export default function Maze() {
-    var game = new window.Phaser.Game(600, 400, window.Phaser.AUTO, null, {
+export default function Pong() {
+    var game = new window.Phaser.Game(600, 400, window.Phaser.AUTO, 'myCanvas', {
         preload: preload, create: create, update: update
     });
 
@@ -77,7 +77,7 @@ export default function Maze() {
         //paddle 2 ai
         paddle2.body.velocity.setTo(ball.body.velocity.y);
         paddle2.body.velocity.x = 0;
-        paddle2.body.maxVelocity.y = 100;
+        paddle2.body.maxVelocity.y = 100; // sets computer ai difficulty
 
         
     }
@@ -89,7 +89,7 @@ export default function Maze() {
         game.physics.arcade.enable(paddle);
         paddle.body.collideWorldBounds = true;
         paddle.body.immovable = true;
-        paddle.scale.setTo(0.4, 0.4)
+        paddle.scale.setTo(0.4, 0.4) // scales the paddles
 
         return paddle;
     }

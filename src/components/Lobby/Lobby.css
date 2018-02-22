@@ -145,6 +145,12 @@ canvas {
     box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
 }
 
+/* this is the lobby awesomeness canvas stuff and stuff */
+#myCanvas{
+    width: 1000px;
+    height: 600px;
+}
+
 @media(max-width:1100px) {
     .upper-lobby-container {
         flex-direction: column;

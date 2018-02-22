@@ -1,14 +1,9 @@
-import React,{Component} from 'react';
-import '../Lobby.css';
-
 window.PIXI   = require('phaser-ce/build/custom/pixi');
 window.p2     = require('phaser-ce/build/custom/p2');
 window.Phaser = require('phaser-ce/build/custom/phaser-split');
 
-class BrickBreaker extends Component {
-
-Game(){
-      var game = new window.Phaser.Game(480, 320, window.Phaser.AUTO, 'Breaking', {
+export default function BrickBreaker(){
+      var game = new window.Phaser.Game(480, 320, window.Phaser.AUTO, 'myCanvas', {
           preload: preload, create: create, update: update
       });
       
@@ -157,23 +152,3 @@ Game(){
       }
 
   }
-    
-  render() {
-    
-    return (
-        <div className="lobby-main-container">
-        <div className="upper-lobby-container">
-        <div id="Breaking">{this.Game()}</div>
-        <div className="upper-lobby-right">
-        <div className="chat-bar"></div>
-         <div className="lobby-buttons"><button>Rules</button>   <button>Leave Game</button></div>
-        </div>
-        </div>
-        <div className="rules-container"></div>
-        <div className="leave-game-button"></div>
-    </div>
-    );
-  }
-}
-
-export default BrickBreaker;
