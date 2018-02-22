@@ -1,38 +1,38 @@
 require('dotenv').config();
-const bodyParser = require('body-parser')
-, express = require('express')
-, cors = require('cors')
-, massive = require('massive')
-, passport = require('passport')
-, session = require('express-session')
-, Auth0Strategy = require('passport-auth0');
-const socketIO = require('socket.io');
-
+const express = require('express')
+    , bodyParser = require('body-parser')
+    , cors = require('cors')
+    , massive = require('massive')
+    , passport = require('passport')
+    , session = require('express-session')
+    , Auth0Strategy = require('passport-auth0')
+    , socketIO = require('socket.io');
 
 const port = process.env.SERVER_PORT;
 const app = express()
 const io = socketIO(app.listen(port, console.log(`this server is running on port ${port}.`)))
-massive(process.env.CONNECTION_STRING).then(db => {
-        app.set('db', db)
-    })
-    app.use("/js", express.static(__dirname + "/client/js"));
+
+massive(process.env.CONNECTION_STRING).then(db => app.set('db', db));
+
+app.use("/js", express.static(__dirname + "/client/js"));
 app.use(bodyParser.json());
 app.use(cors());
 
 io.on('connection', socket => {
-    console.log('User Connected');
-    socket.emit("welcome", {userID: socket.id})
+  console.log('User Connected');
 
-    socket.on('message sent', (data) => {
-      data.user = this.id
-      console.log(data)
-      socket.broadcast.emit('message dispatched', data);
-    })
-  
-    socket.on('disconnect', () => {
-      console.log('User Disconnected');
-    })
+  socket.emit("welcome", {userID: socket.id});
+
+  socket.on('message sent', (data) => {
+    data.user = this.id
+    console.log(data)
+    socket.broadcast.emit('message dispatched', data);
   });
+
+  socket.on('disconnect', () => {
+    console.log('User Disconnected');
+  });
+});
 
 // ---------SESSIONS--------
 app.use(session({
