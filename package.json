@@ -32,5 +32,6 @@
   "main": "server/server.js",
   "repository": "https://github.com/Game-Board-Guys/GameBoard.git",
   "author": "devin <deivnobowen@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "proxy": "http://localhost:5001"
 }
