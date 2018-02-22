@@ -15,6 +15,7 @@ class Chat extends React.Component {
     this.updateMessages = this.updateMessages.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
     this.setUserId = this.setUserId.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -46,6 +47,11 @@ class Chat extends React.Component {
       this.refs.message.value = '';
     }
 
+    handleSubmit(event) {
+      if (event.keyCode === 13)
+        this.sendMessage()
+    }
+
   render() {
 
     const messages = this.state.messages.map((e, i) => {
@@ -61,7 +67,7 @@ class Chat extends React.Component {
           {messages}
         </div>
         <div className="chat-control">
-          <input className="chat-input" ref="message" />
+          <input className="chat-input" ref="message" onKeyUp={this.handleSubmit} />
           <button className="chat-button" onClick={this.sendMessage}>Send</button>
         </div>
       </div>
