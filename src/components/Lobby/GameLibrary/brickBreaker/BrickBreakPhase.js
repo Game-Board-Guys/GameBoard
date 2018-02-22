@@ -25,7 +25,7 @@ export default function BrickBreaker(){
       
       function preload() {
       
-          game.scale.scaleMode = window.Phaser.ScaleManager.NO_SCALE;
+          game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
           game.scale.pageAlignHorizontally = true;
           game.scale.pageAlignVertically = true;
           game.stage.backgroundColor = '#eee';

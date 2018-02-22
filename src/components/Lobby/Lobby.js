@@ -27,7 +27,7 @@ class Lobby extends Component {
                         <div className="lobby-buttons"><button>Rules</button>   <button>Leave Game</button></div>
                     </div>
                 </div>
-                <div className="rules-container"></div>
+                
                 <div className="leave-game-button"></div>
             </div>
         )
