@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:500');
+
 .main-edit-container {
     display: flex;
     flex-direction: row;
@@ -9,6 +11,23 @@
     box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
 }
 
+.avatar-modal {
+    
+}
+
+.edit-body {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .user-profile-img {
     height: 250px;
     width: 250px;
@@ -16,16 +35,65 @@
     border-radius: 150px;
 }
 
-.username-title {
+.edit-buttons {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    border-color: #5762D5;
+    border-radius: 5px;
+    background: #363537;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+    width: 160px;
+    height: 80px;
+    margin-top: 15px;
+}
+
+.edit-buttons:hover {
+    box-shadow: 0 0 10px 0 #5762D5 inset, 0 0 10px 4px #5762D5;
+}
+
+.edit-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.username-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #5762D5;
+    margin-bottom: 5px;
+    margin-left: 15px;
 }
 
 .change-name {
     height: 30px;
-    width: 250px;
+    width: 400px;
     border-radius: 6px;
     background-color: #363537;
     border-color: #5762D5;
+    font-family: 'Orbitron', sans-serif;
+    color: #5762D5;
+    font-size: 24px;
+}
+
+.about-me-title {
+    font-family: 'Orbitron', sans-serif;
+    color: #5762D5;
+    margin-bottom: 5px;
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.about-me {
+    height: 400px;
+    width: 600px;
+    border-radius: 6px;
+    background-color: #363537;
+    border-color: #5762D5;
+    font-family: 'Orbitron', sans-serif;
     color: #5762D5;
     font-size: 24px;
 }
