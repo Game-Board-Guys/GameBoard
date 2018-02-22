@@ -16,7 +16,7 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
             this.load.image('preloaderBar', 'img/2d-maze/loading-bar.png');
         },
         create: function () {
-            this.game.scale.scaleMode = window.Phaser.ScaleManager.NO_SCALE;
+            this.game.scale.scaleMode = window.Phaser.ScaleManager.SCALE_ALL;
             this.game.scale.pageAlignHorizontally = true; 
             this.game.scale.pageAlignVertically = true;
             this.game.state.start('Preloader');
@@ -47,7 +47,7 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
             this.load.spritesheet('button-audio', 'img/2d-maze/button-audio.png', 35, 35);
             this.load.spritesheet('button-start', 'img/2d-maze/button-start.png', 146, 51);
 
-            this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
+            // this.load.audio('audio-bounce', ['audio/bounce.ogg', 'audio/bounce.mp3', 'audio/bounce.m4a']);
         },
         create: function () {
             this.game.state.start('MainMenu')
@@ -233,12 +233,12 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
             this.physics.arcade.overlap(this.ball, this.hole, this.finishLevel, null, this);
         },
         wallCollision: function () {
-            if (this.audioStatus) {
-                this.bounceSound.play();
-            }
-            if ("vibrate" in window.navigator) {
-                window.navigator.vibrate(100);
-            }
+            // if (this.audioStatus) {
+            //     this.bounceSound.play();
+            // }
+            // if ("vibrate" in window.navigator) {
+            //     window.navigator.vibrate(100);
+            // } 
         }, //happens when ball hits wall or other stuff
         handleOrientation: function (e) {
             var x = e.gamma;
