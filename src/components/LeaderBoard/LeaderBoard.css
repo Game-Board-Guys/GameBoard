@@ -1,0 +1,16 @@
+.main-leaderboard-container {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+    height: 1500px;
+}
+
+.leaderboard-sidebar {
+    display: flex;
+    width: 400px;
+    height: 1500px;
+    background: #363537;
+    border-right: 1px solid #5762D5;
+}

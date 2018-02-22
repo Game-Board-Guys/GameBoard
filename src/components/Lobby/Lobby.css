@@ -136,6 +136,11 @@ canvas {
     margin-right: 180px;
 }
 
+#Breaking {
+    height: 600px;
+    width: 1000px;
+}
+
 .leave-game-button:hover {
     box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
 }
