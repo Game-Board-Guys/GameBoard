@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Profile.css';
-import { Link } from 'react-router-dom';
 
 
 class Profile extends Component {
@@ -12,9 +11,9 @@ class Profile extends Component {
                     <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img" />
                     <p className="profile-username">Blair Woodward</p>
                     <p className="profile-level">Level 26</p>
-                    <Link to="/editprofile">
+                    <a href="/editprofile">
                         <button className="update-profile-button">Update Profile</button>
-                    </Link>
+                    </a>
                     </div>
                 </div>
                 <div className="user-stats">

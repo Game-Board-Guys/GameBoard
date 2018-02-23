@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../Lobby.css';
-import { Link } from 'react-router-dom';
 
 class Lobby extends Component {
     constructor(props) {
@@ -220,7 +219,7 @@ class Lobby extends Component {
                                                          
                         </div>
                     </div>
-                    <Link to="/"><div className="leave-game-button">Leave Game</div></Link>
+                    <a href="/"><div className="leave-game-button">Leave Game</div></a>
                 </div>
             </div>
         )

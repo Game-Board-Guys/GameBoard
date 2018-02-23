@@ -134,6 +134,7 @@
     font-size: 15px;
     padding-top: 5px;
     cursor: pointer;
+    text-decoration: underline #5762D5;
 }
 
 @media(max-width:900px){
