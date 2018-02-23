@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Lobby.css';
-import { Link } from 'react-router-dom';
 import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d_maze/2d_maze';
 import BrickBreaker from './GameLibrary/brickBreaker/BrickBreakPhase';
@@ -49,7 +48,7 @@ class Lobby extends Component {
                                                          
                         </div>
                     </div>
-                    <Link to="/"><div className="leave-game-button">Leave Game</div></Link>
+                    <a href="/"><div className="leave-game-button">Leave Game</div></a>
                 </div>
             </div>
         )
