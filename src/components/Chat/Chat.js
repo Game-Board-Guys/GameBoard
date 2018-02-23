@@ -31,8 +31,8 @@ class Chat extends React.Component {
       updatedMessages.push(message);
       this.setState({
         messages: updatedMessages
-      });
-      this.refs.box.scrollTop = this.refs.box.scrollHeight; // Should we put this in sendMessage(), handleSubmit(), or updateMessages()?
+      }, () => this.refs.box.scrollTop = this.refs.box.scrollHeight);
+     // Should we put this in sendMessage(), handleSubmit(), or updateMessages()?
       console.log('ScrollTop: ', this.refs.box.scrollTop);
       console.log('ScrollHeight: ', this.refs.box.scrollHeight);
       console.log(this.state.messages);
