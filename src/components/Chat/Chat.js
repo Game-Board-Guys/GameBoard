@@ -32,10 +32,7 @@ class Chat extends React.Component {
       this.setState({
         messages: updatedMessages
       }, () => this.refs.box.scrollTop = this.refs.box.scrollHeight);
-     // Should we put this in sendMessage(), handleSubmit(), or updateMessages()?
-      console.log('ScrollTop: ', this.refs.box.scrollTop);
-      console.log('ScrollHeight: ', this.refs.box.scrollHeight);
-      console.log(this.state.messages);
+      console.log(this.state.messages); // We will get rid of this later.
     }
 
     setUserId(user) {
@@ -44,7 +41,7 @@ class Chat extends React.Component {
 
     sendMessage() {
       const message = this.refs.message.value;
-      console.log(message);
+      console.log(message);  // We will get rid of this later.
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
       this.refs.message.value = '';
