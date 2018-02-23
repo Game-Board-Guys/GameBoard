@@ -21,8 +21,8 @@ class Chat extends React.Component {
   componentDidMount() {
     // this.state.sliderImages[0]
     this.socket = io('/');
-    this.socket.on('message dispatched', this.updateMessages)
-    this.socket.on('welcome', this.setUserId)
+    this.socket.on('message dispatched', this.updateMessages);
+    this.socket.on('welcome', this.setUserId);
   }
 
     // -------socket methods--------
