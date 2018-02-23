@@ -32,6 +32,9 @@ class Chat extends React.Component {
       this.setState({
         messages: updatedMessages
       });
+      this.refs.box.scrollTop = this.refs.box.scrollHeight; // Should we put this in sendMessage(), handleSubmit(), or updateMessages()?
+      console.log('ScrollTop: ', this.refs.box.scrollTop);
+      console.log('ScrollHeight: ', this.refs.box.scrollHeight);
       console.log(this.state.messages);
     }
 
@@ -48,12 +51,12 @@ class Chat extends React.Component {
     }
 
     handleSubmit(event) {
-      if (event.keyCode === 13)
-        this.sendMessage()
+      if (event.keyCode === 13) {
+        this.sendMessage();
+      }
     }
 
   render() {
-
     const messages = this.state.messages.map((e, i) => {
       const styles = e.user === this.state.userID ? { alignSelf: "flex-end", color: "#9C0D38", paddingLeft: "7px", fontWeight: "900", fontSize: "20px" } : { alignSelf: "flex-start", color: "#E9D758", fontWeight: "900", paddingLeft: "7px", fontSize: "20px" };
       return (
@@ -61,9 +64,11 @@ class Chat extends React.Component {
       );
     });
 
+    // let box = React.createElement('div', {className: 'landing-chat-box'}, messages);
+
     return (
       <div className="chat">
-        <div className="landing-chat-box">
+        <div className="landing-chat-box" ref="box">
           {messages}
         </div>
         <div className="chat-control">

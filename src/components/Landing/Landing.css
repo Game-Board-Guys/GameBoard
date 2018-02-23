@@ -85,17 +85,6 @@
     transition: all 90ms ease-in-out;
 }
 
-/* .landing-chat-box {
-    height: 250px;
-    width: 600px;
-    background-color: black;
-    margin-top: 70px;
-    border: 3px solid #5762D5;
-    border-radius: 6px;
-    overflow: scroll;
-    overflow-y: visible;
-} */
-
 .game-list-container {
     height: 300px;
     width: 800px;
