@@ -10,7 +10,13 @@ export default function playState() {
 
     var score1;
     var score2;
+
+    var aiMaxSpeed;
+    
     return {
+        init: function (data) {
+            aiMaxSpeed = data.maxSpeed || 100;
+        },
         create: function () {
             ballLaunched = false;
             ballVelocity = 400;
@@ -46,21 +52,19 @@ export default function playState() {
 
             if (ball.body.blocked.left) {
                 score2 += 1;
+                this.scoreLaunch();
             } else if (ball.body.blocked.right) {
                 score1 += 1;
+                this.scoreLaunchTwo();
             }
 
             //paddle 2 ai
             paddle2.body.velocity.setTo(ball.body.velocity.y);
             paddle2.body.velocity.x = 0;
-            paddle2.body.maxVelocity.y = 100;
+            paddle2.body.maxVelocity.y = aiMaxSpeed; //used for difficulty
             if (score1 === 11) {
-                score1 = 0;
-                score2 = 0;
                 this.Win();
             } else if (score2 === 11) {
-                score1 = 0;
-                score2 = 0;
                 this.Lose();
             }
 
@@ -99,7 +103,7 @@ export default function playState() {
             ball.anchor.setTo(0.5, 0.5);
             this.game.physics.arcade.enable(ball);
             ball.body.collideWorldBounds = true;
-            ball.body.bounce.setTo(1, 1);
+            ball.body.bounce.setTo(1.05, 1.05);
 
             return ball;
         },
@@ -115,6 +119,20 @@ export default function playState() {
                 ball.body.velocity.y = ballVelocity;
                 ballLaunched = true;
             }
+        },
+        scoreLaunch: function () {
+            ball.x = this.game.world.centerX;
+            ball.y = this.game.world.centerY;
+            ball.body.velocity.x = ballVelocity;
+            ball.body.velocity.y = -ballVelocity;
+            ballLaunched = true;
+        },
+        scoreLaunchTwo: function () {
+            ball.x = this.game.world.centerX;
+            ball.y = this.game.world.centerY;
+            ball.body.velocity.x = -ballVelocity;
+            ball.body.velocity.y = ballVelocity;
+            ballLaunched = true;
         }
     }
 }
