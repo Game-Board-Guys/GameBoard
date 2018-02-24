@@ -4,6 +4,7 @@ import './Lobby.css';
 import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d_maze/2d_maze';
 import BrickBreaker from './GameLibrary/brickBreaker/BrickBreakPhase';
+
 class Lobby extends Component {
 
     componentDidMount() {

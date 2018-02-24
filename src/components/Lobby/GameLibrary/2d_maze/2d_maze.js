@@ -16,7 +16,7 @@ window.Phaser = require('phaser-ce/build/custom/phaser-split');
             this.load.image('preloaderBar', 'img/2d-maze/loading-bar.png');
         },
         create: function () {
-            this.game.scale.scaleMode = window.Phaser.ScaleManager.SCALE_ALL;
+            this.game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
             this.game.scale.pageAlignHorizontally = true; 
             this.game.scale.pageAlignVertically = true;
             this.game.state.start('Preloader');
