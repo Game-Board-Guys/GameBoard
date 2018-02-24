@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import { Link } from 'react-router-dom';
 import checkers from './../../Pictures/checkers.jpeg';
 import blackjack from './../../Pictures/black-jack.jpg';
 import minesweeper from './../../Pictures/minesweeper.jpg';
@@ -56,41 +55,38 @@ class Landing extends Component {
 
         return (
             <div className="landing_main_container">
+                <h1 className="landing-logo"><p>P</p><p>E</p><p>A</p><p>X</p></h1>
                 <div className="arrow-slider-container">
                     <div className="left-arrow" onClick={() => this.slideLeft()}></div>
                     <div className="game-slider-container">
-                        <Link to="lobby">
+                        <a href="lobby">
                             <div className="game-slider" style={sliderStyle}></div>
-                        </Link>
+                        </a>
                     </div>
                     <div className="right-arrow" onClick={() => this.slideRight()}></div>
                 </div>
+                <h3 className="global-chat-header">Discussion</h3>
                 <Chat />
+                <h3 className="game-list-header">Games</h3>
                 <div className="game-list-container">
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    <a href="/lobby:pong" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-1"></div>
-                            <div className="game-text">Checkers</div>
+                            <div className="game-text">Pong</div>
                         </div>
-                    </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    </a>
+                    <a href="/lobby:maze2d" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-2"></div>
-                            <div className="game-text">Black Jack</div>
+                            <div className="game-text">Cyber Orb</div>
                         </div>
-                    </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
-                        <div className="game-container">
-                            <div className="listed-game-3"></div>
-                            <div className="game-text">Mine Sweeper</div>
-                        </div>
-                    </Link>
-                    <Link to="lobby" style={{ textDecoration: 'none' }}>
+                    </a>
+                    <a href="/lobby:brickbreaker" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-4"></div>
-                            <div className="game-text">Break Brick</div>
+                            <div className="game-text">Brick Breaker</div>
                         </div>
-                    </Link>
+                    </a>
                 </div>
             </div>
         )

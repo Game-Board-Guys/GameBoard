@@ -1,7 +1,7 @@
 .landing-chat-box {
     height: 250px;
-    width: 600px;
-    background-color: black;
+    width: 900px;
+    background-color: #242130;
     margin-top: 70px;
     border: 3px solid #5762D5;
     border-radius: 6px;
@@ -12,19 +12,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7px;
+  margin-top: 14px;
 }
 
 .chat-input {
+  padding: 5.5px;
   border: 3px solid #5762D5;
-  border-radius: 2px;
-  font-size: 20px
+  border-radius: 3px;
+  font-size: 20px;
+  background-color: #555;
+  color: #fff;
 }
 
 .chat-button {
-  font-size: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  font-family: 'Orbitron', sans-serif;
   border: 3px solid #5762D5;
-  border-radius: 2px;
+  border-radius: 3px;
   margin-left: 7px;
-  padding: 2px;
+  padding: 7px;
+  background-color: #5762D5;
+  color: #fff
+}
+
+.chat-button:hover {
+  background-color: #9C0D38;
+  border: 3px solid #9C0D38;
 }

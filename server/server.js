@@ -6,7 +6,8 @@ const express = require('express')
     , passport = require('passport')
     , session = require('express-session')
     , Auth0Strategy = require('passport-auth0')
-    , socketIO = require('socket.io');
+    , socketIO = require('socket.io')
+    , controller = require('./controller.js');
 
 const port = process.env.SERVER_PORT;
 const app = express()
@@ -101,3 +102,7 @@ app.get('/auth/logout', function(req,res) {
     req.logOut();
     res.redirect('http://localhost:3000/')
 })
+
+// -------  AVATAR CHANGE ENDPOINTS -------
+
+app.get('/api/testuser', controller.getTestUser);

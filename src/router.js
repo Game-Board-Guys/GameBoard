@@ -10,15 +10,15 @@ import Dropdown from './components/Dropdown/Dropdown.js';
 
 
 
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 export default function router(showSlideMenu, closeMenu){
     // console.log('closeMenu', closeMenu, 'showSlideMenu', showSlideMenu)
     return (
         <Router>
             <div>
-                <Route component={Landing} exact path="/"/>
-                <Route component={Login} path="/login"/>
+                <Route component={Login} exact path="/"/>
+                <Route component={Landing} path="/landing"/>
                 <Route component={Lobby} exact path="/lobby:game"/>
                 <Route component={Profile} path="/profile"/>
                 <Route component={LeaderBoard} path="/leaderboard"/>

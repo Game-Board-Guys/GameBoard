@@ -21,8 +21,8 @@ class Chat extends React.Component {
   componentDidMount() {
     // this.state.sliderImages[0]
     this.socket = io('/');
-    this.socket.on('message dispatched', this.updateMessages)
-    this.socket.on('welcome', this.setUserId)
+    this.socket.on('message dispatched', this.updateMessages);
+    this.socket.on('welcome', this.setUserId);
   }
 
     // -------socket methods--------
@@ -31,8 +31,8 @@ class Chat extends React.Component {
       updatedMessages.push(message);
       this.setState({
         messages: updatedMessages
-      });
-      console.log(this.state.messages);
+      }, () => this.refs.box.scrollTop = this.refs.box.scrollHeight);
+      console.log(this.state.messages); // We will get rid of this later.
     }
 
     setUserId(user) {
@@ -41,19 +41,19 @@ class Chat extends React.Component {
 
     sendMessage() {
       const message = this.refs.message.value;
-      console.log(message);
+      console.log(message);  // We will get rid of this later.
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
       this.refs.message.value = '';
     }
 
     handleSubmit(event) {
-      if (event.keyCode === 13)
-        this.sendMessage()
+      if (event.keyCode === 13) {
+        this.sendMessage();
+      }
     }
 
   render() {
-
     const messages = this.state.messages.map((e, i) => {
       const styles = e.user === this.state.userID ? { alignSelf: "flex-end", color: "#9C0D38", paddingLeft: "7px", fontWeight: "900", fontSize: "20px" } : { alignSelf: "flex-start", color: "#E9D758", fontWeight: "900", paddingLeft: "7px", fontSize: "20px" };
       return (
@@ -61,9 +61,11 @@ class Chat extends React.Component {
       );
     });
 
+    // let box = React.createElement('div', {className: 'landing-chat-box'}, messages);
+
     return (
       <div className="chat">
-        <div className="landing-chat-box">
+        <div className="landing-chat-box" ref="box">
           {messages}
         </div>
         <div className="chat-control">
