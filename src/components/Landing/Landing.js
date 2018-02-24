@@ -3,7 +3,7 @@ import './Landing.css';
 import checkers from './../../Pictures/checkers.jpeg';
 import blackjack from './../../Pictures/black-jack.jpg';
 import minesweeper from './../../Pictures/minesweeper.jpg';
-import Chat from '../Chat/Chat';
+//import Chat from '../Chat/Chat';
 import breakBrick from './../../Pictures/Screenshot (7).png';
 
 
@@ -66,7 +66,7 @@ class Landing extends Component {
                     <div className="right-arrow" onClick={() => this.slideRight()}></div>
                 </div>
                 <h3 className="global-chat-header">Discussion</h3>
-                <Chat />
+             
                 <h3 className="game-list-header">Games</h3>
                 <div className="game-list-container">
                     <a href="/lobby:pong" style={{ textDecoration: 'none' }}>
