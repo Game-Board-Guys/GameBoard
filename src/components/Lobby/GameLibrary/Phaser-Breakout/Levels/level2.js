@@ -1,4 +1,4 @@
-export default function playState() {
+export default function level2State() {
     var ball;
     var paddle;
     var bricks;
@@ -13,7 +13,16 @@ export default function playState() {
     var lifeLostText;
     var playing = true;
     var startButton;
+    var ballSpeed;
+
     return {
+        init: function (data) {
+            ball = data.ball;
+            paddle = data.paddle;
+            score = data.score;
+            lives = data.lives;
+            ballSpeed = data.ballSpeed;
+        },
         create: function () {
             ball = this.game.add.sprite(50, 250, 'ball');
             ball.animations.add('wobble', [0, 1, 0, 2, 0, 1, 0, 2, 0], 24)
@@ -25,7 +34,6 @@ export default function playState() {
             this.game.physics.arcade.checkCollision.down = false;
             ball.checkWorldBounds = true;
             ball.events.onOutOfBounds.add(this.ballLeaveScreen, this)
-
             paddle = this.game.add.sprite(this.game.world.width * 0.5, this.game.world.height - 5, 'paddle')
             paddle.anchor.set(0.5, 1);
             this.game.physics.enable(paddle, window.Phaser.Physics.ARCADE);
@@ -39,7 +47,7 @@ export default function playState() {
             lifeLostText = this.game.add.text(this.game.world.width * 0.5, this.game.world.height * 0.5, 'Life lost, click to continue', this.textStyle)
             lifeLostText.anchor.set(0.5);
             lifeLostText.visible = false;
-            ball.body.velocity.set(150, -150);
+            ball.body.velocity.set(ballSpeed, -ballSpeed);
         },
         update: function () {
             this.game.physics.arcade.collide(ball, paddle, this.ballHitPaddle);
@@ -93,8 +101,6 @@ export default function playState() {
             }
             if (count_alive == 0) {
                 //link to win
-                score = 0;
-                lives = 3;
                 this.win();
             }
         },
@@ -107,12 +113,10 @@ export default function playState() {
                 paddle.reset(this.game.world.width * 0.5, this.game.world.height - 5);
                 this.game.input.onDown.addOnce(function () {
                     lifeLostText.visible = false;
-                    ball.body.velocity.set(150, -150);
+                    ball.body.velocity.set(ballSpeed, -ballSpeed);
                 }, this)
             } else {
                 //link to lose
-                score = 0;
-                lives = 3;
                 this.lose();
             }
         },
@@ -121,10 +125,10 @@ export default function playState() {
             ball.body.velocity.x = -1 * 5 * (paddle.x - ball.x);
         },
         lose: function () {
-            this.game.state.start('lose')
+            this.game.state.start('lose', true, false, {score: score})
         },
         win: function () {
-            this.game.state.start('win')
+            this.game.state.start('level3', true, false, {ball: ball, paddle: paddle, score: score, lives: lives +1, ballSpeed: ballSpeed})
 
         }
     }
