@@ -99,7 +99,7 @@ export default function level3State() {
                     count_alive += 1
                 }
             }
-            if (count_alive == 0) {
+            if (score === 630) {
                 //link to win
                 this.win();
             }

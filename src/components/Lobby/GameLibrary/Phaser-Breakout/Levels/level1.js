@@ -96,7 +96,7 @@ export default function level1State() {
                     count_alive += 1
                 }
             }
-            if (count_alive == 0) {
+            if (score === 210) {
                 //link to win
                 this.win();
             }

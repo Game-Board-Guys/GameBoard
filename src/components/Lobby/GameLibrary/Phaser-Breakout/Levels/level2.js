@@ -99,7 +99,7 @@ export default function level2State() {
                     count_alive += 1
                 }
             }
-            if (count_alive == 0) {
+            if (score === 420) {
                 //link to win
                 this.win();
             }
