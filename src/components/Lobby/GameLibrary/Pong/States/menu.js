@@ -8,7 +8,7 @@ export default function menuState(){
             wkey.onDown.addOnce(this.start, this);
         },
         start: function(){
-            this.game.state.start('play')
+            this.game.state.start('difficulty')
         }
     }
 }
