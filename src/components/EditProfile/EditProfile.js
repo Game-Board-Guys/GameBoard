@@ -30,7 +30,9 @@ class EditProfile extends Component {
             this.setState({ user: res.data.auth_id })
             axios.get(`/api/testuser?auth=${user}`).then(res => {
                 console.log(res.data)
-                this.setState({ img: res.data.img })
+                this.setState({ img: res.data[0].img })
+                console.log(this.state.img)
+                console.log(user)
             })
             var image = this.state.img;
         })
