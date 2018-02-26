@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './Lobby.css';
-import Pong from './GameLibrary/Pong/Pong';
+import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d-Maze/Maze2D';
-import BrickBreaker from './GameLibrary/Phaser-Breakout/Breakout';
+import BrickBreaker from './GameLibrary/phaser-breakout/Breakout';
+import Tanks from './GameLibrary/tanks/Tanks';
+import Invaders from './GameLibrary/invaders/Invaders';
 
 class Lobby extends Component {
 
@@ -13,6 +15,10 @@ class Lobby extends Component {
             Maze2d();
         } else if (this.props.match.params.game === ':brickbreaker') {
             BrickBreaker();
+        }else if (this.props.match.params.game === ':tanks') {
+            Tanks();
+        }else if (this.props.match.params.game === ':invaders') {
+            Invaders();
         }
 
 
