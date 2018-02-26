@@ -1,0 +1,43 @@
+.main_gamedropdown_container {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 10px 0px #5762D5 inset, 0 0 0 0 #5762D5;
+    align-items: center;  
+    position: fixed; 
+    top: 72px;
+    transition: 0.5s;
+    overflow: hidden; 
+}
+
+.gameslidedown {
+    top: -80px;
+}
+
+.gamedropdown-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 12px; 
+    margin-bottom: 12px;
+}
+
+.gamedropdown-nav div {
+    color: #5762D5;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    text-decoration: underline #363537;
+}
+
+.gamedropdown-nav div:hover {
+    color: #E9D758
+}
+
+@media(max-width:900px){ 
+    .gamedropdown-nav {
+        display: none;
+    }
+}

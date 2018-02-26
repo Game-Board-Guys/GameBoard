@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './EditProfile.css';
-import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import axios from 'axios';
@@ -50,7 +49,7 @@ class EditProfile extends Component {
                 <div className="edit-body">
                     <div className="edit-pic-container">
                         <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img"></img>
-                        <button className="edit-buttons">Edit Portrait</button>
+                        <button className="change-picture-button">Change Picture</button>
                     </div>
                     <div className="edit-info-container">
                         <span className="username-title">Username</span>
@@ -65,9 +64,9 @@ class EditProfile extends Component {
                             onChange={e => this.setAboutMe(e.target.value)} 
                             value={this.state.aboutMe}>
                         </textarea>
-                        <Link to="/profile">
-                            <button className="edit-buttons" style={{marginLeft: '400px', textDecoration: 'none'}}>Save Changes</button>
-                        </Link>
+                        <a href="/profile">
+                            <button className="save-changes-button">Save Changes</button>
+                        </a>
                     </div>
                 </div>
             </div>
