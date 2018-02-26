@@ -5,7 +5,7 @@ export default function playState(){
     this.bullet = null;
     this.background = null;
     this.targets = null;
-    this.land = null;
+    var land = null;
     this.emitter = null;
     this.power = 300;
     this.powerText = null;

@@ -10,7 +10,7 @@ window.p2 = require('phaser-ce/build/custom/p2');
 window.Phaser = require('phaser-ce/build/custom/phaser-split');
 
 export default function Game() {
-    var game = new window.Phaser.Game(800, 600, window.Phaser.AUTO, 'myCanvas');
+    var game = new window.Phaser.Game(800, 600, window.Phaser.CANVAS, 'myCanvas');
 
     game.state.add('boot', bootState);
     game.state.add('load', loadState);
