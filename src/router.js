@@ -7,12 +7,13 @@ import LeaderBoard from './components/LeaderBoard/LeaderBoard.js';
 import EditProfile from './components/EditProfile/EditProfile.js';
 // import BrickBreak from './components/Lobby/GameLibrary/BrickBreakerPureJS';
 import Dropdown from './components/Dropdown/Dropdown.js';
+import GamesDropdown from './components/GamesDropdown/GamesDropdown.js';
 
 
 
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-export default function router(showSlideMenu, closeMenu){
+export default function router(showSlideMenu, closeMenu, showGameSlide, closeGameMenu){
     // console.log('closeMenu', closeMenu, 'showSlideMenu', showSlideMenu)
     return (
         <Router>
@@ -24,6 +25,7 @@ export default function router(showSlideMenu, closeMenu){
                 <Route component={LeaderBoard} path="/leaderboard"/>
                 <Route component={EditProfile} path="/editprofile"/>
                 <Route render={() => <Dropdown showSlideMenu={showSlideMenu} closeMenu={closeMenu}/>} path='/'/>
+                <Route render={() => <GamesDropdown showGameSlide={showGameSlide} closeGameMenu={closeGameMenu}/>} path='/'/>
 
 
             </div>

@@ -33,6 +33,7 @@ class Header extends Component {
                 <a href="/landing"><div className="header-logo">P  E  A  X</div></a>
                 <div className="nav-hamburger-container">
                     <nav className="main-nav-container">
+                        <p onClick={this.props.showGameMenu}>GAMES</p>
                         <a href="/leaderboard"><p>LEADERBOARD</p></a>
                         <a href="/profile"><p>PROFILE</p></a>
                         <a href={process.env.REACT_APP_LOGIN} className="login-link"><p>LOGIN/SIGN UP</p></a>
