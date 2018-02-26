@@ -7,7 +7,7 @@ const express = require('express')
     , session = require('express-session')
     , Auth0Strategy = require('passport-auth0')
     , socketIO = require('socket.io')
-    , controller = require('./controller.js')
+    , controller = require('./controller')
 
 const port = process.env.SERVER_PORT;
 const app = express()
@@ -62,7 +62,7 @@ passport.use(new Auth0Strategy({
         if (!user[0]) {
             db.create_user([
                 displayName,
-                'test@email.com',
+                null,
                 picture,
                 user_id
             ]).then(user => {
