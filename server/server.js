@@ -7,7 +7,7 @@ const express = require('express')
     , session = require('express-session')
     , Auth0Strategy = require('passport-auth0')
     , socketIO = require('socket.io')
-    , controller = require('./controller')
+    , controller = require('./controller.js');
 
 const port = process.env.SERVER_PORT;
 const app = express()

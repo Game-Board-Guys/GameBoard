@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './EditProfile.css';
+<<<<<<< HEAD
 // import { Link } from 'react-router-dom';
+=======
+>>>>>>> master
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import axios from 'axios';
@@ -85,6 +88,7 @@ class EditProfile extends Component {
                 <div onClick={this.handleImg4Click}>chair</div>
             </div>
                 <div className="edit-body">
+<<<<<<< HEAD
                    <div className="edit-pic-container">
                        <img src={this.state.img} className="user-profile-img"></img>
                        <button className="change-picture-button">Change Picture</button>
@@ -108,6 +112,31 @@ class EditProfile extends Component {
                    </div>
                </div>
            </div>
+=======
+                    <div className="edit-pic-container">
+                        <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img"></img>
+                        <button className="change-picture-button">Change Picture</button>
+                    </div>
+                    <div className="edit-info-container">
+                        <span className="username-title">Username</span>
+                        <input className="change-name"
+                            type="text" 
+                            onChange={e => this.setUsername(e.target.value)} 
+                            value={this.state.username}>
+                        </input>
+                        <span className="about-me-title">About Me</span>
+                        <textarea className="about-me"
+                            maxLength="300"type="text" 
+                            onChange={e => this.setAboutMe(e.target.value)} 
+                            value={this.state.aboutMe}>
+                        </textarea>
+                        <a href="/profile">
+                            <button className="save-changes-button">Save Changes</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+>>>>>>> master
         )
     }
 }

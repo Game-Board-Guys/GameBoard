@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Dropdown.css';
-import { Link } from 'react-router-dom';
+
 
 
 class Dropdown extends Component {
@@ -9,18 +9,17 @@ class Dropdown extends Component {
         return (
             <div className={this.props.showSlideMenu ? "main_dropdown_container slidedown" : "main_dropdown_container"}>
                 <div className="slidedown_header">
-                    <Link onClick={this.props.closeMenu} to='/'>
+                    <a href="/" onClick={this.props.closeMenu}>
                         <div className="slidedown_logo_wrapper">
                             P E A X
                         </div>
-                    </Link>
+                    </a>
 
                     <div className="close_x" onClick={this.props.closeMenu}>X</div>
                 </div>
                 <nav className="dropdown-nav">
-                    <Link to="/lobby"><div onClick={this.props.closeMenu}>LOBBY</div></Link>
-                    <Link to="/leaderboard"><div onClick={this.props.closeMenu}>LEADERBOARD</div></Link>
-                    <Link to="/profile"><div onClick={this.props.closeMenu}>PROFILE</div></Link>
+                    <a href="/leaderboard"><div onClick={this.props.closeMenu}>LEADERBOARD</div></a>
+                    <a href="/profile"><div onClick={this.props.closeMenu}>PROFILE</div></a>
                 </nav>
             </div>
 
