@@ -12,9 +12,32 @@ class EditProfile extends Component {
         this.state = {
             username: '',
             aboutMe: '',
-            id: 0
+            img: 'https://png.icons8.com/metro/1600/decision.png',
+            user: ''
         }
-        this.handleImgClick = this.handleImgClick.bind(this);
+        this.handleImg1Click = this.handleImg1Click.bind(this);
+        this.handleImg2Click = this.handleImg2Click.bind(this);
+        this.handleImg3Click = this.handleImg3Click.bind(this);
+        this.handleImg4Click = this.handleImg4Click.bind(this);
+    }
+
+    componentDidMount(){
+        axios.get('/auth/me').then((res) => {
+            console.log(res.data)
+            // this.setState({ picture: res.data.img, name: res.data.first_name })
+            let user = res.data.auth_id;
+            this.setState({ user: res.data.auth_id })
+            axios.get(`/api/testuser?auth=${user}`).then(res => {
+                console.log(res.data)
+                this.setState({ img: res.data[0].img })
+                console.log(this.state.img)
+                console.log(user)
+            })
+            var image = this.state.img;
+        })
+        // ---set img on load---
+        // console.log("user", user);
+        
     }
 
     setUsername(value){
@@ -29,22 +52,36 @@ class EditProfile extends Component {
         })
     }
 
-    handleImgClick() {
-        console.log(this.state.id)
+    // ---------avatar changes---------
+    handleImg1Click() {
         this.setState({
-            id: 1
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg'
         })
-        console.log(this.state.id)
     }
+    handleImg2Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/pain_kwirvz.jpg'
+        })
+    }
+    handleImg3Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604657/sample.jpg'
+        })
+    }
+    handleImg4Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg'
+        })
+  }
 
     render(){
         return (
             <div className="main-edit-container">
             <div className="avatar-modal">
-                <div onClick={this.handleImgClick}>mountain</div>
-                {/* <div onClick={this.setState({id: 1})}>pizza</div>
-                <div onClick={this.setState({id: 2})}>cat</div>
-                <div onClick={this.setState({id: 3})}>plane</div> */}
+                <div onClick={this.handleImg1Click}>money</div>
+                <div onClick={this.handleImg2Click}>person</div>
+                <div onClick={this.handleImg3Click}>flower</div>
+                <div onClick={this.handleImg4Click}>chair</div>
             </div>
                 <div className="edit-body">
                     <div className="edit-pic-container">

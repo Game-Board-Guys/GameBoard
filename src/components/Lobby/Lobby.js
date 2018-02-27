@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Lobby.css';
 import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d-Maze/Maze2D';
-import BrickBreaker from './GameLibrary/phaser-breakout/Breakout';
+import BrickBreaker from './GameLibrary/Phaser-Breakout/Breakout';
 import Tanks from './GameLibrary/tanks/Tanks';
 import Invaders from './GameLibrary/invaders/Invaders';
 
