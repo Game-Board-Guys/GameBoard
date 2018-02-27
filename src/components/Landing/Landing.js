@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import checkers from './../../Pictures/checkers.jpeg';
-import blackjack from './../../Pictures/black-jack.jpg';
-import minesweeper from './../../Pictures/minesweeper.jpg';
 import Chat from '../Chat/Chat';
 import Pong from './../../Pictures/Pong.png';
 import Orb from './../../Pictures/Orb.png';
