@@ -3,8 +3,12 @@ import './Landing.css';
 import checkers from './../../Pictures/checkers.jpeg';
 import blackjack from './../../Pictures/black-jack.jpg';
 import minesweeper from './../../Pictures/minesweeper.jpg';
-//import Chat from '../Chat/Chat';
-import breakBrick from './../../Pictures/Screenshot (7).png';
+import Chat from '../Chat/Chat';
+import Pong from './../../Pictures/Pong.png';
+import Orb from './../../Pictures/Orb.png';
+import Invaders from './../../Pictures/Invaders.png';
+import Tanks from './../../Pictures/Tanks.png';
+import BrickBreakers from './../../Pictures/BrickBreakers.png';
 
 
 class Landing extends Component {
@@ -13,7 +17,7 @@ class Landing extends Component {
 
         this.state = {
             // sliderImages: ["url('./../../Pictures/checkers.jpeg')","url('./../../Pictures/black-jack.jpg')", "url('./../../Pictures/minesweeper.jpg')", "url('./../../Pictures/Screenshot (7).png')"],
-            sliderImages: [`url(${checkers}`, `url(${minesweeper}`, `url(${blackjack}`],
+            sliderImages: [`url(${Pong}`, `url(${Orb}`, `url(${Invaders}`, `url(${BrickBreakers}`, `url(${Tanks}`],
             cur: 0
         }
         this.slideLeft = this.slideLeft.bind(this);
@@ -66,25 +70,37 @@ class Landing extends Component {
                     <div className="right-arrow" onClick={() => this.slideRight()}></div>
                 </div>
                 <h3 className="global-chat-header">Discussion</h3>
-             
+                <Chat />
                 <h3 className="game-list-header">Games</h3>
                 <div className="game-list-container">
                     <a href="/lobby:pong" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
-                            <div className="listed-game-1"></div>
+                            <div className="listed-game-1-pong"></div>
                             <div className="game-text">Pong</div>
                         </div>
                     </a>
                     <a href="/lobby:maze2d" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
-                            <div className="listed-game-2"></div>
+                            <div className="listed-game-2-cyberorb"></div>
                             <div className="game-text">Cyber Orb</div>
+                        </div>
+                    </a>
+                    <a href="/lobby:tanks" style={{ textDecoration: 'none' }}>
+                        <div className="game-container">
+                            <div className="listed-game-3-tanks"></div>
+                            <div className="game-text">Tanks</div>
                         </div>
                     </a>
                     <a href="/lobby:brickbreaker" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
-                            <div className="listed-game-4"></div>
+                            <div className="listed-game-4-brickbreaker"></div>
                             <div className="game-text">Brick Breaker</div>
+                        </div>
+                    </a>
+                    <a href="/lobby:invaders" style={{ textDecoration: 'none' }}>
+                        <div className="game-container">
+                            <div className="listed-game-5-invader"></div>
+                            <div className="game-text">Invaders</div>
                         </div>
                     </a>
                 </div>

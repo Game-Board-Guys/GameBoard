@@ -65,11 +65,11 @@ class Chat extends React.Component {
 
     return (
       <div className="chat">
-        <div className="landing-chat-box" ref="box">
+      <div className="landing-chat-box" ref="box" style={{height: this.props.height ? this.props.height : '250px', width: this.props.width ? this.props.width : '900px'}}>
           {messages}
         </div>
         <div className="chat-control">
-          <input className="chat-input" ref="message" onKeyUp={this.handleSubmit} />
+          <input className="chat-input" ref="message" onKeyUp={this.handleSubmit} style={{width: this.props.width ? `${Number(this.props.width.replace("px", "")) / 2}px` : "450px"}}/>
           <button className="chat-button" onClick={this.sendMessage}>Send</button>
         </div>
       </div>
