@@ -22,3 +22,11 @@ insert into "user" (
 'lastname test',
 'test@email.com'
 )
+
+
+ALTER TABLE users
+ADD COLUMN handle varchar(30)
+DEFAULT 'User101';
+ALTER TABLE users
+ADD COLUMN bio varchar(350)
+DEFAULT '...';

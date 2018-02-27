@@ -13,8 +13,10 @@ class EditProfile extends Component {
             username: '',
             aboutMe: '',
             img: 'https://png.icons8.com/metro/1600/decision.png',
+            // user is auth_id
             user: ''
         }
+        this.handleSaveChangesClick = this.handleSaveChangesClick.bind(this);
         this.handleImg1Click = this.handleImg1Click.bind(this);
         this.handleImg2Click = this.handleImg2Click.bind(this);
         this.handleImg3Click = this.handleImg3Click.bind(this);
@@ -22,37 +24,47 @@ class EditProfile extends Component {
     }
 
     componentDidMount(){
+        // ---checks who is logged in and loades their picture---
         axios.get('/auth/me').then((res) => {
-            console.log(res.data)
-            // this.setState({ picture: res.data.img, name: res.data.first_name })
+            // console.log(res.data)
             let user = res.data.auth_id;
             this.setState({ user: res.data.auth_id })
             axios.get(`/api/testuser?auth=${user}`).then(res => {
-                console.log(res.data)
+                // console.log(res.data)
                 this.setState({ img: res.data[0].img })
+                this.setState({username: res.data[0].handle})
+                this.setState({aboutMe: res.data[0].bio})
                 console.log(this.state.img)
-                console.log(user)
+                // console.log(user)
             })
             var image = this.state.img;
         })
-        // ---set img on load---
-        // console.log("user", user);
         
     }
 
+    // ---Changes the database values of user image bio and handle---
+    handleSaveChangesClick(){
+        axios.put('/api/editUserInfo', {
+            handle: this.state.username,
+            bio: this.state.aboutMe,
+            img: this.state.img,
+            auth_id: this.state.user
+        })
+    }
+    // ---handle change---
     setUsername(value){
         this.setState({
             username: value
         })
     }
-
+    // ---bio change---
     setAboutMe(value){
         this.setState({
             aboutMe: value
         })
     }
 
-    // ---------avatar changes---------
+    // ---avatar changes---
     handleImg1Click() {
         this.setState({
             img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg'
@@ -85,11 +97,11 @@ class EditProfile extends Component {
             </div>
                 <div className="edit-body">
                     <div className="edit-pic-container">
-                        <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img"></img>
+                        <img src={this.state.img} className="user-profile-img"></img>
                         <button className="change-picture-button">Change Picture</button>
                     </div>
                     <div className="edit-info-container">
-                        <span className="username-title">Username</span>
+                        <span className="username-title">{this.state.username}</span>
                         <input className="change-name"
                             type="text" 
                             onChange={e => this.setUsername(e.target.value)} 
@@ -100,9 +112,10 @@ class EditProfile extends Component {
                             maxLength="300"type="text" 
                             onChange={e => this.setAboutMe(e.target.value)} 
                             value={this.state.aboutMe}>
+                            {this.state.aboutMe}
                         </textarea>
                         <a href="/profile">
-                            <button className="save-changes-button">Save Changes</button>
+                            <button onClick={this.handleSaveChangesClick} className="save-changes-button">Save Changes</button>
                         </a>
                     </div>
                 </div>
