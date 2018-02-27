@@ -7,6 +7,8 @@ import Tanks from './GameLibrary/tanks/Tanks';
 import Invaders from './GameLibrary/invaders/Invaders';
 import Chat from '../Chat/Chat';
 import gameRules from './GameLibrary/GameRules.js';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor'
 
 class Lobby extends Component {
 
@@ -28,8 +30,12 @@ class Lobby extends Component {
 
 
     render() {
+            configureAnchors({offset: -60, scrollDuration: 1000})
         return (
             <div className="lobby-main-container">
+                    <ScrollableAnchor id={'Gamebox'}>
+                <div className="this is just for the anchor"></div>
+                    </ScrollableAnchor>
                 <div className="upper-lobby-container">
                     <div className="game-box">
                         <p className="game-title">{this.props.match.params.game}</p>
@@ -38,8 +44,8 @@ class Lobby extends Component {
                     <div className="upper-lobby-right">
                         <Chat height={"400px"} width={"400px"} />
                         <div className="lobby-buttons">
-                            <button>Rules</button>
-                            <button>Leave Room</button>
+                            <a href='#Rules'><button>Rules</button></a>
+                            <a href='#Rules'><button>Leave Room</button></a>
                         </div>
                     </div>
                 </div>
@@ -47,11 +53,16 @@ class Lobby extends Component {
                     <div className="game-rules-main">
                         <p className="game-rules-header">Game Rules</p>
                         {console.log(this.props.match.params.game)}
+                        <ScrollableAnchor id={'Rules'}>
                         <div className="rules-container">{gameRules(this.props.match.params.game)}
 
                         </div>
+                        </ScrollableAnchor>
                     </div>
-                    <a href="/"><div className="leave-game-button">Leave Room</div></a>
+                    <div className="lower-lobby-buttons">
+                    <a href="/landing"><div className="leave-game-button">Leave Room</div></a>
+                    <a href='#Gamebox'><div className="back-to-game-button">Back To Game</div></a>
+                    </div>
                 </div>
             </div>
         )
