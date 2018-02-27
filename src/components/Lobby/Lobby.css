@@ -70,6 +70,7 @@ canvas {
     transition: all 90ms ease-in-out;
     width: 160px;
     height: 80px;
+    text-decoration: underline #5762D5;
 }
 
 .chat-bar {
@@ -123,6 +124,13 @@ canvas {
     overflow: scroll;
 }
 
+.lower-lobby-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-between;
+}
+
 .leave-game-button {
     display: flex;
     justify-content: center;
@@ -137,6 +145,26 @@ canvas {
     box-shadow: 0 0 40px 40px #9C0D38 inset, 0 0 0 0 #9C0D38;
     transition: all 90ms ease-in-out;
     margin-right: 180px;
+    text-decoration: underline #9C0D38;
+}
+
+.back-to-game-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 200px;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 6px;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+    transition: all 90ms ease-in-out;
+    text-decoration: underline #5762D5;
+}
+
+.back-to-game-button:hover {
+    box-shadow: 0 0 10px 0 #5762D5 inset, 0 0 10px 4px #5762D5;
 }
 
 #Breaking {
