@@ -106,3 +106,5 @@ app.get('/auth/logout', function(req,res) {
 // -------  AVATAR CHANGE ENDPOINTS -------
 
 app.get('/api/testuser', controller.getTestUser);
+
+app.put('/api/editUserInfo', controller.editUserInfo);
