@@ -9,10 +9,10 @@ export default function loadState() {
             this.game.scale.pageAlignVertically = true;
             this.game.stage.backgroundColor = '#eee';
 
-            this.game.load.spritesheet('ball', 'img/wobble.png', 20, 20);
-            this.game.load.image('paddle', 'img/paddle.png');
-            this.game.load.image('brick', 'img/brick.png');
-            this.game.load.spritesheet('button', 'img/button.png', 120, 40)
+            this.game.load.spritesheet('ball', 'img/brick-breaker/wobble.png', 20, 20);
+            this.game.load.image('paddle', 'img/brick-breaker/paddle.png');
+            this.game.load.image('brick', 'img/brick-breaker/brick.png');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
         },
         create: function () {
             this.game.state.start('menu')

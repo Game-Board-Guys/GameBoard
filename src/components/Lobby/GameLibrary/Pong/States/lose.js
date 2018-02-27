@@ -1,17 +1,29 @@
-export default function lose(){
-    return{
-        create: function(){
+export default function lose() {
+    var textType = {
+        font: '14pt Arial',
+        fill: '#000',
+        align: 'center'
+    }
+    return {
+        create: function () {
             var winLabel = this.game.add.text(80, 80, 'You lose...',
-                {font: '50px Arial', fill: '#00FF00'});
-            var startLabel = this.game.add.text(80, this.game.world.height -80,
-                'press the "W" key to restart',
-                {font: '25px Arial', fill: '#fff'});
-
-            var wKey = this.game.input.keyboard.addKey(window.Phaser.Keyboard.W);
-            wKey.onDown.addOnce(this.restart, this);
+                { font: '50px Arial', fill: '#00FF00' });
+            this.createButton(this.game, "Menu", this.game.world.width * 0.5, this.game.world.height * 0.6, 190, 47.4, this.restart);
         },
-        restart: function(){
+        restart: function () {
             this.game.state.start('menu')
+        },
+        createButton: function (game, string, x, y, w, h, callback) {
+            var button1 = game.add.button(x, y, 'button', callback, this, 8, 6, 2);
+            button1.anchor.setTo(0.5, 0.5);
+            button1.width = w;
+            button1.height = h;
+
+            var text = game.add.text(
+                button1.x, button1.y, string,
+                textType
+            );
+            text.anchor.setTo(0.5, 0.5);
         }
     }
 }
