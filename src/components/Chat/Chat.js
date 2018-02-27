@@ -69,7 +69,7 @@ class Chat extends React.Component {
           {messages}
         </div>
         <div className="chat-control">
-          <input className="chat-input" ref="message" onKeyUp={this.handleSubmit} style={{width: this.props.width ? this.props.width : "500px"}}/>
+          <input className="chat-input" ref="message" onKeyUp={this.handleSubmit} style={{width: this.props.width ? `${Number(this.props.width.replace("px", "")) / 2}px` : "450px"}}/>
           <button className="chat-button" onClick={this.sendMessage}>Send</button>
         </div>
       </div>
