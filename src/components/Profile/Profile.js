@@ -1,15 +1,47 @@
 import React, { Component } from 'react';
 import './Profile.css';
-
+import axios from 'axios';
 
 class Profile extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            username: '...',
+            img: 'https://png.icons8.com/metro/1600/decision.png',
+            // user is auth_id
+            user: ''
+        }
+    }
+        componentDidMount(){
+            // ---checks who is logged in and loades their picture---
+            axios.get('/auth/me').then((res) => {
+                // console.log(res.data)
+                let user = res.data.auth_id;
+                this.setState({ user: res.data.auth_id })
+                axios.get(`/api/testuser?auth=${user}`).then(res => {
+                    // console.log(res.data)
+                    this.setState({ img: res.data[0].img })
+                    this.setState({username: res.data[0].handle})
+                    // console.log(this.state.img)
+                    // console.log(user)
+                })
+                // var image = this.state.img;
+            })
+            
+        }
+
+
+
+
+    
     render() {
         return (
             <div className="main-profile-container">
                 <div className="user-info">
                     <div className="user-info-box">
-                        <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img" />
-                        <p className="profile-username">Blair Woodward</p>
+                        <img src={this.state.img} className="user-profile-img" />
+                        <p className="profile-username">{this.state.username}</p>
                         <p className="profile-level">Level 26</p>
                         <a href="/editprofile">
                             <button className="update-profile-button">Update Profile</button>
