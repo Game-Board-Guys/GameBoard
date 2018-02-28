@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default function playState() {
     var sky;
     var backgroundV = 1;
@@ -66,6 +68,22 @@ export default function playState() {
 
             scoreText.text = 'Score: ' + score;
             if (score === 3200) {
+                // console.log(score);
+                // ---when you beat the game your info is pulled from a database and if your high score is lower than the new score , your high score is updated.---
+                // ---I can set score to local storage---
+                localStorage.setItem('score', score);
+                axios.get('/auth/me').then((res) => {
+                    // console.log(res.data)
+                    let user = res.data.auth_id;
+                    // console.log(user);
+                    if (res.data.invade_high_score < localStorage.getItem('score')) {
+                        axios.put('/api/editUserScore', {
+                            score: localStorage.getItem('score'),
+                            auth_id: user
+                        })
+                    }
+                })
+
                 score = 0;
 
                 this.game.state.start('win')
@@ -109,7 +127,7 @@ export default function playState() {
             enemy.kill();
             score += 100;
         },
-        playerCollision: function(enemy, player){
+        playerCollision: function (enemy, player) {
             player.kill();
             score = 0;
             this.game.state.start('lose');

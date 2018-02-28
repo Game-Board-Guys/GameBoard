@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default function playState() {
     var paddle1;
     var paddle2;
@@ -63,6 +65,16 @@ export default function playState() {
             paddle2.body.velocity.x = 0;
             paddle2.body.maxVelocity.y = aiMaxSpeed; //used for difficulty
             if (score1 === 11) {
+                axios.get('/auth/me').then((res) => {
+                    console.log(res.data)
+                    let user = res.data.auth_id;
+                    let newScore = res.data.pong_wins+1
+                    // console.log(user);
+                        axios.put('/api/editUserScorePong', {
+                            score: newScore,
+                            auth_id: user
+                        })
+                })
                 this.Win();
             } else if (score2 === 11) {
                 this.Lose();

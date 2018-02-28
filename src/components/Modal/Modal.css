@@ -1,0 +1,141 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    padding: 50px;
+}
+
+.closing-x {
+    font-size: 30px;
+    color: #5762D5;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.modal-style {
+    background: #363537;
+    border-radius: 5px;
+    height: 70%;
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px;
+    position: fixed;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.avatar-modal {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-style {
+    position: absolute;
+    bottom: 20
+}
+
+.picture-name-1 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-2 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/devinobowen/image/upload/v1517604867/pain_kwirvz.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-3 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/devinobowen/image/upload/v1517604657/sample.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-4 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-5 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/gameboardguys/image/upload/v1519339721/frowny-pizza.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-6 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/gameboardguys/image/upload/v1519339725/big-plane.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-7 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/gameboardguys/image/upload/v1519339727/cage-cat.jpg');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-8 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url('https://res.cloudinary.com/gameboardguys/image/upload/v1519339730/mountainjpg.webp');
+    background-size: cover;
+    margin-right: 40px;
+    margin-bottom: 35px;
+    border: 5px solid;
+    border-color: #5762D5
+}
+
+.picture-name-container {
+    cursor: pointer;
+}

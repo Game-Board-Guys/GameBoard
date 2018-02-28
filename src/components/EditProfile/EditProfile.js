@@ -3,6 +3,7 @@ import './EditProfile.css';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import axios from 'axios';
+import Modal from './../Modal/Modal';
 
 
 class EditProfile extends Component {
@@ -13,12 +14,17 @@ class EditProfile extends Component {
             username: '',
             aboutMe: '',
             img: 'https://png.icons8.com/metro/1600/decision.png',
-            user: ''
+            user: '',
+            show: false
         }
         this.handleImg1Click = this.handleImg1Click.bind(this);
         this.handleImg2Click = this.handleImg2Click.bind(this);
         this.handleImg3Click = this.handleImg3Click.bind(this);
         this.handleImg4Click = this.handleImg4Click.bind(this);
+        this.handleImg5Click = this.handleImg5Click.bind(this);
+        this.handleImg6Click = this.handleImg6Click.bind(this);
+        this.handleImg7Click = this.handleImg7Click.bind(this);
+        this.handleImg8Click = this.handleImg8Click.bind(this);
     }
 
     componentDidMount(){
@@ -54,39 +60,100 @@ class EditProfile extends Component {
 
     // ---------avatar changes---------
     handleImg1Click() {
+        console.log('handle image click')
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg'
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg',
+            show: false
         })
     }
     handleImg2Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/pain_kwirvz.jpg'
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/pain_kwirvz.jpg',
+            show: false
         })
     }
     handleImg3Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604657/sample.jpg'
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604657/sample.jpg',
+            show: false
         })
     }
     handleImg4Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg'
+            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg',
+            show: false
         })
-  }
+    }
+
+    handleImg5Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339721/frowny-pizza.jpg',
+            show: false
+        })
+    }
+
+    handleImg6Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339725/big-plane.jpg',
+            show: false
+        })
+    }
+
+    handleImg7Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339727/cage-cat.jpg',
+            show: false
+        })
+    }
+
+    handleImg8Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339730/mountainjpg.webp',
+            show: false
+        })
+    }
+
+    showModal = () => {
+        this.setState({
+            show: true
+        })
+    }
+
+    closeTheModal = () => {
+        this.setState({
+            show: false
+        })
+    }
 
     render(){
+        console.log(this.state)
         return (
             <div className="main-edit-container">
-            <div className="avatar-modal">
-                <div onClick={this.handleImg1Click}>money</div>
-                <div onClick={this.handleImg2Click}>person</div>
-                <div onClick={this.handleImg3Click}>flower</div>
-                <div onClick={this.handleImg4Click}>chair</div>
-            </div>
+            <Modal 
+             closeModal={this.closeTheModal}
+                showChosenImg1={this.handleImg1Click}
+                showChosenImg2={this.handleImg2Click}
+                showChosenImg3={this.handleImg3Click}
+                showChosenImg4={this.handleImg4Click}
+                showChosenImg5={this.handleImg5Click}
+                showChosenImg6={this.handleImg6Click}
+                showChosenImg7={this.handleImg7Click}
+                showChosenImg8={this.handleImg8Click}
+                onClose1={this.showModal}
+                onClose2={this.showModal}
+                onClose3={this.showModal}
+                onClose4={this.showModal}
+                onClose5={this.showModal}
+                onClose6={this.showModal}
+                onClose7={this.showModal}
+                onClose8={this.showModal}
+                // closeModal={this.showModal}
+                show={this.state.show}>
+            </Modal>
                 <div className="edit-body">
                     <div className="edit-pic-container">
-                        <img src="https://lh3.googleusercontent.com/-Sh2ali7Rm1Q/AAAAAAAAAAI/AAAAAAAAAMY/eYgSvFha8ww/photo.jpg" className="user-profile-img"></img>
-                        <button className="change-picture-button">Change Picture</button>
+                        <img src={this.state.img} className="user-profile-img"></img>
+                        <button className="change-picture-button" onClick={this.showModal}>Change Picture</button>
                     </div>
                     <div className="edit-info-container">
                         <span className="username-title">Username</span>

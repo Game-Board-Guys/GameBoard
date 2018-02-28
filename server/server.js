@@ -106,3 +106,11 @@ app.get('/auth/logout', function(req,res) {
 // -------  AVATAR CHANGE ENDPOINTS -------
 
 app.get('/api/testuser', controller.getTestUser);
+
+app.put('/api/editUserInfo', controller.editUserInfo);
+
+
+// ---updates high score for invaders---
+app.put('/api/editUserScore', controller.editUserScore);
+// ---updates win score for pong---
+app.put('/api/editUserScorePong', controller.editUserScorePong);

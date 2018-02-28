@@ -34,9 +34,53 @@
     flex-direction: column;
     border: 3px solid #5762D5;
     border-radius: 6px;
-    background: aliceblue;
+    background: #363537;
     margin-top: 20px;
-    
+}
+
+.stat-tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 94%;
+    height: 150px;
+    background: #242130;
+    border: 2px solid #5762D5;
+    color: #9C0D38;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.standings-tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 94%;
+    height: 150px;
+    background: #242130;
+    border: 2px solid #5762D5;
+    color: #9C0D38;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.stat-tile-header {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.standings-tile-header {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.wins-losses {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-around;
+    font-size: 19px; 
 }
 
 .standings {
@@ -48,7 +92,7 @@
     flex-direction: column;
     border: 3px solid #5762D5;
     border-radius: 6px;
-    background: aliceblue;
+    background: #363537;
     margin-top: 20px;
 }
 
@@ -76,7 +120,7 @@
     align-items: center;
     height: 80px;
     width: 90%;
-    color: #363537;
+    color: aliceblue;
     font-size: 35px;
     font-family: 'Orbitron', sans-serif;
     margin-top: 15px;
@@ -89,7 +133,7 @@
     align-items: center;
     height: 80px;
     width: 90%;
-    color: #363537;
+    color: aliceblue;
     font-size: 35px;
     font-family: 'Orbitron', sans-serif;
     margin-top: 15px;
@@ -101,6 +145,7 @@
     height: 600px;
     margin-left: 30px;
     margin-top: 10px;
+    padding-right: 10px;
     font-family: 'Orbitron', sans-serif;
     font-size: 19px;
     line-height: 190%;

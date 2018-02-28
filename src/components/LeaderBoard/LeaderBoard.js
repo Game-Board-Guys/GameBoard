@@ -3,15 +3,22 @@ import './LeaderBoard.css';
 
 
 class LeaderBoard extends Component {
+
+    showGameLeaders(){
+
+    }
+
     render(){
         return (
             <div className="main-leaderboard-container">
                 <div className="leaderboard-sidebar">
                     <div className="sidebar-header">Select Game</div>
                     <div className="game-name-box">
-                        <p>Pong</p>
-                        <p>Cyber Orb</p>
-                        <p>Brick Breaker</p>
+                        <p className="game-name">Pong</p>
+                        <p className="game-name">Brick Breaker</p>
+                        <p className="game-name">Tanks</p>
+                        <p className="game-name">Invaders</p>
+                        <p className="game-name">Cyber Orb</p>
                         
                     </div>
                 </div>

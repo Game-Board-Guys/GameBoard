@@ -6,7 +6,14 @@ import Maze2d from './GameLibrary/2d-Maze/Maze2D';
 import BrickBreaker from './GameLibrary/Phaser-Breakout/Breakout';
 import Tanks from './GameLibrary/tanks/Tanks';
 import Invaders from './GameLibrary/invaders/Invaders';
+
 import MatchThree from './GameLibrary/match-three/MatchThree';
+
+import Chat from '../Chat/Chat';
+import gameRules from './GameLibrary/GameRules.js';
+import ScrollableAnchor from 'react-scrollable-anchor';
+import { configureAnchors } from 'react-scrollable-anchor'
+
 
 class Lobby extends Component {
 
@@ -30,38 +37,39 @@ class Lobby extends Component {
 
 
     render() {
+            configureAnchors({offset: -60, scrollDuration: 1000})
         return (
             <div className="lobby-main-container">
+                    <ScrollableAnchor id={'Gamebox'}>
+                <div className="this is just for the anchor"></div>
+                    </ScrollableAnchor>
                 <div className="upper-lobby-container">
                     <div className="game-box">
-                        <p className="game-title">{this.props.match.params.game}</p>
+                        <p className="game-title">{this.props.match.params.game.replace(":", "")}</p>
                         <div id="myCanvas"></div>
                     </div>
                     <div className="upper-lobby-right">
-                        <div className="chat-bar"></div>
+                        <Chat height={"400px"} width={"400px"} />
                         <div className="lobby-buttons">
-                            <button onClick={this.draw}>Start Game</button>
-                            <button>Rules</button>
-                            <button>Leave Game</button>
+                            <a href='#Rules'><button>Rules</button></a>
+                            <a href='#Rules'><button>Leave Room</button></a>
                         </div>
                     </div>
                 </div>
                 <div className="lower-lobby">
                     <div className="game-rules-main">
                         <p className="game-rules-header">Game Rules</p>
-                        <div className="rules-container">The objective in Brick Breaker is to eliminate all the bricks at the top of the screen.
-                                                        To do this you must use the paddle at the bottom of the screen to bounce the ball up to
-                                                        the bricks to break them. To move the paddle, simply use the arrow buttons on your keyboard,
-                                                        your mouse to drag it left to right, or your thumb if playing mobily. To beat the level,
-                                                        break all the bricks. Move your paddle quicker to change direction or trajectory of the
-                                                        ball. You are given three lives to complete as many levels as you can. If the ball hits
-                                                        the bottom of the screen without you making contact with your paddle, you lose a life.
-                                                        To get a new life you must complete three levels. If you leave game early, you will get
-                                                        a loss on your stats.
+                        {console.log(this.props.match.params.game)}
+                        <ScrollableAnchor id={'Rules'}>
+                        <div className="rules-container">{gameRules(this.props.match.params.game)}
 
-</div>
+                        </div>
+                        </ScrollableAnchor>
                     </div>
-                    <a href="/"><div className="leave-game-button">Leave Game</div></a>
+                    <div className="lower-lobby-buttons">
+                    <a href="/landing"><div className="leave-game-button">Leave Room</div></a>
+                    <a href='#Gamebox'><div className="back-to-game-button">Back To Game</div></a>
+                    </div>
                 </div>
             </div>
         )
