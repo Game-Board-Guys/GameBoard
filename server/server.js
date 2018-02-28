@@ -116,3 +116,5 @@ app.put('/api/editUserScore', controller.editUserScore);
 app.put('/api/editUserScorePong', controller.editUserScorePong);
 
 app.put('/api/editUserScoreBreak', controller.editUserScoreBreak);
+
+app.put('/api/editUserScoreMaze', controller.editUserScoreMaze);

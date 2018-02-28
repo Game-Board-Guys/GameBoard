@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default function playState() {
     var Ball = {
         _WIDTH: 320,
@@ -170,7 +172,22 @@ export default function playState() {
         finishLevel: function () {
             if (this.level >= this.maxLevels) {
                 this.totalTimer += this.timer;
+                console.log(this.totalTimer)
                 
+                    // localStorage.setItem('score', score);
+                axios.get('/auth/me').then((res) => {
+                    // console.log(res.data)
+                    let user = res.data.auth_id;
+                    // console.log(user);
+                    if (res.data.maze_time_highscore > this.totalTimer || res.data.maze_time_highscore == 0) {
+                        axios.put('/api/editUserScoreMaze', {
+                            // score: localStorage.getItem('score'),
+                            score: this.totalTimer,
+                            auth_id: user
+                        })
+                    }
+                })
+
                 this.game.state.start('win');
             }
             else {
