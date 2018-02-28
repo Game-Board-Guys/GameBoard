@@ -79,23 +79,35 @@ class EditProfile extends Component {
             img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg',
             show: false
         })
-  }
+    }
 
-  showModal = () => {
-      this.setState({
-        ... this.state,
-        show: !this.state.show
-      })
-     
-  }
+    showModal = () => {
+        this.setState({
+            show: true
+        })
+    }
+
+    closeTheModal = () => {
+        this.setState({
+            show: false
+        })
+    }
 
     render(){
         console.log(this.state)
         return (
             <div className="main-edit-container">
             <Modal 
-                showChosenImg={this.handleImg1Click}
-                onClose={this.showModal}
+             closeModal={this.closeTheModal}
+                showChosenImg1={this.handleImg1Click}
+                showChosenImg2={this.handleImg2Click}
+                showChosenImg3={this.handleImg3Click}
+                showChosenImg4={this.handleImg4Click}
+                onClose1={this.showModal}
+                onClose2={this.showModal}
+                onClose3={this.showModal}
+                onClose4={this.showModal}
+                // closeModal={this.showModal}
                 show={this.state.show}>
             </Modal>
                 <div className="edit-body">
