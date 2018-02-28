@@ -83,6 +83,8 @@
     width: 160px;
     height: 80px;
     text-decoration: underline #5762D5;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .change-picture-button {
@@ -99,6 +101,7 @@
     transition: all 90ms ease-in-out;
     width: 160px;
     height: 80px;
+    margin-top: 25px;
 }
 
 .edit-buttons:hover {
