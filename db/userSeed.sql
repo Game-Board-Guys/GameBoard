@@ -34,3 +34,7 @@ DEFAULT '...';
 ALTER TABLE users
 ADD COLUMN invade_high_score text
 DEFAULT '0';
+
+ALTER TABLE users
+ADD COLUMN brick_breaker_highscore text
+DEFAULT '0';

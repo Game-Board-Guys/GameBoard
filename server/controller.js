@@ -30,5 +30,13 @@ module.exports = {
         db.edit_user_wins_pong([req.body.score, req.body.auth_id]).then(response => {
             res.status(200).send(response)
         })
+    },
+    editUserScoreBreak: (req, res, next) => {
+        const db = req.app.get('db');
+        console.log(req.body.score)
+        console.log(req.body.auth_id)
+        db.edit_user_score_break([req.body.score, req.body.auth_id]).then(response => {
+            res.status(200).send(response)
+        })
     }
 }
