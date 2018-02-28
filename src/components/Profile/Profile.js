@@ -10,31 +10,35 @@ class Profile extends Component {
             username: '...',
             img: 'https://png.icons8.com/metro/1600/decision.png',
             // user is auth_id
-            user: ''
+            user: '',
+            aboutMe: ''
         }
     }
-        componentDidMount(){
-            // ---checks who is logged in and loades their picture---
-            axios.get('/auth/me').then((res) => {
-                // console.log(res.data)
-                let user = res.data.auth_id;
-                this.setState({ user: res.data.auth_id })
-                axios.get(`/api/testuser?auth=${user}`).then(res => {
-                    // console.log(res.data)
-                    this.setState({ img: res.data[0].img })
-                    this.setState({username: res.data[0].handle})
-                    // console.log(this.state.img)
-                    // console.log(user)
-                })
-                // var image = this.state.img;
+    componentDidMount() {
+        // ---checks who is logged in and loades their picture---
+        axios.get('/auth/me').then((res) => {
+            // console.log(res.data)
+            let user = res.data.auth_id;
+            this.setState({
+                user: res.data.auth_id,
+                aboutMe: res.data.bio
             })
-            
-        }
+            axios.get(`/api/testuser?auth=${user}`).then(res => {
+                // console.log(res.data)
+                this.setState({ img: res.data[0].img })
+                this.setState({ username: res.data[0].handle })
+                // console.log(this.state.img)
+                // console.log(user)
+            })
+            // var image = this.state.img;
+        })
+
+    }
 
 
 
 
-    
+
     render() {
         return (
             <div className="main-profile-container">
@@ -42,7 +46,11 @@ class Profile extends Component {
                     <div className="user-info-box">
                         <img src={this.state.img} className="user-profile-img" />
                         <p className="profile-username">{this.state.username}</p>
-                        <p className="profile-level">Level 26</p>
+                        <p className="bio-header">About {this.state.username}</p>
+                        <p className="profile-bio">
+                            <p className="bio-words">{this.state.aboutMe}
+                            </p>
+                        </p>
                         <a href="/editprofile">
                             <button className="update-profile-button">Update Profile</button>
                         </a>
@@ -98,7 +106,7 @@ class Profile extends Component {
                             <div className="standings-tile-header">Cyber Orb</div>
                             <div>314th Place</div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

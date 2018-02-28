@@ -62,53 +62,53 @@ class EditProfile extends Component {
     handleImg1Click() {
         console.log('handle image click')
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/money_giicnh.jpg',
+            img: 'https://i.imgur.com/vCjxv9S.jpg',
             show: false
         })
     }
     handleImg2Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604867/pain_kwirvz.jpg',
+            img: 'https://i.imgur.com/LUGHTal.jpg',
             show: false
         })
     }
     handleImg3Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604657/sample.jpg',
+            img: 'https://i.imgur.com/gdwBnlM.jpg',
             show: false
         })
     }
     handleImg4Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/devinobowen/image/upload/v1517604868/sleep_sfpips.jpg',
+            img: 'https://i.imgur.com/liTLW97.png',
             show: false
         })
     }
 
     handleImg5Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339721/frowny-pizza.jpg',
+            img: 'https://i.imgur.com/cnGlWJl.jpg',
             show: false
         })
     }
 
     handleImg6Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339725/big-plane.jpg',
+            img: 'https://i.imgur.com/1HKf7ga.jpg',
             show: false
         })
     }
 
     handleImg7Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339727/cage-cat.jpg',
+            img: 'https://i.imgur.com/X6Inegp.jpg',
             show: false
         })
     }
 
     handleImg8Click() {
         this.setState({
-            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339730/mountainjpg.webp',
+            img: 'https://i.imgur.com/xGHnLxk.jpg',
             show: false
         })
     }

@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     width: 400px;
-    height: 500px;
+    height: 650px;
     flex-direction: column;
 }
 
@@ -108,10 +108,29 @@
     font-family: 'Orbitron', sans-serif;
 }
 
-.profile-level {
-    font-size: 28px;
+.bio-header {
+    font-size: 32px;
     font-family: 'Orbitron', sans-serif;
     margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.profile-bio {
+    height: 200px;
+    width: 100%;
+    color: #9C0D38;
+    font-size: 18px;
+    line-height: 150%;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    background: #242130;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 0px;
+    overflow: scroll;
+}
+
+.bio-words {
+    margin: 25px;
 }
 
 .stats-header {
