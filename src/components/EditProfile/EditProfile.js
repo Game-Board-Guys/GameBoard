@@ -21,6 +21,10 @@ class EditProfile extends Component {
         this.handleImg2Click = this.handleImg2Click.bind(this);
         this.handleImg3Click = this.handleImg3Click.bind(this);
         this.handleImg4Click = this.handleImg4Click.bind(this);
+        this.handleImg5Click = this.handleImg5Click.bind(this);
+        this.handleImg6Click = this.handleImg6Click.bind(this);
+        this.handleImg7Click = this.handleImg7Click.bind(this);
+        this.handleImg8Click = this.handleImg8Click.bind(this);
     }
 
     componentDidMount(){
@@ -81,6 +85,34 @@ class EditProfile extends Component {
         })
     }
 
+    handleImg5Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339721/frowny-pizza.jpg',
+            show: false
+        })
+    }
+
+    handleImg6Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339725/big-plane.jpg',
+            show: false
+        })
+    }
+
+    handleImg7Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339727/cage-cat.jpg',
+            show: false
+        })
+    }
+
+    handleImg8Click() {
+        this.setState({
+            img: 'https://res.cloudinary.com/gameboardguys/image/upload/v1519339730/mountainjpg.webp',
+            show: false
+        })
+    }
+
     showModal = () => {
         this.setState({
             show: true
@@ -103,10 +135,18 @@ class EditProfile extends Component {
                 showChosenImg2={this.handleImg2Click}
                 showChosenImg3={this.handleImg3Click}
                 showChosenImg4={this.handleImg4Click}
+                showChosenImg5={this.handleImg5Click}
+                showChosenImg6={this.handleImg6Click}
+                showChosenImg7={this.handleImg7Click}
+                showChosenImg8={this.handleImg8Click}
                 onClose1={this.showModal}
                 onClose2={this.showModal}
                 onClose3={this.showModal}
                 onClose4={this.showModal}
+                onClose5={this.showModal}
+                onClose6={this.showModal}
+                onClose7={this.showModal}
+                onClose8={this.showModal}
                 // closeModal={this.showModal}
                 show={this.state.show}>
             </Modal>
