@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Lobby.css';
 //games
-import Pong from './GameLibrary/Pong/Pong';
+import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d-Maze/Maze2D';
 import BrickBreaker from './GameLibrary/Phaser-Breakout/Breakout';
 import Tanks from './GameLibrary/tanks/Tanks';
