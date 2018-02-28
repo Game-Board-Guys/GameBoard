@@ -52,23 +52,23 @@ class Profile extends Component {
                     <div className="stats-header">Stats</div>
                     <div className="user-stats-actual">
                         <div className="stat-tile">
-                            <h1 className="stat-tile-header">Pong</h1>
+                            <div className="stat-tile-header">Pong</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
-                            <h1 className="stat-tile-header">Brick Breaker</h1>
+                            <div className="stat-tile-header">Brick Breaker</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
-                            <h1 className="stat-tile-header">Tanks</h1>
+                            <div className="stat-tile-header">Tanks</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
-                            <h1 className="stat-tile-header">Invaders</h1>
+                            <div className="stat-tile-header">Invaders</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
-                            <h1 className="stat-tile-header">Cyber Orb</h1>
+                            <div className="stat-tile-header">Cyber Orb</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
 
@@ -79,23 +79,23 @@ class Profile extends Component {
                     <div className="standings-header">Standings</div>
                     <div className="standings-actual">
                         <div className="standings-tile">
-                            <h1 className="standings-tile-header">Pong</h1>
+                            <div className="standings-tile-header">Pong</div>
                             <div>34th Place</div>
                         </div>
                         <div className="standings-tile">
-                            <h1 className="standings-tile-header">Brick Breaker</h1>
+                            <div className="standings-tile-header">Brick Breaker</div>
                             <div>13th Place</div>
                         </div>
                         <div className="standings-tile">
-                            <h1 className="standings-tile-header">Tanks</h1>
+                            <div className="standings-tile-header">Tanks</div>
                             <div>2th Place</div>
                         </div>
                         <div className="standings-tile">
-                            <h1 className="standings-tile-header">Invaders</h1>
+                            <div className="standings-tile-header">Invaders</div>
                             <div>56th Place</div>
                         </div>
                         <div className="standings-tile">
-                            <h1 className="standings-tile-header">Cyber Orb</h1>
+                            <div className="standings-tile-header">Cyber Orb</div>
                             <div>314th Place</div>
                         </div>
                         

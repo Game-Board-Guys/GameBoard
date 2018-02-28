@@ -38,7 +38,7 @@ class Lobby extends Component {
                     </ScrollableAnchor>
                 <div className="upper-lobby-container">
                     <div className="game-box">
-                        <p className="game-title">{this.props.match.params.game}</p>
+                        <p className="game-title">{this.props.match.params.game.replace(":", "")}</p>
                         <div id="myCanvas"></div>
                     </div>
                     <div className="upper-lobby-right">
