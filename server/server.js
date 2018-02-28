@@ -114,3 +114,5 @@ app.put('/api/editUserInfo', controller.editUserInfo);
 app.put('/api/editUserScore', controller.editUserScore);
 // ---updates win score for pong---
 app.put('/api/editUserScorePong', controller.editUserScorePong);
+
+app.put('/api/editUserScoreBreak', controller.editUserScoreBreak);
