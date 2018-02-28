@@ -15,12 +15,6 @@
     height: 100vh;
     background: #363537;
     border-right: 1px solid #5762D5;
-    overflow: scroll;
-}
-
-.leaderboard-sidebar div{
-
-    color: white;
 }
 
 .sidebar-header {
@@ -58,12 +52,30 @@
 }
 
 .game-name-box {
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    width: 69%;
+    /* height: 100%; */
     margin-top: 240px;
-    overflow: scroll;
+    overflow-y: scroll;
+    margin-left: 150px;
+}
+
+.game-name-box::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+.game-name-box::-webkit-scrollbar-thumb {
+    background: #5762D5;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.game-name-box::-webkit-scrollbar-track {
+    background: #363537
 }
 
 .game-name {

@@ -69,7 +69,7 @@ class Landing extends Component {
                 <h3 className="global-chat-header">Discussion</h3>
                 <Chat />
                 <h3 className="game-list-header">Games</h3>
-                <div className="game-list-container">
+                <div className="game-list-container" >
                     <a href="/lobby:pong" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-1-pong"></div>

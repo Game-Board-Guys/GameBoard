@@ -19,7 +19,6 @@ class LeaderBoard extends Component {
                         <p className="game-name">Tanks</p>
                         <p className="game-name">Invaders</p>
                         <p className="game-name">Cyber Orb</p>
-                        
                     </div>
                 </div>
                 <div className="game-leaderboard-container">

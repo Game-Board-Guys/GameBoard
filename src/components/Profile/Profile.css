@@ -126,7 +126,23 @@
     background: #242130;
     font-family: 'Orbitron', sans-serif;
     margin-top: 0px;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.profile-bio::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+.profile-bio::-webkit-scrollbar-thumb {
+    background: #5762D5;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.profile-bio::-webkit-scrollbar-track {
+    background: #363537
 }
 
 .bio-words {
@@ -169,7 +185,23 @@
     font-size: 19px;
     line-height: 190%;
     color: #363537;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.user-stats-actual::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+.user-stats-actual::-webkit-scrollbar-thumb {
+    background: #5762D5;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.user-stats-actual::-webkit-scrollbar-track {
+    background: #363537
 }
 
 .standings-actual {
@@ -181,7 +213,23 @@
     font-size: 19px;
     line-height: 190%;
     color: #363537;
-    overflow: scroll;
+    overflow-y: scroll;
+}
+
+.standings-actual::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+.standings-actual::-webkit-scrollbar-thumb {
+    background: #5762D5;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.standings-actual::-webkit-scrollbar-track {
+    background: #363537
 }
 
 .update-profile-button {
