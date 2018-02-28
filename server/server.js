@@ -108,3 +108,5 @@ app.get('/auth/logout', function(req,res) {
 app.get('/api/testuser', controller.getTestUser);
 
 app.put('/api/editUserInfo', controller.editUserInfo);
+
+app.put('/api/editUserScore', controller.editUserScore);

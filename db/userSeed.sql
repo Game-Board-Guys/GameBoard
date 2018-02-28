@@ -30,3 +30,7 @@ DEFAULT 'User101';
 ALTER TABLE users
 ADD COLUMN bio varchar(350)
 DEFAULT '...';
+
+ALTER TABLE users
+ADD COLUMN invade_high_score text
+DEFAULT '0';
