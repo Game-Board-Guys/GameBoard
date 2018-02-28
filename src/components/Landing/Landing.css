@@ -109,6 +109,22 @@ overflow-y: scroll;
 margin-bottom: 150px;
 }
 
+.game-list-container::-webkit-scrollbar {
+    width: 3px;
+    display: none;
+}
+
+.game-list-container::-webkit-scrollbar-thumb {
+    background: #5762D5;
+    outline: 0;
+    border-radius: 50px;
+    box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.game-list-container::-webkit-scrollbar-track {
+    background: #363537
+}
+
 .global-chat-header {
 margin-bottom: -50px;
 margin-top: 60px;
