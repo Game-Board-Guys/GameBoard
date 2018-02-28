@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import './Lobby.css';
+//games
 import Pong from './GameLibrary/pong/Pong';
 import Maze2d from './GameLibrary/2d-Maze/Maze2D';
 import BrickBreaker from './GameLibrary/Phaser-Breakout/Breakout';
 import Tanks from './GameLibrary/tanks/Tanks';
 import Invaders from './GameLibrary/invaders/Invaders';
+
+import MatchThree from './GameLibrary/match-three/MatchThree';
+
 import Chat from '../Chat/Chat';
 import gameRules from './GameLibrary/GameRules.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { configureAnchors } from 'react-scrollable-anchor'
+
 
 class Lobby extends Component {
 
@@ -23,6 +28,8 @@ class Lobby extends Component {
             Tanks();
         } else if (this.props.match.params.game === ':invaders') {
             Invaders();
+        }else if (this.props.match.params.game === ':match-three'){
+            MatchThree();
         }
 
 
