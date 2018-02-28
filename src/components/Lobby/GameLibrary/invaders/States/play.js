@@ -76,7 +76,7 @@ export default function playState() {
                     // console.log(res.data)
                     let user = res.data.auth_id;
                     // console.log(user);
-                    if (score > localStorage.getItem('score')) {
+                    if (res.data.invade_high_score < localStorage.getItem('score')) {
                         axios.put('/api/editUserScore', {
                             score: localStorage.getItem('score'),
                             auth_id: user
