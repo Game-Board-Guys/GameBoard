@@ -27,8 +27,6 @@ class Chat extends React.Component {
     this.socket.on('welcome', this.setUserId);
 
     axios.get('/auth/me').then((res) => {
-      console.log(res.data)
-      let user = res.data.auth_id;
       this.setState({
           username: res.data.handle
       });
@@ -52,7 +50,6 @@ class Chat extends React.Component {
 
     sendMessage() {
       const message = this.state.username + ': ' + this.refs.message.value;
-      console.log(message);  // We will get rid of this later.
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
       this.refs.message.value = '';
