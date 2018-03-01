@@ -177,7 +177,7 @@
 
 .user-stats-actual {
     width: 95%;
-    height: 600px;
+    height: 100%;
     margin-left: 30px;
     margin-top: 10px;
     padding-right: 10px;
@@ -206,7 +206,7 @@
 
 .standings-actual {
     width: 95%;
-    height: 600px;
+    height: 100%;
     margin-left: 30px;
     margin-top: 10px;
     font-family: 'Orbitron', sans-serif;
@@ -236,7 +236,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 60px;
     width: 140px;
     border: none;
     border-radius: 6px;
@@ -245,6 +245,7 @@
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     padding-top: 5px;
+    margin-top: 15px;
     cursor: pointer;
     text-decoration: underline #5762D5;
 }
@@ -252,11 +253,12 @@
 @media(max-width:900px){
     .main-profile-container {
         flex-direction: column;
-        height: 2000px;
+        height: 2700px;
     }
     .user-info {
         width: 80%;
         height: 32%;
+        /* margin-top: 70px; */
     }
     .user-info-box {
         margin-top: 130px;

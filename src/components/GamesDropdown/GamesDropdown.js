@@ -17,6 +17,7 @@ class GamesDropdown extends Component {
                     <a href="/lobby:maze2d"><div onClick={this.props.closeGameMenu}>Cyber Orb</div></a>
                     <a href="/lobby:invaders"><div onClick={this.props.closeGameMenu}>Invaders</div></a>
                     <a href="/lobby:tanks"><div onClick={this.props.closeGameMenu}>Tanks</div></a>
+                    <a href="/lobby:match-three"><div onClick={this.props.closeGameMenu}>Match Three</div></a>
                 </nav>
             </div>
 
