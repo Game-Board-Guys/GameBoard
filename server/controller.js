@@ -11,6 +11,10 @@ module.exports = {
     },
     editUserInfo: (req, res, next) => {
         const db = req.app.get('db');
+        console.log('test');
+        console.log('test');
+        console.log('test');
+        console.log(req.body);
         db.edit_user_info([req.body.handle, req.body.bio, req.body.img, req.body.auth_id]).then(response => {
             res.status(200).send(response)
         })

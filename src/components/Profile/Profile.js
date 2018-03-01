@@ -12,27 +12,27 @@ class Profile extends Component {
             // user is auth_id
             user: '',
             aboutMe: '',
-            pongWins: 0
+            pongWins: 0,
+            breakHigh: null,
+            invadeHigh: null,
+            orbHigh: null
         }
     }
     componentDidMount() {
-        // ---checks who is logged in and loades their picture---
         axios.get('/auth/me').then((res) => {
-            // console.log(res.data)
+            console.log(res.data)
             let user = res.data.auth_id;
             this.setState({
                 user: res.data.auth_id,
                 aboutMe: res.data.bio,
-                pongWins: res.data.pong_wins
-            })
-            axios.get(`/api/testuser?auth=${user}`).then(res => {
-                // console.log(res.data)
-                this.setState({ img: res.data[0].img })
-                this.setState({ username: res.data[0].handle })
-                // console.log(this.state.img)
-                // console.log(user)
-            })
-            // var image = this.state.img;
+                img: res.data.img,
+                username: res.data.handle,
+                pongWins: res.data.pong_wins,
+                breakHigh: res.data.brick_breaker_highscore,
+                invadeHigh: res.data.invade_high_score,
+                orbHigh: res.data.maze_time_highscore
+            }) 
+
         })
 
     }
@@ -67,7 +67,7 @@ class Profile extends Component {
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Brick Breaker</div>
-                            <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
+                            <div className="wins-losses"><div>HighScore: {this.state.breakHigh}</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Tanks</div>
@@ -75,7 +75,7 @@ class Profile extends Component {
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Invaders</div>
-                            <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
+                            <div className="wins-losses"><div>HighScore: {this.state.invadeHigh}</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Match Three</div>
@@ -83,7 +83,7 @@ class Profile extends Component {
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Cyber Orb</div>
-                            <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
+                            <div className="wins-losses"><div>Best Time: {this.state.orbHigh}</div><div>Losses:</div></div>
                         </div>
 
                     </div>

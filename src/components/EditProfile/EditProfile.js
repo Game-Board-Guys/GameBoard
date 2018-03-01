@@ -43,14 +43,14 @@ class EditProfile extends Component {
 
     componentDidMount() {
         axios.get('/auth/me').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             // this.setState({ picture: res.data.img, name: res.data.first_name })
             let user = res.data.auth_id;
             this.setState({ user: res.data.auth_id,
                             username: res.data.handle,
                             aboutMe: res.data.bio})
             axios.get(`/api/testuser?auth=${user}`).then(res => {
-                console.log(res.data)
+                console.log('user from the db', res.data)
                 this.setState({ img: res.data[0].img })
                 console.log(this.state.img)
                 console.log(this.state.user)
@@ -63,17 +63,12 @@ class EditProfile extends Component {
     }
 
     updateUserInfo() {
-        // axios.get('/auth/me')
-        //     .then((res) => {
-        //         let user = res.data.auth_id;
-        //     })
-        console.log('riiiiight here')
-        console.log('this.state.user', this.state.user)
-        axios.put('/api/user/' + this.state.user, {
-            username: this.state.username,
-            aboutMe: this.state.aboutMe,
-            img: this.state.img
-        })
+        axios.put('/api/editUserInfo', {
+            handle: this.state.username,
+            bio: this.state.aboutMe,
+            img: this.state.img,
+            auth_id: this.state.user
+        }).then(window.location.replace('http://localhost:3001/profile'))
     }
 
     setUsername(value) {
@@ -316,7 +311,9 @@ class EditProfile extends Component {
                             value={this.state.aboutMe}>
                         </textarea>
                         <div className="profile-buttons-bottom">
-                        <a href="/profile"><button className="save-changes-button" onClick={this.updateUserInfo}>Save Changes</button></a>
+                        {/* <a href="/profile"> */}
+                        <button className="save-changes-button" onClick={this.updateUserInfo}>Save Changes</button>
+                        {/* </a> */}
                         <a href="/profile"><button className="save-changes-button">Cancel</button></a>
                         </div>
                     </div>
