@@ -99,7 +99,7 @@ export default class Modal extends Component {
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         if (!this.props.show) {
             return null;
         }
@@ -110,67 +110,67 @@ export default class Modal extends Component {
                     <div className="closing-x" onClick={(e) => {this.closeModal(e)}}>X</div>
                     <div className="avatar-modal">
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/vCjxv9S.jpg" className="picture-name" onClick={this.onClose1}/>
+                            <img src="https://i.imgur.com/vCjxv9S.jpg" alt="" className="picture-name" onClick={this.onClose1}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/LUGHTal.jpg" className="picture-name" onClick={this.onClose2}/>
+                            <img src="https://i.imgur.com/LUGHTal.jpg" alt="" className="picture-name" onClick={this.onClose2}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/gdwBnlM.jpg" className="picture-name" onClick={this.onClose3}/>
+                            <img src="https://i.imgur.com/gdwBnlM.jpg" alt="" className="picture-name" onClick={this.onClose3}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/liTLW97.png" className="picture-name" onClick={this.onClose4}/>
+                            <img src="https://i.imgur.com/liTLW97.png" alt="" className="picture-name" onClick={this.onClose4}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/cnGlWJl.jpg" className="picture-name" onClick={this.onClose5}/>
+                            <img src="https://i.imgur.com/cnGlWJl.jpg" alt="" className="picture-name" onClick={this.onClose5}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/1HKf7ga.jpg" className="picture-name" onClick={this.onClose6}/>
+                            <img src="https://i.imgur.com/1HKf7ga.jpg" alt="" className="picture-name" onClick={this.onClose6}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/X6Inegp.jpg" className="picture-name" onClick={this.onClose7}/>
+                            <img src="https://i.imgur.com/X6Inegp.jpg" alt="" className="picture-name" onClick={this.onClose7}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/xGHnLxk.jpg" className="picture-name" onClick={this.onClose8}/>
+                            <img src="https://i.imgur.com/xGHnLxk.jpg" alt="" className="picture-name" onClick={this.onClose8}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/xOwTCBh.jpg" className="picture-name" onClick={this.onClose9}/>
+                            <img src="https://i.imgur.com/xOwTCBh.jpg" alt="" className="picture-name" onClick={this.onClose9}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/tz4E54E.jpg" className="picture-name" onClick={this.onClose10}/>
+                            <img src="https://i.imgur.com/tz4E54E.jpg" alt="" className="picture-name" onClick={this.onClose10}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/1DfL734.jpg" className="picture-name" onClick={this.onClose11}/>
+                            <img src="https://i.imgur.com/1DfL734.jpg" alt="" className="picture-name" onClick={this.onClose11}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/xqvHKng.jpg" className="picture-name" onClick={this.onClose12}/>
+                            <img src="https://i.imgur.com/xqvHKng.jpg" alt="" className="picture-name" onClick={this.onClose12}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/diTObOl.jpg" className="picture-name" onClick={this.onClose13}/>
+                            <img src="https://i.imgur.com/diTObOl.jpg" alt="" className="picture-name" onClick={this.onClose13}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/KZbROKV.jpg" className="picture-name" onClick={this.onClose14}/>
+                            <img src="https://i.imgur.com/KZbROKV.jpg" alt="" className="picture-name" onClick={this.onClose14}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/tGgRip2.jpg" className="picture-name" onClick={this.onClose15}/>
+                            <img src="https://i.imgur.com/tGgRip2.jpg" alt="" className="picture-name" onClick={this.onClose15}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/gSWD3ia.jpg" className="picture-name" onClick={this.onClose16}/>
+                            <img src="https://i.imgur.com/gSWD3ia.jpg" alt="" className="picture-name" onClick={this.onClose16}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/1sN8zNH.jpg" className="picture-name" onClick={this.onClose17}/>
+                            <img src="https://i.imgur.com/1sN8zNH.jpg" alt="" className="picture-name" onClick={this.onClose17}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/VeB79d4.jpg" className="picture-name" onClick={this.onClose18}/>
+                            <img src="https://i.imgur.com/VeB79d4.jpg" alt="" className="picture-name" onClick={this.onClose18}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/UUDP2uj.png" className="picture-name" onClick={this.onClose19}/>
+                            <img src="https://i.imgur.com/UUDP2uj.png" alt="" className="picture-name" onClick={this.onClose19}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/3AFY66F.jpg" className="picture-name" onClick={this.onClose20}/>
+                            <img src="https://i.imgur.com/3AFY66F.jpg" alt="" className="picture-name" onClick={this.onClose20}/>
                         </div>
                         <div onClick={(e) => {this.closeModal(e)}} className="picture-name-container">
-                            <img src="https://i.imgur.com/eFeqD34.jpg" className="picture-name" onClick={this.onClose21}/>
+                            <img src="https://i.imgur.com/eFeqD34.jpg" alt="" className="picture-name" onClick={this.onClose21}/>
                         </div>
                     </div>
                     <div className="footer-style"></div>

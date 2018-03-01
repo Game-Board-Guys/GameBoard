@@ -11,7 +11,8 @@ class Profile extends Component {
             img: 'https://png.icons8.com/metro/1600/decision.png',
             // user is auth_id
             user: '',
-            aboutMe: ''
+            aboutMe: '',
+            pongWins: 0
         }
     }
     componentDidMount() {
@@ -21,7 +22,8 @@ class Profile extends Component {
             let user = res.data.auth_id;
             this.setState({
                 user: res.data.auth_id,
-                aboutMe: res.data.bio
+                aboutMe: res.data.bio,
+                pongWins: res.data.pong_wins
             })
             axios.get(`/api/testuser?auth=${user}`).then(res => {
                 // console.log(res.data)
@@ -46,11 +48,11 @@ class Profile extends Component {
                     <div className="user-info-box">
                         <img src={this.state.img} className="user-profile-img" />
                         <p className="profile-username">{this.state.username}</p>
-                        <p className="bio-header">About {this.state.username}</p>
-                        <p className="profile-bio">
+                        <p className="bio-header">About</p>
+                        <div className="profile-bio">
                             <p className="bio-words">{this.state.aboutMe}
                             </p>
-                        </p>
+                        </div>
                         <a href="/editprofile">
                             <button className="update-profile-button">Update Profile</button>
                         </a>
@@ -61,7 +63,7 @@ class Profile extends Component {
                     <div className="user-stats-actual">
                         <div className="stat-tile">
                             <div className="stat-tile-header">Pong</div>
-                            <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
+                            <div className="wins-losses"><div>Wins: {this.state.pongWins}</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Brick Breaker</div>
@@ -73,6 +75,10 @@ class Profile extends Component {
                         </div>
                         <div className="stat-tile">
                             <div className="stat-tile-header">Invaders</div>
+                            <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
+                        </div>
+                        <div className="stat-tile">
+                            <div className="stat-tile-header">Match Three</div>
                             <div className="wins-losses"><div>Wins:</div><div>Losses:</div></div>
                         </div>
                         <div className="stat-tile">
@@ -101,6 +107,10 @@ class Profile extends Component {
                         <div className="standings-tile">
                             <div className="standings-tile-header">Invaders</div>
                             <div>56th Place</div>
+                        </div>
+                        <div className="standings-tile">
+                            <div className="standings-tile-header">Match Three</div>
+                            <div>6th Place</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Cyber Orb</div>
