@@ -1,6 +1,7 @@
 import React from 'react';
 import './Chat.css';
 import io from 'socket.io-client';
+import axios from 'axios';
 
 class Chat extends React.Component {
   constructor(props) {
@@ -8,7 +9,8 @@ class Chat extends React.Component {
 
     this.state = {
       userID: 1, // 1 is a placeholder until we have user accounts up.
-      messages: []
+      messages: [],
+      username: ''
     }
 
     // ----sockets binds-----
@@ -23,6 +25,15 @@ class Chat extends React.Component {
     this.socket = io('/');
     this.socket.on('message dispatched', this.updateMessages);
     this.socket.on('welcome', this.setUserId);
+
+    axios.get('/auth/me').then((res) => {
+      console.log(res.data)
+      let user = res.data.auth_id;
+      this.setState({
+          username: res.data.handle
+      });
+
+  })
   }
 
     // -------socket methods--------
@@ -40,7 +51,7 @@ class Chat extends React.Component {
     }
 
     sendMessage() {
-      const message = this.refs.message.value;
+      const message = this.state.username + ': ' + this.refs.message.value;
       console.log(message);  // We will get rid of this later.
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
