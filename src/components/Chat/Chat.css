@@ -8,6 +8,22 @@
     overflow-y: auto;
 }
 
+.landing-chat-box::-webkit-scrollbar {
+  width: 3px;
+  display: none;
+}
+
+.landing-chat-box::-webkit-scrollbar-thumb {
+  background: #5762D5;
+  outline: 0;
+  border-radius: 50px;
+  box-shadow: 0, 4px, 10px rgba(0,0,0,0.5)
+}
+
+.landing-chat-box::-webkit-scrollbar-track {
+  background: #363537
+}
+
 .chat-control {
   display: flex;
   align-items: center;
