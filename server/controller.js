@@ -50,5 +50,12 @@ module.exports = {
         db.edit_user_score_maze([req.body.score, req.body.auth_id]).then(response => {
             res.status(200).send(response)
         })
+    },
+    getPongOrder: (req, res) => {
+        const db = req.app.get('db');
+        db.get_pong_order().then(users => {
+            console.log(users)
+            res.status(200).send(users)
+        })
     }
 }

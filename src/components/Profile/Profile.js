@@ -15,7 +15,9 @@ class Profile extends Component {
             pongWins: 0,
             breakHigh: null,
             invadeHigh: null,
-            orbHigh: null
+            orbHigh: null,
+            pongLeaders: null,
+            pong: null
         }
     }
     componentDidMount() {
@@ -32,7 +34,23 @@ class Profile extends Component {
                 invadeHigh: res.data.invade_high_score,
                 orbHigh: res.data.maze_time_highscore
             }) 
-
+        }),
+        axios.get('/api/getPongOrder').then((res) => {
+            console.log(res.data)
+            this.setState({
+                pongLeaders: res.data
+            })
+            this.setState ({
+                pong: 0
+            })
+            var pong = 0
+            for(var i=0;i<=this.state.pongLeaders.length;i++){
+                if(this.state.pongLeaders[i]["auth_id"]===this.state.user){
+                     return pong++;
+                }else{
+                    return pong++;
+                }
+            }
         })
 
     }
@@ -94,7 +112,7 @@ class Profile extends Component {
                     <div className="standings-actual">
                         <div className="standings-tile">
                             <div className="standings-tile-header">Pong</div>
-                            <div>34th Place</div>
+                            <div>{this.state.pong}</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Brick Breaker</div>
