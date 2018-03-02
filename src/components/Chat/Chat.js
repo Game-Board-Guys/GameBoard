@@ -49,7 +49,7 @@ class Chat extends React.Component {
     }
 
     sendMessage() {
-      const message = this.state.username + ': ' + this.refs.message.value;
+      const message = this.state.username ? this.state.username + ': ' + this.refs.message.value : this.refs.message.value ;
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
       this.refs.message.value = '';

@@ -19,6 +19,17 @@ class GamesDropdown extends Component {
                     <a href="/lobby:invaders"><div onClick={this.props.closeGameMenu}>Invaders</div></a>
                     <a href="/lobby:tanks"><div onClick={this.props.closeGameMenu}>Tanks</div></a>
                     <a href="/lobby:match-three"><div onClick={this.props.closeGameMenu}>Match Three</div></a>
+                    <a href="/lobby:asteroids"><div onClick={this.props.closeGameMenu}>asteroids</div></a>
+                    <a href="/lobby:breakout"><div onClick={this.props.closeGameMenu}>breakout</div></a>
+                    <a href="/lobby:invaders-two"><div onClick={this.props.closeGameMenu}>invaders 2</div></a>
+                    <a href="/lobby:snake"><div onClick={this.props.closeGameMenu}>snake</div></a>
+                    <a href="/lobby:star-platformer"><div onClick={this.props.closeGameMenu}>star platformer-</div></a>
+                    <a href="/lobby:gemmatch"><div onClick={this.props.closeGameMenu}>gemmatch</div></a>
+                    <a href="/lobby:matching-pairs"><div onClick={this.props.closeGameMenu}>matching pairs</div></a>
+                    <a href="/lobby:simon"><div onClick={this.props.closeGameMenu}>simon</div></a>
+                    <a href="/lobby:sliding-puzzle"><div onClick={this.props.closeGameMenu}>sliding puzzle</div></a>
+                    <a href="/lobby:defender"><div onClick={this.props.closeGameMenu}>defender</div></a>
+                    <a href="/lobby:tanks-two"><div onClick={this.props.closeGameMenu}>tanks 2</div></a>
                 </nav>
             </div>
 
