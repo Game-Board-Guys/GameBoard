@@ -19,7 +19,7 @@ export default function loadState() {
             //game.stage.backgroundColor = '#eee';
             this.game.load.tilemap('matching', 'img/matching-pairs/tiles.json', null, window.Phaser.Tilemap.TILED_JSON);
             this.game.load.image('tiles', 'img/matching-pairs/tiles.png');//, 100, 100, -1, 1, 1);    
-
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
             this.bck = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
             this.bck.anchor.setTo(0.5, 0.5);
@@ -43,7 +43,7 @@ export default function loadState() {
 
         },
         create: function () {
-            this.game.state.start('playTwo')
+            this.game.state.start('menu')
         }
 
     }

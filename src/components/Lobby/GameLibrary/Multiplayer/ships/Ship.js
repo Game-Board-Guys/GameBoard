@@ -13,9 +13,9 @@ export default function Game() {
     var game = new window.Phaser.Game(800, 600, window.Phaser.AUTO, 'myCanvas');
 
     game.state.add('boot', bootState);
-    game.state.add('load', loadState(game));
-    // game.state.add('menu', menuState);wwwwwwww
-    game.state.add('play', playState(game));
+    game.state.add('load', loadState);
+    game.state.add('menu', menuState);
+    game.state.add('play', playState);
     // game.state.add('win', winState);
     // game.state.add('lose', loseState);
 

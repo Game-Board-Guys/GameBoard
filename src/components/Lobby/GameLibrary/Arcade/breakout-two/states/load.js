@@ -19,9 +19,10 @@ export default function loadState() {
 
             this.game.load.atlas('breakout', 'img/breakout/breakout.png', 'img/breakout/breakout.json');
             this.game.load.image('starfield', 'img/breakout/starfield.jpg');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
         },
         create: function () {
-            this.game.state.start('play');
+            this.game.state.start('menu');
         }
     }
 }

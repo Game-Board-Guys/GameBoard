@@ -17,7 +17,7 @@ export default function loadState(game) {
 
 
             this.load.setPreloadSprite(this.preloadBar);
-
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
 
             // Load all the ships
@@ -32,7 +32,7 @@ export default function loadState(game) {
             this.game.load.image('water', ASSET_URL + 'water_tile.png');
         },
         create: function () {
-            return this.game.state.start('play')
+            return this.game.state.start('menu')
         }
     }
 }

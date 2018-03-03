@@ -11,7 +11,7 @@ export default function loadState() {
 
 
             this.load.setPreloadSprite(this.preloadBar);
-
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
             this.game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
             this.game.scale.pageAlignHorizontally = true;
@@ -37,7 +37,7 @@ export default function loadState() {
 
         },
         create: function () {
-            this.game.state.start('colors')
+            this.game.state.start('menu')
         }
     }
 }

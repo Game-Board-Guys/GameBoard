@@ -13,7 +13,7 @@ export default function loadState(){
 
 
             this.load.setPreloadSprite(this.preloadBar);
-
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
            //load images
              preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloadBar');
             preloadBar.anchor.setTo(0.5, 0.5);
@@ -33,7 +33,7 @@ export default function loadState(){
            //load audio
         },
         create: function () {
-           this.game.state.start('play')
+           this.game.state.start('menu')
         }
     }
 }

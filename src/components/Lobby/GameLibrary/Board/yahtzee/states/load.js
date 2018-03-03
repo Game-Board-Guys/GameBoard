@@ -11,7 +11,7 @@ export default function loadState() {
 
 
             this.load.setPreloadSprite(this.preloadBar);
-
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
             this.load.baseURL = 'img/';
             this.load.image('board');
@@ -20,7 +20,7 @@ export default function loadState() {
             this.load.atlas('dice');
         },
         create: function () {
-            this.game.state.start('play');
+            this.game.state.start('menu');
         }
     }
 }
