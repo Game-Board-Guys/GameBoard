@@ -5,8 +5,20 @@ export default function loadState(){
         preload: function(){
             // set background color and preload image
             this.stage.backgroundColor = '#B4D9E7';
-            this.preloadBar = this.add.sprite((GAME_WIDTH-311)/2, (GAME_HEIGHT-27)/2, 'preloaderBar');
+
+            this.bck = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
+            this.bck.anchor.setTo(0.5, 0.5);
+            this.bck.scale.setTo(0.5, 0.5);
+            this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBar');
+            this.preloadBar.anchor.setTo(0, 0.5);
+            this.preloadBar.scale.setTo(0.5, 1);
+            this.preloadBar.x = this.world.centerX - this.preloadBar.width / 2;
+
+
             this.load.setPreloadSprite(this.preloadBar);
+
+
+
             // load images
             this.load.image('background', 'img/monsterCandy/background.png');
             this.load.image('floor', 'img/monsterCandy/floor.png');

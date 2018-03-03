@@ -7,6 +7,19 @@ export default function loadState(game) {
             
             game.stage.backgroundColor = "#1199DA";
 
+            this.bck = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
+            this.bck.anchor.setTo(0.5, 0.5);
+            this.bck.scale.setTo(0.5, 0.5);
+            this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBar');
+            this.preloadBar.anchor.setTo(0, 0.5);
+            this.preloadBar.scale.setTo(0.5, 1);
+            this.preloadBar.x = this.world.centerX - this.preloadBar.width / 2;
+
+
+            this.load.setPreloadSprite(this.preloadBar);
+
+
+
             // Load all the ships
             for (var i = 1; i <= 6; i++) {
                 this.game.load.image('ship' + String(i) + '_1', ASSET_URL + 'ship' + String(i) + '_1.png');

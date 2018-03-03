@@ -5,9 +5,17 @@ export default function loadState() {
     };
     return {
         preload: function () {
-            this.preloadBg = this.add.sprite((Ball._WIDTH - 297) * 0.5, (Ball._HEIGHT - 145) * 0.5, 'preloaderBg');
-            this.preloadBar = this.add.sprite((Ball._WIDTH - 158) * 0.5, (Ball._HEIGHT - 50) * 0.5, 'preloaderBar');
+            this.bck = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
+            this.bck.anchor.setTo(0.5, 0.5);
+            this.bck.scale.setTo(0.5, 0.5);
+            this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBar');
+            this.preloadBar.anchor.setTo(0, 0.5);
+            this.preloadBar.scale.setTo(0.5, 1);
+            this.preloadBar.x = this.world.centerX - this.preloadBar.width / 2;
+
+
             this.load.setPreloadSprite(this.preloadBar);
+
 
             this.load.image('ball', 'img/2d-maze/ball.png');
             this.load.image('hole', 'img/2d-maze/hole.png');
