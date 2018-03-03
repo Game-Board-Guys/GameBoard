@@ -1,44 +1,35 @@
 export default function menuState(){
-    var score =0;
+    var textType = {
+        font: '14pt Arial',
+        fill: '#fff',
+        align: 'center'
+    }
     return{
-        create : function(){
-            this.game.world.bounds.x = 0;
-    
-            this.game.world.bounds.y = 0;
-    
-            this.game.world.bounds.width = 400;
-    
-            this.game.world.bounds.height = 600;
-    
-            this.playbutton = this.add.button(this.game.world.centerX, this.game.world.centerY-40,'play',this.playclicked,this,1,0,2);
-    
-            this.playbutton.anchor.setTo(0.5,0.5);
-    
-            this.tweenplay = this.game.add.tween(this.playbutton).to({y:300},1000, window.Phaser.Easing.Sinusoidal.InOut,true,0,100,true);
-    
-    
-            this.arrows = this.game.add.sprite(this.game.world.centerX,this.game.world.centerY+180,'arrow');
-    
-            this.arrows.anchor.setTo(0.5,0.5);
-    
-            this.arrows.scale.setTo(0.6,0.6);
-    
-    
-    
-            this.titleimage = this.add.sprite(this.game.world.centerX,0,'title');
-    
-            this.titleimage.anchor.setTo(0.5,0);
-    
+        create: function () {
+            var nameLabel = this.game.add.text(80, 80, 'Tetris', { font: '50px Arial', fill: '#fff' });
+        
+
+            this.createButton(this.game, "Play", this.game.world.width * 0.5, this.game.world.height * 0.65, 190, 47.4, this.play);
+
+
         },
-    
-    
-    
-        playclicked : function() {
-    
-            score = 0;
-    
-            this.game.state.start('play');
-    
+        help: function () {
+            this.game.state.start('howto')
         },
+        play: function () {
+            this.game.state.start('play')
+        },
+        createButton: function(game, string, x, y, w, h, callback){
+            var button1 = game.add.button(x, y, 'button', callback, this, 1, 0, 2);
+            button1.anchor.setTo(0.5, 0.5);
+            button1.width = w;
+            button1.height = h;
+
+            var text = game.add.text(
+                button1.x, button1.y, string, 
+                textType
+            );
+            text.anchor.setTo(0.5, 0.5);
+        }
     }
 }

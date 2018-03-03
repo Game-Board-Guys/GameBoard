@@ -18,7 +18,7 @@ export default function loadState() {
             this.game.scale.pageAlignVertically = true;
             //game.stage.backgroundColor = '#eee';
 
-            this.game.load.spritesheet('button', 'img/menu-stuffs/greySheet.png', 190, 47.3)
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.3)
             this.game.load.spritesheet("orbs", "img/match-three/orbs.png", orbSize, orbSize);
         },
         create: function () {

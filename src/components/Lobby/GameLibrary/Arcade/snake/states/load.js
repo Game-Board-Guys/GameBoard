@@ -20,6 +20,7 @@ export default function loadState() {
             //game.stage.backgroundColor = '#eee';
 
             this.game.load.image('ball', 'img/snake/shinyball.png');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
             //set up the loading sprites
             this.background = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
@@ -38,7 +39,7 @@ export default function loadState() {
             // this.load.audio('eat', ['img/sounds/eat.mp3', 'assets/sounds/eat.ogg', 'assets/sounds/eat.wav', 'assets/sounds/eat.m4a']);
         },
         create: function () {
-            this.game.state.start('play')
+            this.game.state.start('menu')
         }
 
     }

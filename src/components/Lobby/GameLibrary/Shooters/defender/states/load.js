@@ -11,11 +11,11 @@ export default function loadState() {
 
 
             this.load.setPreloadSprite(this.preloadBar);
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
-
-        this.game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
-        this.game.scale.pageAlignHorizontally = true;
-        this.game.scale.pageAlignVertically = true;
+            this.game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
+            this.game.scale.pageAlignHorizontally = true;
+            this.game.scale.pageAlignVertically = true;
 
             this.game.load.image('player', 'img/defender/ship.png');
             this.game.load.image('star', 'img/defender/star2.png');
@@ -23,7 +23,7 @@ export default function loadState() {
             this.game.load.atlas('lazer', 'img/defender/laser.png', 'img/defender/laser.json');
         },
         create: function () {
-            this.game.state.start('play');
+            this.game.state.start('menu');
         }
     }
 }

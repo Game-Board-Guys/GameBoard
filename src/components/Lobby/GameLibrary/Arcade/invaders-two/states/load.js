@@ -25,10 +25,11 @@ export default function loadState() {
             this.game.load.spritesheet('kaboom', 'img/invaders-two/explode.png', 128, 128);
             this.game.load.image('starfield', 'img/invaders-two/starfield.png');
             this.game.load.image('background', 'img/invaders-two/background2.png');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
 
         },
         create: function () {
-            this.game.state.start('play')
+            this.game.state.start('menu')
         }
     }
 }

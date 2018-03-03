@@ -19,9 +19,10 @@ export default function loadState() {
 
             this.game.load.image('bullet', 'img/asteroids/bullets.png');
             this.game.load.image('ship', 'img/asteroids/ship.png');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
         },
         create: function () {
-            this.game.state.start('play');
+            this.game.state.start('menu');
         }
 
     }

@@ -24,6 +24,7 @@ export default function loadState(){
             this.load.image('win','img/tetris/win.png');
             this.load.spritesheet('blocks','img/tetris/blocks.png',30,30);
             this.load.image('bck','img/tetris/Bck.png');
+            this.game.load.spritesheet('button', 'img/menu-stuffs/blueSheet.png', 190, 47.4);
         },
         create : function(){
             this.game.state.start('menu');
