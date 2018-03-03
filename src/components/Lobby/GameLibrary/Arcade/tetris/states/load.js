@@ -2,8 +2,17 @@ export default function loadState(){
     return{
         preload : function(){
             this.stage.backgroundColor = "#000";
-            this.preloadtext = this.add.text(this.game.world.centerX,this.game.world.centerY,"Loading..."+this.load.progress+"%",{ font: "20px Arial", fill: "#ff0044", align: "center" });
-            this.preloadtext.anchor.setTo(0.5,0.5);
+            this.bck = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBackground');
+            this.bck.anchor.setTo(0.5, 0.5);
+            this.bck.scale.setTo(0.5, 0.5);
+            this.preloadBar = this.add.sprite(this.world.centerX, this.world.centerY, 'preloaderBar');
+            this.preloadBar.anchor.setTo(0, 0.5);
+            this.preloadBar.scale.setTo(0.5, 1);
+            this.preloadBar.x = this.world.centerX - this.preloadBar.width / 2;
+
+
+            this.load.setPreloadSprite(this.preloadBar);
+
     
             this.load.spritesheet('play','img/tetris/play.png',100,80);
             this.load.image('pause','img/tetris/Pause.png');

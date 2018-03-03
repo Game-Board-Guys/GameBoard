@@ -1,7 +1,8 @@
 export default function bootState(){
     return{
-        preload: function(){
-            // preload the loading indicator first before anything else
+        preload: function () {
+            this.load.image('preloaderBackground', 'img/menu-stuffs/preloadbck.png');
+            this.load.image('preloaderBar', 'img/menu-stuffs/preloadbar.png');
         },
         create: function(){
             

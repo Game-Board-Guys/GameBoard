@@ -1,4 +1,4 @@
-export default function playState() {
+export default function playState(game) {
     var GAME_WIDTH = 640;
     var GAME_HEIGHT = 960;
 
@@ -118,9 +118,7 @@ export default function playState() {
             // if the health of the player drops to 0, the player dies = game over
             if (!health) {
                 // show the game over message
-                this.add.sprite((GAME_WIDTH - 594) / 2, (GAME_HEIGHT - 271) / 2, 'game-over');
-                // pause the game
-                this.game.paused = true;
+               game.state.start('menu');
             }
         }
     };

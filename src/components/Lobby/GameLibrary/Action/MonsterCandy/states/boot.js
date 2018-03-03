@@ -1,13 +1,13 @@
 export default function bootState(){
     return{
-        preload: function(){
-            // preload the loading indicator first before anything else
-            this.load.image('preloaderBar', 'img/loading-bar.png');
+        preload: function () {
+            this.load.image('preloaderBackground', 'img/menu-stuffs/preloadbck.png');
+            this.load.image('preloaderBar', 'img/menu-stuffs/preloadbar.png');
         },
         create: function(){
             
             // start the physics engine
-		this.physics.startSystem(window.Phaser.Physics.ARCADE);            
+		    this.physics.startSystem(window.Phaser.Physics.ARCADE);            
             // set scale options
             this.input.maxPointers = 1;
             this.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
