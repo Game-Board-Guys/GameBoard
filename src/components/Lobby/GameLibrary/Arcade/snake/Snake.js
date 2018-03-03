@@ -1,7 +1,8 @@
 import bootState from './states/boot';
 import loadState from './states/load';
 import menuState from './states/menu';
-import playState from './states/play';
+import playState from './levels/play';
+import debugState from './levels/debug';
 import winState from './states/win';
 import loseState from './states/lose';
 
@@ -16,6 +17,7 @@ export default function Snake() {
     game.state.add('load', loadState);
     game.state.add('menu', menuState);
     game.state.add('play', playState);
+    game.state.add('debug', debugState);
     game.state.add('win', winState);
     game.state.add('lose', loseState);
 
