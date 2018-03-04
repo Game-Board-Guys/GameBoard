@@ -63,7 +63,6 @@ class Chat extends React.Component {
     }
 
   render() {
-    const colors = ['#ff316c', '#6bd9ed'];
     const userName = this.state.username ? this.state.username + ': ' : 'Guest: ';
     const messages = this.state.messages.map((e, i) => {
       const colors = e.user === this.state.userID ? {color: '#ff316c'} : {color: '#6bd9ed'};
