@@ -100,7 +100,7 @@ export default function playState(game) {
             game.stage.disableVisibilityChange = true;
 
             // Placeholder for now. - W
-            var ship_type = Math.floor(Math.random() * 5) + 1;
+            var ship_type = Math.floor(Math.random() * 5) + 2;
 
             // Create player
             var player_ship_type = String(ship_type);
