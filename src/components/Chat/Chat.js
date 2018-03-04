@@ -8,9 +8,9 @@ class Chat extends React.Component {
     super(props);
 
     this.state = {
-      userID: 1, // 1 is a placeholder until we have user accounts up.
-      messages: [],
-      username: ''
+      userID: 1,
+      username: '',
+      messages: []
     }
 
     // ----sockets binds-----
@@ -28,7 +28,8 @@ class Chat extends React.Component {
 
     axios.get('/auth/me').then((res) => {
       this.setState({
-          username: res.data.handle
+        userID: res.data.auth_id,
+        username: res.data.handle
       });
 
   })
@@ -49,7 +50,7 @@ class Chat extends React.Component {
     }
 
     sendMessage() {
-      const message = this.state.username ? this.state.username + ': ' + this.refs.message.value : this.refs.message.value ;
+      const message = this.refs.message.value;
       this.socket.emit('message sent', { message, userid: this.state.user });
       this.updateMessages({ message, user: this.state.userID });
       this.refs.message.value = '';
@@ -62,10 +63,12 @@ class Chat extends React.Component {
     }
 
   render() {
+    const userName = this.state.username ? this.state.username + ': ' : 'Guest: ';
     const messages = this.state.messages.map((e, i) => {
-      const styles = e.user === this.state.userID ? { alignSelf: "flex-end", color: "#9C0D38", paddingLeft: "7px", fontWeight: "900", fontSize: "20px" } : { alignSelf: "flex-start", color: "#E9D758", fontWeight: "900", paddingLeft: "7px", fontSize: "20px" };
+      const colors = e.user === this.state.userID ? {color: '#ff316c'} : {color: '#6bd9ed'};
+      const styles = e.user === this.state.userID ? { alignSelf: "flex-end", color: "#fff", paddingLeft: "7px", fontWeight: "900", fontSize: "20px" } : { alignSelf: "flex-start", color: "#fff", fontWeight: "900", paddingLeft: "7px", fontSize: "20px" };
       return (
-        <p key={i} style={styles}>{e.message}</p>
+        <p key={i} style={styles}><span style={colors}>{userName}</span>{e.message}</p>
       );
     });
 
