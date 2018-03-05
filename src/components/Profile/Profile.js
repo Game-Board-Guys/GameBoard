@@ -17,7 +17,13 @@ class Profile extends Component {
             invadeHigh: null,
             orbHigh: null,
             pongLeaders: null,
-            pong: null
+            pong: null,
+            breakLeaders: null,
+            brick: null,
+            invadeLeaders: null,
+            invade: null,
+            orbLeaders: null,
+            orb: null
         }
     }
     componentDidMount() {
@@ -45,13 +51,83 @@ class Profile extends Component {
             })
             var pong = 0
             for(var i=0;i<=this.state.pongLeaders.length;i++){
-                if(this.state.pongLeaders[i]["auth_id"]===this.state.user){
-                     return pong++;
+                if(this.state.pongLeaders[i].auth_id===this.state.user){
+                    ++pong;
+                     break;
                 }else{
-                    return pong++;
+                    ++pong;
                 }
             }
+            return this.setState({
+                pong
+            })
+        }),
+        axios.get('/api/getBreakOrder').then((res) => {
+            console.log(res.data)
+            this.setState({
+                breakLeaders: res.data
+            })
+            this.setState ({
+                brick: 0
+            })
+            var brick = 0;
+            for(var i=0;i<=this.state.breakLeaders.length;i++){
+                if(this.state.breakLeaders[i].auth_id===this.state.user){
+                    ++brick;
+                     break;
+                }else{
+                    ++brick;
+                }
+            }
+            return this.setState({
+                brick
+            })
+        }),
+        axios.get('/api/getInvadeOrder').then((res) => {
+            console.log(res.data)
+            this.setState({
+                invadeLeaders: res.data
+            })
+            this.setState ({
+                invade: 0
+            })
+            var invade = 0;
+            for(var i=0;i<=this.state.invadeLeaders.length;i++){
+                if(this.state.invadeLeaders[i].auth_id===this.state.user){
+                    ++invade;
+                     break;
+                }else{
+                    ++invade;
+                }
+            }
+            return this.setState({
+                invade
+            })
+        }),
+        axios.get('/api/getOrbOrder').then((res) => {
+            console.log("orb", res.data)
+            this.setState({
+                orbLeaders: res.data
+            })
+            this.setState ({
+                orb: 0
+            })
+            var orb = 0;
+            for(var i=0;i<=this.state.orbLeaders.length;i++){
+                if(this.state.orbLeaders[i].auth_id===this.state.user){
+                    console.log(this.state.orbLeaders[i].auth_id, "break");
+                    ++orb;
+                     break;
+                }else{
+                    console.log(this.state.orbLeaders[i].auth_id);
+                    ++orb;
+                }
+            }
+            return this.setState({
+                orb
+            })
         })
+
 
     }
 
@@ -116,23 +192,23 @@ class Profile extends Component {
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Brick Breaker</div>
-                            <div>13th Place</div>
+                            <div>{this.state.brick}</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Tanks</div>
-                            <div>2th Place</div>
+                            <div>...</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Invaders</div>
-                            <div>56th Place</div>
+                            <div>{this.state.invade}</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Match Three</div>
-                            <div>6th Place</div>
+                            <div>...</div>
                         </div>
                         <div className="standings-tile">
                             <div className="standings-tile-header">Cyber Orb</div>
-                            <div>314th Place</div>
+                            <div>{this.state.orb}</div>
                         </div>
 
                     </div>

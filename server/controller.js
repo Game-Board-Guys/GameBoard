@@ -57,5 +57,26 @@ module.exports = {
             console.log(users)
             res.status(200).send(users)
         })
+    },
+    getBreakOrder: (req, res) => {
+        const db = req.app.get('db');
+        db.get_break_order().then(users => {
+            console.log(users)
+            res.status(200).send(users)
+        })
+    },
+    getInvadeOrder: (req, res) => {
+        const db = req.app.get('db');
+        db.get_invade_order().then(users => {
+            console.log(users)
+            res.status(200).send(users)
+        })
+    },
+    getOrbOrder: (req, res) => {
+        const db = req.app.get('db');
+        db.get_orb_order().then(users => {
+            console.log(users)
+            res.status(200).send(users)
+        })
     }
 }

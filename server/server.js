@@ -195,5 +195,14 @@ app.put('/api/editUserScorePong', controller.editUserScorePong);
 app.put('/api/editUserScoreBreak', controller.editUserScoreBreak);
 
 app.put('/api/editUserScoreMaze', controller.editUserScoreMaze);
-// ---get users in order of highest rated player to lowest---
+
+
+
+// ---get users in order of highest rated player to lowest pong---
 app.get('/api/getPongOrder', controller.getPongOrder);
+//  ---get users in order for brick breaker---
+app.get('/api/getBreakOrder', controller.getBreakOrder);
+//  --- invaders
+app.get('/api/getInvadeOrder', controller.getInvadeOrder);
+// --- orb
+app.get('/api/getOrbOrder', controller.getOrbOrder);
