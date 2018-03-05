@@ -20,7 +20,18 @@ class Chat extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  detectScreenSize() {
+    if (window.screen.width === 1440)
+      return {
+        height: this.props.height ? this.props.height : '250px',
+        width: this.props.width ? this.props.width : '900px'
+      }
+    else
+      return {};
+  }
+
   componentDidMount() {
+    console.log(window.screen);
     // this.state.sliderImages[0]
     this.socket = io('/');
     this.socket.on('message dispatched', this.updateMessages);
@@ -76,7 +87,7 @@ class Chat extends React.Component {
 
     return (
       <div className="chat">
-      <div className="landing-chat-box" ref="box" style={{height: this.props.height ? this.props.height : '250px', width: this.props.width ? this.props.width : '900px'}}>
+      <div className="landing-chat-box" ref="box" style={this.detectScreenSize()}>
           {messages}
         </div>
         <div className="chat-control">
