@@ -28,7 +28,7 @@ class Profile extends Component {
     }
     componentDidMount() {
         axios.get('/auth/me').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             let user = res.data.auth_id;
             this.setState({
                 user: res.data.auth_id,
@@ -42,7 +42,7 @@ class Profile extends Component {
             }) 
         }),
         axios.get('/api/getPongOrder').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 pongLeaders: res.data
             })
@@ -63,7 +63,7 @@ class Profile extends Component {
             })
         }),
         axios.get('/api/getBreakOrder').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 breakLeaders: res.data
             })
@@ -84,7 +84,7 @@ class Profile extends Component {
             })
         }),
         axios.get('/api/getInvadeOrder').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 invadeLeaders: res.data
             })
@@ -105,7 +105,7 @@ class Profile extends Component {
             })
         }),
         axios.get('/api/getOrbOrder').then((res) => {
-            console.log("orb", res.data)
+            // console.log("orb", res.data)
             this.setState({
                 orbLeaders: res.data
             })
@@ -115,11 +115,11 @@ class Profile extends Component {
             var orb = 0;
             for(var i=0;i<=this.state.orbLeaders.length;i++){
                 if(this.state.orbLeaders[i].auth_id===this.state.user){
-                    console.log(this.state.orbLeaders[i].auth_id, "break");
+                    // console.log(this.state.orbLeaders[i].auth_id, "break");
                     ++orb;
                      break;
                 }else{
-                    console.log(this.state.orbLeaders[i].auth_id);
+                    // console.log(this.state.orbLeaders[i].auth_id);
                     ++orb;
                 }
             }
