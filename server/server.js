@@ -7,7 +7,8 @@ const express = require('express')
     , session = require('express-session')
     , Auth0Strategy = require('passport-auth0')
     , socketIO = require('socket.io')
-    , controller = require('./controller.js');
+    , controller = require('./controller.js')
+    , ships_ctrl = require('./socket_controllers/ships/ships_ctrl');
 
 const port = process.env.SERVER_PORT;
 const app = express()
@@ -25,47 +26,25 @@ var bullet_array = []; // Keeps track of all the bullets to update them on the s
 io.on('connection', socket => {
   console.log('User Connected');
 
-  	// Listen for a new player trying to connect
-	socket.on('new-player',function(state){
-	  console.log("New player joined with state:",state);
-	  players[socket.id] = state;
-	  // Broadcast a signal to everyone containing the updated players list
-	  io.emit('update-players',players);
-	})
+  // Listen for a new player trying to connect
+  socket.on('new-player', ships_ctrl.new_player(state));
 
   // When player dies, remove player from game. - W
-  socket.on('remove_player', function(id) {
-    delete players[id.id];
-    io.emit('update-players', players);
-  });
+  socket.on('remove_player', ships_ctrl.remove_player(id));
+
+  // Listen for move events and tell all other clients that something has moved 
+  socket.on('move-player', ships_ctrl.move_player(position_data));
+
+  // Listen for shoot-bullet events and add it to our bullet array
+  socket.on('shoot-bullet', ships_ctrl.shoot_bullet(data));
+
+  socket.emit("welcome", {userID: socket.id});
 
   // Listen for a disconnection and update our player table 
   socket.on('disconnect',function(state){
     delete players[socket.id];
     io.emit('update-players',players);
   })
-
-  // Listen for move events and tell all other clients that something has moved 
-  socket.on('move-player',function(position_data){
-    if(players[socket.id] == undefined) return; // Happens if the server restarts and a client is still connected 
-    players[socket.id].x = position_data.x;
-    players[socket.id].y = position_data.y;
-    players[socket.id].angle = position_data.angle;
-    io.emit('update-players',players);
-  })
-
-  // Listen for shoot-bullet events and add it to our bullet array
-  socket.on('shoot-bullet',function(data){
-    if(players[socket.id] == undefined) return;
-    var new_bullet = data;
-    data.owner_id = socket.id; // Attach id of the player to the bullet 
-    if(Math.abs(data.speed_x) > 20 || Math.abs(data.speed_y) > 20){
-      console.log("Player",socket.id,"is cheating!");
-    }
-    bullet_array.push(new_bullet);
-  });
-
-  socket.emit("welcome", {userID: socket.id});
 
   socket.on('message sent', (data) => {
     data.user = this.id
