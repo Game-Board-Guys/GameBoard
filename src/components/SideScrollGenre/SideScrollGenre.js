@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './SideScrollGenre.css';
-import star from './../../Pictures/star.png';
-import tanks1 from './../../Pictures/tanks1.png';
+import star from './../../Pictures/starjpeg.jpg';
+import tanks1 from './../../Pictures/tanks1jpeg.jpg';
 
 class SideScrollGenre extends Component {
     render(){

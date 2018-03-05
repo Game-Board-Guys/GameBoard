@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import './PuzzleGenre.css';
-import Match3 from './../../Pictures/Match 3.png';
-import gemmatch from './../../Pictures/gemmatch.png';
-import memory from './../../Pictures/memory.png';
-import simon from './../../Pictures/simon.png';
-import slidingpuzzle from './../../Pictures/slidingpuzzle.png';
+import Match3 from './../../Pictures/Match 3jpeg.jpg';
+import gemmatch from './../../Pictures/gemmatchjpeg.jpg';
+import memory from './../../Pictures/memoryjpeg.jpg';
+import simon from './../../Pictures/simonjpeg.jpg';
+import slidingpuzzle from './../../Pictures/slidingpuzzlejpeg.jpg';
 
 class PuzzleGenre extends Component {
     render(){
