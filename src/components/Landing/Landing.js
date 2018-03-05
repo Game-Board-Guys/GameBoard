@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import './Landing.css';
 import Chat from '../Chat/Chat';
-import Pong from './../../Pictures/Pong.png';
-import Orb from './../../Pictures/Orb.png';
-import Invaders from './../../Pictures/Invaders.png';
-import Tanks from './../../Pictures/Tanks.png';
-import BrickBreakers from './../../Pictures/BrickBreakers.png';
+import Pong from './../../Pictures/ponggamejpeg.jpg';
+import Orb from './../../Pictures/cyberorbjpeg.jpg';
+import Invaders from './../../Pictures/invaders1jpeg.jpg';
+import Tanks from './../../Pictures/tanks1jpeg.jpg';
+import BrickBreakers from './../../Pictures/breakoutjpeg.jpg';
 
 
 class Landing extends Component {
@@ -88,10 +88,10 @@ class Landing extends Component {
                             <div className="game-text">Tanks</div>
                         </div>
                     </a>
-                    <a href="/lobby:brickbreaker" style={{ textDecoration: 'none' }}>
+                    <a href="/lobby:breakout" style={{ textDecoration: 'none' }}>
                         <div className="game-container">
                             <div className="listed-game-4-brickbreaker"></div>
-                            <div className="game-text">Brick Breaker</div>
+                            <div className="game-text">Breakout</div>
                         </div>
                     </a>
                     <a href="/lobby:invaders" style={{ textDecoration: 'none' }}>
