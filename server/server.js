@@ -70,6 +70,7 @@ io.on('connection', socket => {
   socket.on('message sent', (data) => {
     data.user = this.id
     console.log(data)
+
     socket.broadcast.emit('message dispatched', data);
   });
 
