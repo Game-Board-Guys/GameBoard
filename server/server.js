@@ -100,7 +100,7 @@ function ServerGameLoop(){
       }
   
       // Remove if it goes too far off screen 
-      if(bullet.x < -10 || bullet.x > 1000 || bullet.y < -10 || bullet.y > 1000){
+      if(bullet.x < -10 || bullet.x > 1800 || bullet.y < -10 || bullet.y > 1800){
           bullet_array.splice(i,1);
           i--;
       }
