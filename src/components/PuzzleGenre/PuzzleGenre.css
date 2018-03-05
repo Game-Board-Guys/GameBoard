@@ -1,0 +1,50 @@
+.puzzle-root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+    min-height: 100vh; 
+}
+
+.puzzle-genre-header {
+    margin-top: 150px;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 40px;
+    color: white;
+}
+
+.puzzle-game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 80%; */
+    width: 70%;
+    overflow: scroll;
+    /* margin-top: 100px; */
+    margin-bottom: 100px;
+}
+
+.puzzlelink {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif; 
+    font-size: 30px;
+    color: white;
+    margin: 20px;
+    text-decoration: underline #363537;
+}
+
+.puzzlelink:hover {
+    color: #E9D758;
+}
+
+.puzzlelink img {
+    height: 310px;
+    width: 480px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
