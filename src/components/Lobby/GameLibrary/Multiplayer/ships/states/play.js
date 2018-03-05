@@ -21,7 +21,6 @@ export default function playState(game) {
         friction: 0.95,
         shot: false,
         update: function () {
-            console.log(game);
             // Lerp rotation towards mouse
             var dx = (game.input.mousePointer.x + game.camera.x) - this.sprite.x;
             var dy = (game.input.mousePointer.y + game.camera.y) - this.sprite.y;
