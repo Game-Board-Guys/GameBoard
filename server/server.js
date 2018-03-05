@@ -183,42 +183,9 @@ app.get('/auth/logout', function(req,res) {
 
 app.get('/api/testuser', controller.getTestUser);
 
-// app.get('/api/user/:auth_id', (req, res, next) => {
-//     const db = req.app.get('db');
-//     const { id } = req.params
-//     db.find_user([id])
-//         .then(user => {
-//             console.log('this is the user', user.username)
-//             res.status(200).send(user)
-//         })
-// })
 
 app.put('/api/editUserInfo', controller.editUserInfo);
 
-// app.put('/api/user/:auth_id', (req, res, next) => {
-//     const db = req.app.get('db');
-//     const { id } = req.params
-//     const user = req.user
-//     console.log('this is the awesome user', user.auth_id)
-//     console.log('this is the id =', id)
-//     console.log('I am the body', req.body)
-//     if (req.body.username){
-//         db.update_user_username([req.body.username, user.auth_id])
-//             .then(user => {
-//                 res.status(200).send(user)
-//             })
-//     } if (req.body.aboutMe){
-//         db.update_user_bio([req.body.aboutMe, user.auth_id])
-//             .then(user => {
-//                 res.status(200).send(user)
-//             })
-//     } if (req.body.img){
-//         db.update_user_img([req.body.img, user.auth_id])
-//             .then(user => {
-//                 res.status(200).send(user)
-//             })
-//     }
-// })
 
 // ---updates high score for invaders---
 app.put('/api/editUserScore', controller.editUserScore);
@@ -228,3 +195,14 @@ app.put('/api/editUserScorePong', controller.editUserScorePong);
 app.put('/api/editUserScoreBreak', controller.editUserScoreBreak);
 
 app.put('/api/editUserScoreMaze', controller.editUserScoreMaze);
+
+
+
+// ---get users in order of highest rated player to lowest pong---
+app.get('/api/getPongOrder', controller.getPongOrder);
+//  ---get users in order for brick breaker---
+app.get('/api/getBreakOrder', controller.getBreakOrder);
+//  --- invaders
+app.get('/api/getInvadeOrder', controller.getInvadeOrder);
+// --- orb
+app.get('/api/getOrbOrder', controller.getOrbOrder);
