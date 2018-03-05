@@ -1,7 +1,8 @@
 export default function bootState(){
     return{
         preload: function () {
-            //load images for loading and stuff
+            this.load.image('preloaderBackground', 'img/menu-stuffs/preloadbck.png');
+            this.load.image('preloaderBar', 'img/menu-stuffs/preloadbar.png');
         },
         create: function () {
             this.game.physics.startSystem(window.Phaser.Physics.ARCADE);

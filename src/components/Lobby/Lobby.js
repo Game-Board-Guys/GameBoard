@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Lobby.css';
 //games
 //action
+import MonsterCandy from './GameLibrary/Action/MonsterCandy/MonsterCandy';
 
 //adventure
 
@@ -14,6 +15,7 @@ import InvadersTwo from './GameLibrary/Arcade/invaders-two/InvadersTwo';
 import BrickBreaker from './GameLibrary/Arcade/Phaser-Breakout/Breakout';
 import Pong from './GameLibrary/Arcade/pong/Pong';
 import Snake from './GameLibrary/Arcade/snake/Snake';
+import Tetris from './GameLibrary/Arcade/tetris/Tetris';
 
 //board
 // import Yahtzee from './GameLibrary/Board/yahtzee/Yahtzee';
@@ -78,28 +80,32 @@ class Lobby extends Component {
             MatchThree();
         } else if (this.props.match.params.game === ':ships') {
             Ships();
-        }else if (this.props.match.params.game === ':asteroids') {
+        } else if (this.props.match.params.game === ':asteroids') {
             Asteroids();
-        }else if (this.props.match.params.game === ':breakout') {
+        } else if (this.props.match.params.game === ':breakout') {
             BreakoutTwo();
-        }else if (this.props.match.params.game === ':invaders-two') {
+        } else if (this.props.match.params.game === ':invaders-two') {
             InvadersTwo();
-        }else if (this.props.match.params.game === ':snake') {
+        } else if (this.props.match.params.game === ':snake') {
             Snake();
-        }else if (this.props.match.params.game === ':star-platformer') {
+        } else if (this.props.match.params.game === ':star-platformer') {
             StarPlatformer();
-        }else if (this.props.match.params.game === ':gemmatch') {
+        } else if (this.props.match.params.game === ':gemmatch') {
             Gemmatch();
-        }else if (this.props.match.params.game === ':matching-pairs') {
+        } else if (this.props.match.params.game === ':matching-pairs') {
             MatchingPairs();
-        }else if (this.props.match.params.game === ':simon') {
+        } else if (this.props.match.params.game === ':simon') {
             Simon();
-        }else if (this.props.match.params.game === ':sliding-puzzle') {
+        } else if (this.props.match.params.game === ':sliding-puzzle') {
             SlidingPuzzle();
-        }else if (this.props.match.params.game === ':defender') {
+        } else if (this.props.match.params.game === ':defender') {
             Defender();
-        }else if (this.props.match.params.game === ':tanks-two') {
+        } else if (this.props.match.params.game === ':tanks-two') {
             TanksTwo();
+        } else if (this.props.match.params.game === ':monster-candy') {
+            MonsterCandy();
+        } else if (this.props.match.params.game === ':tetris') {
+            Tetris();
         }
 
 

@@ -12,6 +12,8 @@ export default function menuState(){
             this.createButton(this.game, "Medium", this.game.world.width * 0.5, this.game.world.height * 0.6, 190, 47.4, this.medium);
 
             this.createButton(this.game, "Hard", this.game.world.width * 0.5, this.game.world.height * 0.75, 190, 47.4, this.hard);
+
+            this.createButton(this.game, "Insane", this.game.world.width * 0.5, this.game.world.height * 0.9, 190, 47.4, this.insane);
         },
         easy: function () {
             this.game.state.start('play', true, false, { maxSpeed: 150 })
@@ -21,6 +23,9 @@ export default function menuState(){
         },
         hard: function () {
             this.game.state.start('play', true, false, { maxSpeed: 400 })
+        },
+        insane: function () {
+            this.game.state.start('play', true, false, { maxSpeed: 600 })
         },
         createButton: function (game, string, x, y, w, h, callback) {
             var button1 = game.add.button(x, y, 'button', callback, this, 8, 6,2);

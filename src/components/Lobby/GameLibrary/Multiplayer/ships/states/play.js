@@ -100,7 +100,7 @@ export default function playState(game) {
             game.stage.disableVisibilityChange = true;
 
             // Placeholder for now. - W
-            var ship_type = Math.floor(Math.random() * 5) + 1;
+            var ship_type = Math.floor(Math.random() * 5) + 2;
 
             // Create player
             var player_ship_type = String(ship_type);
@@ -138,6 +138,7 @@ export default function playState(game) {
 
 
                 }
+                game.world.wrap(player.sprite, 16);
                 // Check if a player is missing and delete them 
                 for (var id in other_players) {
                     if (!players_found[id]) {
@@ -203,7 +204,7 @@ export default function playState(game) {
                     other_players[id].alpha = 1;
                 }
             }
-            game.world.wrap(player.sprite, 16);
+            
             // Interpolate all players to where they should be
             for (var id in other_players) {
                 var p = other_players[id];
