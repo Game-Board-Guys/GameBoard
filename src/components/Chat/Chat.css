@@ -1,3 +1,5 @@
+/*/////////////// NORMAL VIEW ///////////////*/
+
 .landing-chat-box {
     height: 250px;
     width: 900px;
@@ -56,4 +58,128 @@
 .chat-button:hover {
   background-color: #9C0D38;
   border: 3px solid #9C0D38;
+}
+
+
+
+/*/////////////// IPAD PRO VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  .landing-chat-box {
+    height: 250px;
+    width: 800px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: auto;
+  }
+}
+
+
+
+/*/////////////// IPAD VIEW ///////////////*/
+
+
+
+@media only screen and (max-width: 768px) {
+  .landing-chat-box {
+    height: 250px;
+    width: 600px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: auto;
+  }
+}
+
+
+
+/*/////////////// iPHONE X VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+  .landing-chat-box {
+    height: 190px;
+    width: 300px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: auto;
+  }
+
+  .chat-input {
+    padding: 5.5px;
+    width: 200px;
+    border: 3px solid #5762D5;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+  }
+}
+
+
+
+/*/////////////// iPHONE 8 PLUS VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 414px) {
+  .landing-chat-box {
+    height: 190px;
+    width: 300px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: auto;
+  }
+
+  .chat-input {
+    padding: 5.5px;
+    width: 200px;
+    border: 3px solid #5762D5;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+  }
+}
+
+
+
+/*/////////////// iPHONE 8 VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+  .landing-chat-box {
+    height: 190px;
+    width: 300px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: auto;
+  }
+
+  .chat-input {
+    padding: 5.5px;
+    width: 200px;
+    border: 3px solid #5762D5;
+    border-radius: 3px;
+    font-size: 20px;
+    background-color: #555;
+    color: #fff;
+  }
 }
