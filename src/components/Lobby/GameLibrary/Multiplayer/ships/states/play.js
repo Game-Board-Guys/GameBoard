@@ -18,7 +18,7 @@ export default function playState(game) {
         speed_x: 0,// This is the speed it's currently moving at
         speed_y: 0,
         speed: .2, // This is the parameter for how fast it should move
-        friction: 0.95,
+        friction: 0.96,
         shot: false,
         update: function () {
             // Lerp rotation towards mouse
@@ -41,7 +41,7 @@ export default function playState(game) {
             this.speed_x *= this.friction;
             this.speed_y *= this.friction;
 
-            // Shoot bullet 
+            // Shoot bullet
             if (game.input.activePointer.leftButton.isDown && !this.shot) {
                 var speed_x = Math.cos(this.sprite.rotation + Math.PI / 2) * 3; // 20
                 var speed_y = Math.sin(this.sprite.rotation + Math.PI / 2) * 3; // 20

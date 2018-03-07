@@ -142,7 +142,7 @@ font-size: 30px;
 
 .listed-game-1-pong {
 margin-top: 10px;
-background-image: url('./../../Pictures/Pong.png');
+background-image: url('./../../Pictures/ponggamejpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
@@ -169,7 +169,7 @@ cursor: pointer;
 
 .listed-game-2-cyberorb {
 margin-top: 10px;
-background-image: url('./../../Pictures/Orb.png');
+background-image: url('./../../Pictures/cyberorbjpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
@@ -177,7 +177,7 @@ width: 105px;
 
 .listed-game-3 {
 margin-top: 10px;
-background-image: url('./../../Pictures/minesweeper.jpg');
+background-image: url('./../../Pictures/tanks1jpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
@@ -185,7 +185,7 @@ width: 105px;
 
 .listed-game-4-brickbreaker {
 margin-top: 10px;
-background-image: url('./../../Pictures/BrickBreakers.png');
+background-image: url('./../../Pictures/breakoutjpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
@@ -193,7 +193,7 @@ width: 105px;
 
 .listed-game-3-tanks {
 margin-top: 10px;
-background-image: url('./../../Pictures/Tanks.png');
+background-image: url('./../../Pictures/tanks1jpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
@@ -201,7 +201,7 @@ width: 105px;
 
 .listed-game-5-invader {
 margin-top: 10px;
-background-image: url('./../../Pictures/Invaders.png');
+background-image: url('./../../Pictures/invaders1jpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
