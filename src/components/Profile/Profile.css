@@ -46,7 +46,7 @@
     height: 150px;
     background: #242130;
     border: 2px solid #5762D5;
-    color: #9C0D38;
+    color: #B4334B;
     border-radius: 6px;
     margin-bottom: 10px;
 }
@@ -59,7 +59,7 @@
     height: 150px;
     background: #242130;
     border: 2px solid #5762D5;
-    color: #9C0D38;
+    color: #B4334B;
     border-radius: 6px;
     margin-bottom: 10px;
 }
@@ -118,7 +118,7 @@
 .profile-bio {
     height: 200px;
     width: 100%;
-    color: #9C0D38;
+    color: #B4334B;
     font-size: 18px;
     line-height: 150%;
     border: 3px solid #5762D5;
