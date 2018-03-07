@@ -85,6 +85,7 @@ render() {
 
 // let box = React.createElement('div', {className: 'landing-chat-box'}, messages);
 
+
 return (
     <div className="chat">
     <div className="landing-chat-box" ref="box" style={this.detectScreenSize()}>
@@ -95,6 +96,7 @@ return (
         <button className="chat-button" onClick={this.sendMessage}>Send</button>
     </div>
     </div>
+
     );
   }
 }

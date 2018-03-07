@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:500');
 
+/*/////////////// NORMAL VIEW ///////////////*/
 
 .landing_main_container {
 color: #fff;
@@ -204,4 +205,301 @@ background-image: url('./../../Pictures/invaders1jpeg.jpg');
 background-size: contain;
 height: 60px;
 width: 105px;
+}
+
+
+
+/*/////////////// IPAD PRO VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 1024px) {
+    
+    .game-slider {
+        height: 400px;
+        width: 800px;
+        background-size: cover;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+    }
+    
+    .game-list-container {
+        height: 300px;
+        width: 800px;
+        background-color: #242130;
+        margin-top: 70px;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        overflow-y: scroll;
+        margin-bottom: 150px;
+    }
+    
+}
+
+
+
+/*/////////////// IPAD VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .game-slider {
+    height: 300px;
+    width: 600px;
+    background-size: cover;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    }
+
+    .game-list-container {
+    height: 300px;
+    width: 600px;
+    background-color: #242130;
+    margin-top: 70px;
+    border: 3px solid #5762D5;
+    border-radius: 6px;
+    overflow-y: scroll;
+    margin-bottom: 150px;
+    }
+}
+
+
+
+/*/////////////// iPHONE X VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .game-slider {
+        height: 190px;
+        width: 300px;
+        background-size: cover;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        margin-top: 20px;
+    }
+    
+    .game-list-container {
+        height: 200px;
+        width: 300px;
+        background-color: #242130;
+        margin-top: 70px;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        overflow-y: scroll;
+        margin-bottom: 150px;
+    }
+
+    .left-arrow {
+        width: 0;
+        height: 0;
+        /* border-color: #5762D5; */
+        border-radius: 120px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        margin-right: 10px;
+        border-right: 20px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+        }
+
+        .right-arrow {
+        width: 0;
+        height: 0;
+        /* border-color: #5762D5; */
+        border-radius: 120px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        margin-left: 10px;
+        border-left: 20px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+        }
+
+        .landing-logo {
+            display: flex;
+            flex-direction: row;
+            width: 300px;
+            justify-content: space-between;
+            margin-bottom: -230px;
+        }
+
+        .landing-logo p {
+            font-size: 90px;
+            font-family: 'Orbitron', sans-serif;
+        }
+}
+
+
+
+/*/////////////// iPHONE 8 PLUS VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 414px) {
+    .landing-logo {
+        display: flex;
+        flex-direction: row;
+        width: 300px;
+        justify-content: space-between;
+        margin-bottom: -230px;
+    }
+
+    .landing-logo p {
+        font-size: 90px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .game-slider {
+        height: 190px;
+        width: 300px;
+        background-size: cover;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        margin-top: 20px;
+    }
+    
+    .game-list-container {
+        height: 200px;
+        width: 300px;
+        background-color: #242130;
+        margin-top: 70px;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        overflow-y: scroll;
+        margin-bottom: 150px;
+    }
+
+    .left-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        margin-right: 10px;
+        border-right: 30px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
+
+    .right-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        margin-left: 10px;
+        border-left: 30px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
+
+}
+
+
+
+/*/////////////// iPHONE 8 PLUS VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .left-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        margin-right: 10px;
+        border-right: 20px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
+
+    .right-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 20px solid transparent;
+        border-bottom: 20px solid transparent;
+        margin-left: 10px;
+        border-left: 20px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
+}
+
+
+
+/*/////////////// GALAXY VIEW S5 ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .landing-logo {
+        display: flex;
+        flex-direction: row;
+        width: 230px;
+        justify-content: space-between;
+        margin-bottom: -230px;
+    }
+
+    .landing-logo p {
+        font-size: 70px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .game-slider {
+        height: 190px;
+        width: 300px;
+        background-size: cover;
+        border: 3px solid #5762D5;
+        border-radius: 6px;
+        margin-top: 40px;
+    }
+    
+    .left-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        margin-right: 10px;
+        border-right: 15px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
+
+    .right-arrow {
+        width: 0;
+        height: 0;
+        border-radius: 120px;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        margin-left: 10px;
+        border-left: 15px solid #5762D5;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        margin-top: 130px;
+        cursor: pointer;
+    }
 }
