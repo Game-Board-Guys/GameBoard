@@ -66,3 +66,121 @@
     font-size: 132px;
     font-family: 'Orbitron', sans-serif;
 }
+
+
+
+/*/////////////// iPHONE X VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .login-logo {
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin-right: 160px;
+        margin-bottom: 300px;
+    }
+    
+    .login-logo p {
+        font-size: 100px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .login-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/*/////////////// iPHONE 8 PLUS VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 414px) {
+    .login-logo {
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin-right: 160px;
+        margin-bottom: 300px;
+    }
+    
+    .login-logo p {
+        font-size: 100px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .login-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/*/////////////// iPHONE 8 VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 375px) {
+    .login-logo {
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin-right: 160px;
+        margin-bottom: 300px;
+    }
+    
+    .login-logo p {
+        font-size: 100px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .login-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 60px;
+    }
+
+}
+
+
+
+/*/////////////// NEXUS 5X VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 412px) {
+    .login-logo {
+        display: flex;
+        flex-direction: row;
+        width: 150px;
+        margin-right: 160px;
+        margin-bottom: 300px;
+    }
+    
+    .login-logo p {
+        font-size: 100px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    .login-buttons {
+        display: flex;
+        flex-direction: row;
+        width: 350px;
+        margin-bottom: 70px;
+    }
+
+}
