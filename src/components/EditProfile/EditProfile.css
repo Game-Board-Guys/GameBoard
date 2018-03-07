@@ -470,12 +470,22 @@
 
 
 
-/*/////////////// IPHONE 8 PLUS VIEW ///////////////*/
+/*/////////////// IPHONE 8 VIEW ///////////////*/
 
 
 
 
 @media only screen and (max-width: 375px) {
+    .user-profile-img {
+        height: 150px;
+        width: 150px;
+        /* margin-top: 5px; */
+    }
+
+    .change-picture-button {
+        margin-top: 10px;
+    }
+
     .about-me {
         height: 160px;
         width: 300px;
@@ -485,6 +495,10 @@
         font-family: 'Orbitron', sans-serif;
         color: #5762D5;
         font-size: 24px;
+    }
+
+    .username-title {
+        margin-top: -1px;
     }
 
     .save-changes-button {
@@ -502,7 +516,67 @@
         width: 100px;
         height: 40px;
         text-decoration: underline #5762D5;
-        margin-top: 20px;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    .profile-buttons-bottom {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-left: 25px
+    }
+}
+
+
+
+/*/////////////// IPHONE 8 PLUS VIEW ///////////////*/
+
+
+
+
+@media only screen and (max-width: 412px) {
+    .user-profile-img {
+        height: 150px;
+        width: 150px;
+        /* margin-top: 20px; */
+    }
+
+    .change-picture-button {
+        margin-top: 10px;
+    }
+    
+    .username-title {
+        margin-top: -1px;
+    }
+
+    .about-me {
+        height: 160px;
+        width: 300px;
+        border-radius: 6px;
+        background-color: #363537;
+        border-color: #5762D5;
+        font-family: 'Orbitron', sans-serif;
+        color: #5762D5;
+        font-size: 24px;
+    }
+
+    .save-changes-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 11px;
+        font-family: 'Orbitron', sans-serif;
+        border-color: #5762D5;
+        border-radius: 5px;
+        background: #363537;
+        color: #fff;
+        box-shadow: 0 0 40px 40px #5762D5 inset, 0 0 0 0 #5762D5;
+        transition: all 90ms ease-in-out;
+        width: 100px;
+        height: 40px;
+        text-decoration: underline #5762D5;
+        margin-top: 15px;
         margin-left: 20px;
     }
 
