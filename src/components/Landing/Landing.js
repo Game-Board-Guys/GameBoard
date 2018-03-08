@@ -67,7 +67,9 @@ class Landing extends Component {
                     <div className="right-arrow" onClick={() => this.slideRight()}></div>
                 </div>
                 <h3 className="global-chat-header">Discussion</h3>
+                <div className="landing-chat-container">
                 <Chat />
+                </div>
                 <h3 className="game-list-header">Games</h3>
                 <div className="game-list-container" >
                     <a href="/lobby:pong" style={{ textDecoration: 'none' }}>

@@ -25,6 +25,7 @@
     font-size: 32px;
     font-family: 'Orbitron', sans-serif;
     margin-left: 50px;
+    margin-top: -30px;
 }
 
 canvas {
@@ -177,6 +178,7 @@ canvas {
 /* this is the lobby awesomeness canvas stuff and stuff */
 #myCanvas{
     /* width: 1000px; */
+    margin-top: -30px;
     height: 600px;
     margin-left: 0px;
 }
@@ -184,6 +186,8 @@ canvas {
 @media(max-width:1100px) {
     .upper-lobby-container {
         flex-direction: column;
+        justify-content: center;
+        width: 100%;
         height: 900px;
     }
     .game-box {
@@ -240,8 +244,10 @@ canvas {
         width: 90%;
     }
     .upper-lobby-right {
+        display: flex;
+        align-items: center;
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         margin-top: 0px;
     }
     #myCanvas {
