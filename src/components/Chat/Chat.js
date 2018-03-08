@@ -88,7 +88,7 @@ render() {
 
 return (
     <div className="chat">
-    <div className="landing-chat-box" ref="box" style={this.detectScreenSize()}>
+    <div className="landing-chat-box" ref="box">
         {messages}
     </div>
     <div className="chat-control">

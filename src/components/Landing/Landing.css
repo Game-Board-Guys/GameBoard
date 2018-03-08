@@ -99,9 +99,13 @@ box-shadow: 0 0 45px 45px #5762D5 inset, 0 0 0 0 #5762D5;
 transition: all 90ms ease-in-out;
 }
 
+.landing-chat-container {
+width: 68%;
+}
+
 .game-list-container {
 height: 300px;
-width: 900px;
+width: 68%;
 background-color: #242130;
 margin-top: 70px;
 border: 3px solid #5762D5;
@@ -223,18 +227,6 @@ width: 105px;
         border: 3px solid #5762D5;
         border-radius: 6px;
     }
-    
-    .game-list-container {
-        height: 300px;
-        width: 800px;
-        background-color: #242130;
-        margin-top: 70px;
-        border: 3px solid #5762D5;
-        border-radius: 6px;
-        overflow-y: scroll;
-        margin-bottom: 150px;
-    }
-    
 }
 
 
@@ -251,17 +243,6 @@ width: 105px;
     background-size: cover;
     border: 3px solid #5762D5;
     border-radius: 6px;
-    }
-
-    .game-list-container {
-    height: 300px;
-    width: 600px;
-    background-color: #242130;
-    margin-top: 70px;
-    border: 3px solid #5762D5;
-    border-radius: 6px;
-    overflow-y: scroll;
-    margin-bottom: 150px;
     }
 }
 
@@ -280,17 +261,6 @@ width: 105px;
         border: 3px solid #5762D5;
         border-radius: 6px;
         margin-top: 20px;
-    }
-    
-    .game-list-container {
-        height: 200px;
-        width: 300px;
-        background-color: #242130;
-        margin-top: 70px;
-        border: 3px solid #5762D5;
-        border-radius: 6px;
-        overflow-y: scroll;
-        margin-bottom: 150px;
     }
 
     .left-arrow {
@@ -365,17 +335,6 @@ width: 105px;
         border: 3px solid #5762D5;
         border-radius: 6px;
         margin-top: 20px;
-    }
-    
-    .game-list-container {
-        height: 200px;
-        width: 300px;
-        background-color: #242130;
-        margin-top: 70px;
-        border: 3px solid #5762D5;
-        border-radius: 6px;
-        overflow-y: scroll;
-        margin-bottom: 150px;
     }
 
     .left-arrow {

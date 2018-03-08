@@ -60,7 +60,7 @@ import TanksTwo from './GameLibrary/Shooters/tanks-two/tanksTwo';
 import Chat from '../Chat/Chat';
 import gameRules from './GameLibrary/GameRules.js';
 import ScrollableAnchor from 'react-scrollable-anchor';
-import { configureAnchors } from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor';
 
 
 class Lobby extends Component {

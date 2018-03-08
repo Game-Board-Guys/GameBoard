@@ -1,0 +1,24 @@
+.main-genres-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+    background: #363537;
+    box-shadow: 0 0 540px 10px #5762D5 inset, 0 0 0 0 #5762D5;
+}
+
+.genre-image {
+    height: 250px!important;
+    width: 380px!important;
+}
+
+.genre-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 80%;
+    width: 85%;
+    overflow: scroll;
+}

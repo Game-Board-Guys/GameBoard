@@ -18,6 +18,7 @@ class Dropdown extends Component {
                     <div className="close_x" onClick={this.props.closeMenu}>X</div>
                 </div>
                 <nav className="dropdown-nav">
+                    <a href="/genres"><div onClick={this.props.closeMenu}>GAMES</div></a>
                     <a href="/leaderboard"><div onClick={this.props.closeMenu}>LEADERBOARD</div></a>
                     <a href="/profile"><div onClick={this.props.closeMenu}>PROFILE</div></a>
                 </nav>
