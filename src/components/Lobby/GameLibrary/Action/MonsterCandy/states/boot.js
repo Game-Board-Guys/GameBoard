@@ -10,9 +10,20 @@ export default function bootState(){
 		    this.physics.startSystem(window.Phaser.Physics.ARCADE);            
             // set scale options
             this.input.maxPointers = 1;
-            this.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
-            this.scale.pageAlignHorizontally = true;
-            this.scale.pageAlignVertically = true;
+            //makes the game center in the div
+            this.game.scale.pageAlignHorizontally = true;
+            this.game.scale.pageAlignVertically = true;
+            if (this.game.device.desktop) {
+
+                //code for desktop devices
+                this.game.scale.scaleMode = window.Phaser.ScaleManager.SHOW_ALL;
+            } else {
+                //code for mobile devices
+
+              this.game.scale.startFullScreen(false);
+               this.game.scale.fullScreenScaleMode = window.Phaser.ScaleManager.SHOW_ALL;
+               
+            };
             // this.scale.setScreenSize(true);
             // start the Preloader state
             this.state.start('load');
