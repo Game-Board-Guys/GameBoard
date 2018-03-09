@@ -104,6 +104,30 @@ class Profile extends Component {
                         ++invade;
                     }
                 }
+<<<<<<< HEAD
+            }
+            return this.setState({
+                invade
+            })
+        }),
+        axios.get('/api/getOrbOrder').then((res) => {
+            // console.log("orb", res.data)
+            this.setState({
+                orbLeaders: res.data
+            })
+            this.setState ({
+                orb: 0
+            })
+            var orb = 0;
+            for(var i=0;i<=this.state.orbLeaders.length;i++){
+                if(this.state.orbLeaders[i]["auth_id"]===this.state.user){
+                    // console.log(this.state.orbLeaders[i].auth_id, "break");
+                    ++orb;
+                     break;
+                }else{
+                    // console.log(this.state.orbLeaders[i].auth_id);
+                    ++orb;
+=======
                 return this.setState({
                     invade
                 })
@@ -127,6 +151,7 @@ class Profile extends Component {
                         // console.log(this.state.orbLeaders[i].auth_id);
                         ++orb;
                     }
+>>>>>>> master
                 }
                 return this.setState({
                     orb
