@@ -126,7 +126,6 @@ class Profile extends Component {
                 }else{
                     // console.log(this.state.orbLeaders[i].auth_id);
                     ++orb;
-=======
                 return this.setState({
                     invade
                 })
@@ -150,7 +149,6 @@ class Profile extends Component {
                         // console.log(this.state.orbLeaders[i].auth_id);
                         ++orb;
                     }
->>>>>>> master
                 }
                 return this.setState({
                     orb
