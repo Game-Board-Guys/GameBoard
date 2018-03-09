@@ -17,6 +17,7 @@ class LeaderBoard extends Component {
     this.showPongClick = this.showPongClick.bind(this);
     this.showBreakClick = this.showBreakClick.bind(this);
     this.showInvadeClick = this.showInvadeClick.bind(this);
+    this.showOrbClick = this.showOrbClick.bind(this);
     }
     
 
@@ -40,22 +41,22 @@ class LeaderBoard extends Component {
     }
     showInvadeClick(){
         axios.get('/api/getInvadeOrder').then((res) => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({
                 view: res.data,
                 game: "Invaders"
             })
         })
     }
-    // showInvadeClick(){
-    //     axios.get('/api/getInvadeOrder').then((res) => {
-    //         // console.log(res.data)
-    //         this.setState({
-    //             view: res.data,
-    //             game: "Invaders"
-    //         })
-    //     })
-    // }
+    showOrbClick(){
+        axios.get('/api/getOrbOrder').then((res) => {
+            // console.log(res.data)
+            this.setState({
+                view: res.data,
+                game: "Cyber Orb"
+            })
+        })
+    }
 
     render(){
         var board = this.state.view.slice(0,10).map(view => (
@@ -77,13 +78,13 @@ class LeaderBoard extends Component {
                     <div className="game-name-box">
                         <a href='#Leaders' className="game-name"><p onClick={this.showPongClick}>Pong</p></a>
                         <a href='#Leaders' className="game-name"><p onClick={this.showBreakClick}>Breakout</p></a>
-                        <a href='#Leaders' className="game-name"><p>Tanks</p></a>
+                        {/* <a href='#Leaders' className="game-name"><p>Tanks</p></a> */}
                         <ScrollableAnchor id={'Leaders'}>
                         <p className="anchor"></p>
                         </ScrollableAnchor>
                         <a href='#Leaders' className="game-name"><p onClick={this.showInvadeClick}>Invaders</p></a>
-                        <a href='#Leaders' className="game-name"><p>Match Three</p></a>
-                        <a href='#Leaders' className="game-name"><p>Cyber Orb</p></a>
+                        {/* <a href='#Leaders' className="game-name"><p>Match Three</p></a> */}
+                        <a href='#Leaders' className="game-name"><p onClick={this.showOrbClick}>Cyber Orb</p></a>
                     </div>
                 </div>
                 
