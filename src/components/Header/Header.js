@@ -11,7 +11,7 @@ class Header extends Component {
         super(props);
 
         this.state = {
-            user: ''
+            user: null
         }
         this.whichHeader = this.whichHeader.bind(this)
     }
@@ -35,7 +35,7 @@ class Header extends Component {
                     <p onClick={this.props.showGameMenu}>GAMES</p>
                     <a href="/leaderboard"><p>LEADERBOARD</p></a>
                     <a href="/profile"><p>PROFILE</p></a>
-                    <a href={process.env.REACT_APP_LOGIN} className="logout-link"><p>LOGOUT</p></a>
+                    <a href={'http://localhost:5001/auth/logout'} className="logout-link"><p>LOGOUT</p></a>
                 </nav>
         )
         } else if (!this.state.user){
