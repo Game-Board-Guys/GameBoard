@@ -31,10 +31,9 @@ detectScreenSize() {
   }
 
   componentDidMount() {
-    this.socket = io('/');
+    this.socket = io(this.props.room ? '/' + this.props.room : '/');
     this.socket.on('message dispatched', this.updateMessages);
     this.socket.on('welcome', this.setUserId);
-
     axios.get('/auth/me').then((res) => {
       this.setState({
         userID: res.data.auth_id,

@@ -126,7 +126,7 @@ class Lobby extends Component {
                         <div id="myCanvas"></div>
                     </div>
                     <div className="upper-lobby-right">
-                        <Chat height={"400px"} width={"400px"} />
+                        <Chat height={"400px"} width={"400px"} room={this.props.match.params.game.replace(":", "")} />
                         <div className="lobby-buttons">
                             <a href='#Rules'><button>Rules</button></a>
                             <a href='#Rules'><button>Leave Room</button></a>

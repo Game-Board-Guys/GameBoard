@@ -114,7 +114,7 @@ class Profile extends Component {
             })
             var orb = 0;
             for(var i=0;i<=this.state.orbLeaders.length;i++){
-                if(this.state.orbLeaders[i].auth_id===this.state.user){
+                if(this.state.orbLeaders[i]["auth_id"]===this.state.user){
                     // console.log(this.state.orbLeaders[i].auth_id, "break");
                     ++orb;
                      break;
