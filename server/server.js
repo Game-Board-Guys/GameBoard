@@ -22,6 +22,347 @@ app.use(cors());
 var players = {}; //Keeps a table of all players, the key is the socket id
 var bullet_array = []; // Keeps track of all the bullets to update them on the server 
 
+io.of('/ships').on('connection', socket => {
+  console.log('Ships user Connected');
+
+  socket.emit("welcome", {userID: socket.id});
+
+  socket.on('message sent', (data) => {
+    data.user = this.id
+    console.log(data)
+
+    socket.broadcast.emit('message dispatched', data);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User Disconnected');
+  });
+});
+
+io.of('/tanks-two').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/pong').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/maze2d').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/brickbreaker').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/tanks').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/invaders').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/match-three').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/asteroids').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+
+  io.of('/breakout').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/invaders-two').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/snake').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/star-platformer').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/gemmatch').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/matching-pairs').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/simon').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/sliding-puzzle').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/defender').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/monster-candy').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
+  io.of('/tetris').on('connection', socket => {
+    console.log('Ships user Connected');
+  
+    socket.emit("welcome", {userID: socket.id});
+  
+    socket.on('message sent', (data) => {
+      data.user = this.id
+      console.log(data)
+  
+      socket.broadcast.emit('message dispatched', data);
+    });
+  
+    socket.on('disconnect', () => {
+      console.log('User Disconnected');
+    });
+  });
+
 io.on('connection', socket => {
   console.log('User Connected');
 

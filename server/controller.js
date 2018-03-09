@@ -54,7 +54,7 @@ module.exports = {
     getPongOrder: (req, res) => {
         const db = req.app.get('db');
         db.get_pong_order().then(users => {
-            console.log(users)
+            console.log("user's length", users.length)
             res.status(200).send(users)
         })
     },

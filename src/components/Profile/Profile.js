@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import './Profile.css';
 import axios from 'axios';
-
 class Profile extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             username: '...',
             img: 'https://png.icons8.com/metro/1600/decision.png',
@@ -134,14 +132,7 @@ class Profile extends Component {
             })
         })
         
-
-
     }
-
-
-
-
-
     render() {
         return (
             <div className="main-profile-container">
@@ -186,9 +177,7 @@ class Profile extends Component {
                             <div className="stat-tile-header">Cyber Orb</div>
                             <div className="wins-losses"><div>Best Time: {this.state.orbHigh}</div></div>
                         </div>
-
                     </div>
-
                 </div>
                 <div className="standings">
                     <div className="standings-header">Standings</div>
@@ -217,12 +206,10 @@ class Profile extends Component {
                             <div className="standings-tile-header">Cyber Orb</div>
                             <div>{this.state.orb}</div>
                         </div>
-
                     </div>
                 </div>
             </div>
         )
     }
 }
-
 export default Profile;
