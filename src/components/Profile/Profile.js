@@ -104,7 +104,6 @@ class Profile extends Component {
                         ++invade;
                     }
                 }
-<<<<<<< HEAD
             }
             return this.setState({
                 invade
