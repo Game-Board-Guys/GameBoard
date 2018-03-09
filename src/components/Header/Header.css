@@ -53,6 +53,11 @@
     color: #E9D758
 }
 
+.nav-bar {
+    margin-right: 50px;
+    width: 500px;
+}
+
 .hamburger_container img {
     height: 20px;
     margin-right: 40px;
