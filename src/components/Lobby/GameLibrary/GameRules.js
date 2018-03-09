@@ -33,6 +33,46 @@ case ':ships':
 return (
 "Sail around the ocean and shoot other ships with cannonballs. Use your keyboard up arrow or 'W' key to move forward and your mouse to steer your ship. Click the mouse to fire cannonballs at your opponents."
 )
+case ':matching-pairs':
+return (
+    "Click on the squares to reveal a shape.  Once a square is selected, you must match the shape of the revealed shape by clicking on another square. To move on to the next puzzel you must match all of the hidden shapes."
+)
+case ':simon':
+return (
+    "Simon will activate a square.  You will have to remember that square and mimic them ack to Simon.  He will then activate the same squares he selected and you will have to activate them back to him in the same order as Simon did."
+)
+case ':pong':
+return (
+    "Classic Pong!  Hit the ball past your oppenent to score!  First to 11 wins."
+)
+case ':invaders-two':
+return (
+    "Blast the invaders out of the sky!  Watch out for return fire!  Prevent them from landing on earth."
+)
+case ':asteroids':
+return (
+    "Shoot the asteroids to accumulate score.  Dodge the asteroids to avoid being blown up!"
+)
+case ':breakout':
+return (
+    "Break the bricks to score!  Don't let the ball hit the ground or you'll lose a life.  Break all of the bricks to move on to the next level."
+)
+case ':defender':
+return (
+    "Master your piloting skills by dodging and weaving between the enemy!  Reach the end unharmed to move on."
+)
+case ':snake':
+return (
+    "Classic Snake!  Eat the food to score and grow larger.  If you run into yourself, you lose.  Moveing through the wall will place you on the other side of the map."
+)
+case ':star-platformer':
+return (
+    "Find your way home!  Move through the perilous planet of Janoka to find power-ups and check points.  You have three chances to get home or you must start from the beginning!"
+)
+case ':tanks-two':
+return (
+    "Battle stations!  Compete against your friends in this armor-plated arena to be the last one standing!  Once hit, you're out."
+)
 default:
 return ('Game Rules')
 }
