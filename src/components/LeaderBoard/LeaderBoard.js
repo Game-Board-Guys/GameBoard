@@ -11,7 +11,8 @@ class LeaderBoard extends Component {
 
         this.state ={
             view: [],
-            game: ''
+            game: '',
+            score: ''
         }
     this.showPongClick = this.showPongClick.bind(this);
     this.showBreakClick = this.showBreakClick.bind(this);
@@ -39,28 +40,28 @@ class LeaderBoard extends Component {
     }
     showInvadeClick(){
         axios.get('/api/getInvadeOrder').then((res) => {
-            // console.log(res.data)
+            console.log(res.data)
             this.setState({
                 view: res.data,
                 game: "Invaders"
             })
         })
     }
-    showInvadeClick(){
-        axios.get('/api/getInvadeOrder').then((res) => {
-            // console.log(res.data)
-            this.setState({
-                view: res.data,
-                game: "Invaders"
-            })
-        })
-    }
+    // showInvadeClick(){
+    //     axios.get('/api/getInvadeOrder').then((res) => {
+    //         // console.log(res.data)
+    //         this.setState({
+    //             view: res.data,
+    //             game: "Invaders"
+    //         })
+    //     })
+    // }
 
     render(){
         var board = this.state.view.slice(0,10).map(view => (
             <div className="game-leaderboard-box" key={view.id}>
               <div className="leaderboard-placing">
-              <p className="leaderboard-name">{view.handle}</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="leaderboard-score">{view.pong_wins}</p>
+              <p className="leaderboard-name">{view.handle}</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="just-a-dash">-</p><p className="leaderboard-score">{view.score}</p>
               </div>
               <br />
       
