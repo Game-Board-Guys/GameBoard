@@ -60,7 +60,7 @@ class Landing extends Component {
                 <div className="arrow-slider-container">
                     <div className="left-arrow" onClick={() => this.slideLeft()}></div>
                     <div className="game-slider-container">
-                        <a href="lobby">
+                        <a href="genres">
                             <div className="game-slider" style={sliderStyle}></div>
                         </a>
                     </div>

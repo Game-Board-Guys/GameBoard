@@ -118,7 +118,7 @@ class Lobby extends Component {
         return (
             <div className="lobby-main-container">
                 <ScrollableAnchor id={'Gamebox'}>
-                    <div className="this is just for the anchor"></div>
+                    <div className="anchor"></div>
                 </ScrollableAnchor>
                 <div className="upper-lobby-container">
                     <div className="game-box">
