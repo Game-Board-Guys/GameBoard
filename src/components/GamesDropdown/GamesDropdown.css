@@ -7,11 +7,13 @@
     align-items: center;  
     position: fixed; 
     top: 72px;
-    transition: 0.5s;
-    overflow: hidden; 
+    transition: 0.5s; 
+    /* overflow: hidden;  */
 }
 
 .gameslidedown {
+    display: none;
+    transition: 0.5s;
     top: -80px;
 }
 
